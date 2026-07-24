@@ -75,7 +75,7 @@ coverage/
 
 # Gatsby
 .cache/
-public/
+
 
 # Storybook
 storybook-static/

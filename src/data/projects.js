@@ -1,56 +1,91 @@
 export const projects = [
    {
-        id: 1,
+    id:1,
 
-        title: "Luxury Villa",
+    title:"Modern Residential Villa",
 
-        cardImage: "/images/project1.jpg",
+    category:"Residential",
 
-        designImage: "/images/design1.jpg",
+    year:"2026",
 
-        plotImage: "/images/plot1.jpg",
+    image:"/images/image01.png",
 
-        progressImage: "/images/progress1.jpg",
-
-        description:
-            "Modern residential construction.",
-
-        details:
-            "This project includes premium materials and modern architecture."
-    },
+    description:
+        "Luxury residence designed with sustainability and modern living in mind."
+},
 
     {
-        id: 2,
-        title: "Office Complex",
-        image: "/images/project2.jpg",
-        description: "..."
-    },
+    id:2,
+
+    title:"Modern Residential Villa",
+
+    category:"Residential",
+
+    year:"2026",
+
+    image:"/images/image01.png",
+
+    description:
+        "Luxury residence designed with sustainability and modern living in mind."
+},
 
     {
-        id: 3,
-        title: "Downtown Renovation",
-        image: "/images/project3.jpg",
-        description: "..."
-    },
+    id:3,
+
+    title:"Modern Residential Villa",
+
+    category:"Residential",
+
+    year:"2026",
+
+    image:"/images/image01.png",
+
+    description:
+        "Luxury residence designed with sustainability and modern living in mind."
+},
 
     {
-        id: 4,
-        title: "Hotel Construction",
-        image: "/images/project4.jpg",
-        description: "..."
-    },
+    id:4,
+
+    title:"Modern Residential Villa",
+
+    category:"Residential",
+
+    year:"2026",
+
+    image:"/images/image01.png",
+
+    description:
+        "Luxury residence designed with sustainability and modern living in mind."
+},
 
     {
-        id: 5,
-        title: "Shopping Mall",
-        image: "/images/project5.jpg",
-        description: "..."
-    },
+    id:5,
+
+    title:"Modern Residential Villa",
+
+    category:"Residential",
+
+    year:"2026",
+
+   image:"/images/image01.png",
+
+    description:
+        "Luxury residence designed with sustainability and modern living in mind."
+},
 
     {
-        id: 6,
-        title: "Apartment Complex",
-        image: "/images/project6.jpg",
-        description: "..."
-    }
+    id:6,
+
+    title:"Modern Residential Villa",
+
+    category:"Residential",
+
+    year:"2026",
+
+    image:"/images/image01.png",
+
+    description:
+        "Luxury residence designed with sustainability and modern living in mind."
+}
 ];

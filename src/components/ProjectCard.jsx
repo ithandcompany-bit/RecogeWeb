@@ -4,40 +4,41 @@ function ProjectCard({ project, openProject }) {
 
     return (
 
-        <div className="project-card">
+       <div className="project-card">
 
-            <img
-                src={project.image}
-                alt={project.title}
-            />
+    <img
+        src={project.image}
+        alt={project.title}
+        className="project-image"
+    />
 
-            <div className="project-card-content">
+    <div className="project-content">
 
-                <h3>{project.title}</h3>
+        <div className="project-meta">
 
-                <p>{project.description}</p>
+            <span>{project.category}</span>
 
-                <p
-
-                    className="view-project"
-
-                    onClick={() => openProject(project)}
-
-                >
-
-                    View Project
-
-                    <span className="arrow">
-
-                        <FaArrowRight />
-
-                    </span>
-
-                </p>
-
-            </div>
+            <span>{project.year}</span>
 
         </div>
+
+        <h3>{project.title}</h3>
+
+        <p>{project.description}</p>
+
+        <p
+            className="view-project"
+            onClick={() => openProject(project)}
+        >
+            View Project
+            <span className="arrow">
+                <FaArrowRight />
+            </span>
+        </p>
+
+    </div>
+
+</div>
 
     );
 

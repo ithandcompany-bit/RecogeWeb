@@ -1,0 +1,341 @@
+/* ======================================================
+   ABOUT POPUP
+====================================================== */
+
+.about-popup{
+    width:100%;
+    background:#f7f4ef;
+}
+
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+
+
+
+/* ======================================================
+   HERO IMAGE
+====================================================== */
+
+.about-popup-image-wrapper{
+
+    width:100%;
+
+}
+
+.about-popup-image{
+
+    width:100%;
+
+    height:330px;
+
+    display:block;
+
+    object-fit:cover;
+
+}
+
+
+/* ======================================================
+   CONTENT
+====================================================== */
+
+.about-popup-section{
+
+    padding:45px 55px;
+
+}
+
+.about-popup-heading{
+
+    margin:0;
+
+    color:#4d2412;
+
+    font-size:1.45rem;
+
+    font-weight:600;
+
+}
+
+.about-popup-divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:#d7d7d7;
+
+    margin:18px 0 28px;
+
+}
+
+.about-popup-text{
+
+    color:#555;
+
+    line-height:1.9;
+
+    font-size:1rem;
+
+}
+
+
+/* ======================================================
+   TWO COLUMNS
+====================================================== */
+
+.about-popup-two-columns{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:60px;
+
+}
+
+.about-popup-list{
+
+    margin:0;
+
+    padding-left:20px;
+
+}
+
+.about-popup-list li{
+
+    color:#555;
+
+    line-height:2;
+
+    margin-bottom:8px;
+
+}
+
+
+/* ======================================================
+   TEAM
+====================================================== */
+
+.about-popup-team-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.about-popup-member{
+
+    text-align:center;
+
+}
+
+.about-popup-member-image{
+
+    width:100%;
+
+    height:190px;
+
+    object-fit:cover;
+
+}
+
+.about-popup-member-name{
+
+    margin:18px 0 8px;
+
+    color:#4d2412;
+
+    font-size:1.05rem;
+
+}
+
+.about-popup-member-role{
+
+    margin:0;
+
+    color:#555;
+
+    font-size:.95rem;
+
+}
+
+.about-popup-member-degree{
+
+    margin-top:8px;
+
+    color:#777;
+
+    line-height:1.6;
+
+    font-size:.9rem;
+
+}
+
+
+
+/* ======================================================*/
+                ICONS
+
+
+.about-popup-heading{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#4A2412;
+
+    font-size:1.45rem;
+
+    font-weight:600;
+
+}
+
+.about-popup-icon{
+
+    color:#A97142;
+
+    font-size:1.2rem;
+
+    margin-right: 12px;
+
+}
+/* ======================================================
+   BUTTONS
+====================================================== */
+
+.about-popup-footer{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    padding:55px;
+
+}
+
+.about-popup-button{
+
+    width:250px;
+
+    height:52px;
+
+    border:1px solid #4a2412;
+
+    background:linear-gradient(
+        to bottom,
+        #7b4b2b 0%,
+        #623019 55%,
+        #4a2412 100%
+    );
+
+    color:white;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.about-popup-button:hover{
+
+    background:linear-gradient(
+        to bottom,
+        #8b5733 0%,
+        #744023 55%,
+        #5b2d16 100%
+    );
+
+}
+
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media(max-width:992px){
+
+    .about-popup-team-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .about-popup-two-columns{
+
+        grid-template-columns:1fr;
+
+        gap:10px;
+
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    .about-popup-header{
+
+        padding:25px;
+
+    }
+
+    .about-popup-title{
+
+        font-size:1.6rem;
+
+    }
+
+    .about-popup-image{
+
+        height:240px;
+
+    }
+
+    .about-popup-section{
+
+        padding:35px;
+
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .about-popup-team-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .about-popup-footer{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .about-popup-button{
+
+        width:100%;
+
+        max-width:280px;
+
+    }
+
+}

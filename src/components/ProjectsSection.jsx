@@ -9,6 +9,8 @@ import ProjectModal from "../modals/ProjectModal";
 import ResearchModal from "../modals/ResearchModal";
 import SectionTitle from "./SectionTitle"
 
+import "../styles/workSection.css";
+
 function ProjectsSection() {
 
     const [selectedProject, setSelectedProject] = useState(null);

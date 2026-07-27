@@ -2,7 +2,7 @@ export const services = [
     {
         id: 1,
         title: "Residential Construction",
-        image: "/images/service-1.jpg",
+        image: "/images/serImages/image01.png",
         description:
             "We design and build durable, elegant homes tailored to our clients' lifestyles."
     },
@@ -10,7 +10,7 @@ export const services = [
     {
         id: 2,
         title: "Commercial Projects",
-        image: "/images/service-2.jpg",
+         image: "/images/serImages/image02.png",
         description:
             "High-performance commercial spaces with lasting value."
     },
@@ -18,7 +18,7 @@ export const services = [
     {
         id: 3,
         title: "Renovations & Remodeling",
-        image: "/images/service-3.jpg",
+         image: "/images/serImages/image03.png",
         description:
             "Revitalizing existing structures with precision and care."
     },
@@ -26,7 +26,7 @@ export const services = [
     {
         id: 4,
         title: "Custom Design Solutions",
-        image: "/images/service-4.jpg",
+        image: "/images/serImages/image04.png",
         description:
             "Creating unique designs to meet your specific needs."
     },
@@ -34,7 +34,7 @@ export const services = [
     {
         id: 5,
         title: "Interior Design & Finishing",
-        image: "/images/service-5.jpg",
+         image: "/images/serImages/image05.png",
         description:
             "Beautiful, functional interiors crafted to perfection."
     },
@@ -42,7 +42,7 @@ export const services = [
     {
         id: 6,
         title: "Project Planning & Consultation",
-        image: "/images/service-6.jpg",
+        image: "/images/serImages/image06.png",
         description:
             "Expert guidance from concept to completion."
     },
@@ -50,8 +50,10 @@ export const services = [
     {
         id: 7,
         title: "Structural Engineering Support",
-        image: "/images/service-7.jpg",
+         image: "/images/serImages/image07.png",
         description:
             "Engineering expertise that guarantees safety and quality."
     }
 ];
+
+export default services;

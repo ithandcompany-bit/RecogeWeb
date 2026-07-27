@@ -1,82 +1,89 @@
 import Modal from "../components/Modal";
+import services from "../data/services";
 
-function ServicesModal({ close }) {
+import "../styles/servicesModal.css";
+
+function ServicesModal({
+
+    close,
+    openContact
+
+}) {
+
     return (
-        <Modal close={close}>
 
-            <div className="services-modal">
+        <Modal close={close} title="Recoge Construction Services">
 
-                <img
-                    src="/images/services-cover.jpg"
-                    alt="Services"
-                    className="services-cover"
-                />
+            <div className="services-popup">
 
-                <section className="service-block">
+                <div className="services-popup-list">
 
-                    <h1>OUR SERVICES</h1>
+                    {
 
-                    <p>
-                        We provide innovative construction
-                        solutions tailored to our clients'
-                        needs, from design to completion.
-                    </p>
+                        services.map(service => (
 
-                </section>
+                            <div
+                                key={service.id}
+                                className="services-popup-item"
+                            >
 
-                <section className="service-grid">
+                                <img
+                                    src={service.image}
+                                    alt={service.title}
+                                    className="services-popup-image"
+                                />
 
-                    <div className="service-card">
+                                <div className="services-popup-content">
 
-                        <h2>Architectural Design</h2>
+                                    <h2>
 
-                        <p>
-                            Modern and functional designs
-                            adapted to your vision.
-                        </p>
+                                        {service.title}
 
-                    </div>
+                                    </h2>
 
-                    <div className="service-card">
+                                    <p>
 
-                        <h2>Construction</h2>
+                                        {service.description}
 
-                        <p>
-                            Residential and commercial
-                            construction projects built
-                            with quality materials.
-                        </p>
+                                    </p>
 
-                    </div>
+                                </div>
 
-                    <div className="service-card">
+                            </div>
 
-                        <h2>Interior Design</h2>
+                        ))
 
-                        <p>
-                            Beautiful interior spaces
-                            combining comfort and style.
-                        </p>
+                    }
 
-                    </div>
+                </div>
 
-                    <div className="service-card">
+                <div className="services-popup-buttons">
 
-                        <h2>Project Management</h2>
+                    <button
+                        className="services-popup-quote"
+                    >
 
-                        <p>
-                            Careful planning and supervision
-                            from start to finish.
-                        </p>
+                        Request a Quote
 
-                    </div>
+                    </button>
 
-                </section>
+                    <button
+                        className="services-popup-contact"
+                        onClick={openContact}
+                    >
+
+                        Contact Us
+
+                    </button>
+
+                </div>
 
             </div>
 
         </Modal>
+
     );
+
 }
 
 export default ServicesModal;

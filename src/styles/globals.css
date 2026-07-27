@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --dark-green:#2f4735;
+
+    --olive:#54634d;
+
+    --beige:#d7c4b5;
+
+    --cream:#f5f2ed;
+
+    --charcoal:#222222;
+
+    --white:#ffffff;
+
+     --brown:#5B2C16;
+     
+    --gold:#C88A3D;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+
+}
+
+h1,
+h2,
+h3{
+
+    font-family:"Playfair Display",serif;
+
+}

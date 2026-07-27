@@ -1,3 +1,5 @@
+import "../styles/ctaSection.css";
+
 function CTASection({ openContact, openServices }) {
 
     return (

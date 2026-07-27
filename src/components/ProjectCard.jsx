@@ -1,4 +1,5 @@
 import { FaArrowRight } from "react-icons/fa";
+import "../styles/workSection.css";
 
 function ProjectCard({ project, openProject }) {
 

@@ -1,0 +1,256 @@
+/* ===========================
+   SERVICES POPUP
+=========================== */
+
+.services-popup{
+
+    background-color:var(--cream);
+
+    background-image:
+
+    radial-gradient(
+        rgba(120,90,50,.03) 1px,
+        transparent 1px
+    );
+
+    background-size:6px 6px;
+
+    padding-bottom: 30px;
+
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+.services-popup-title{
+
+    text-align:center;
+
+    font-size:2.6rem;
+
+   color:#6a2c12;
+
+    margin-bottom:25px;
+
+    padding-bottom:18px;
+
+    border-bottom:2px solid #d9c6b6;
+
+}
+
+/* ===========================
+   SERVICES LIST
+=========================== */
+
+.services-popup-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* ===========================
+   SINGLE SERVICE
+=========================== */
+
+.services-popup-item{
+
+    display:grid;
+
+    grid-template-columns:240px 1fr;
+
+    gap:22px;
+
+    align-items:center;
+
+    padding:14px 0;
+
+    border-bottom:2px solid #e3d5c8;
+
+}
+
+/* ===========================
+   IMAGE
+=========================== */
+
+.services-popup-image{
+
+    width:220px;
+
+    height:120px;
+
+    object-fit:cover;
+
+    border:1px solid #d5c3b2;
+
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.services-popup-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.services-popup-content h2{
+
+    color:var(--brown);
+
+    font-size:2rem;
+
+    margin-bottom:12px;
+
+    padding-bottom:10px;
+
+    border-bottom:1px solid #ded0c2;
+
+}
+
+.services-popup-content p{
+
+    color:#2d2d2d;
+
+    font-size:1.35rem;
+
+    line-height:1.5;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.services-popup-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    margin-top:35px;
+
+    padding-top:20px;
+
+    border-top:2px solid #d9c6b6;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.services-popup-quote,
+.services-popup-contact{
+
+    width:320px;
+
+    padding:18px 0;
+
+    font-size:1.45rem;
+
+    font-weight:600;
+
+    color:white;
+
+    cursor:pointer;
+
+    border:none;
+
+    transition:.25s;
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.25),
+        0 5px 10px rgba(0,0,0,.18);
+
+}
+
+/* LEFT BUTTON */
+
+.services-popup-quote{
+
+    background:
+    linear-gradient(
+        to bottom,
+        #b45a18,
+        #8a3907
+    );
+
+}
+
+/* RIGHT BUTTON */
+
+.services-popup-contact{
+
+    background:
+    linear-gradient(
+        to bottom,
+        #6a2c12,
+        #431707
+    );
+
+}
+
+.services-popup-quote:hover{
+
+    background:#8d3e09;
+     transform:translateY(-2px);
+
+}
+
+.services-popup-contact:hover{
+
+    background:#3b1708;
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.services-popup-item{
+
+    grid-template-columns:1fr;
+
+}
+
+.services-popup-image{
+
+    width:100%;
+
+    height:220px;
+
+}
+
+.services-popup-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.services-popup-quote,
+
+.services-popup-contact{
+
+    width:100%;
+
+}
+
+}

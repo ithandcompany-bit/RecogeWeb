@@ -6,7 +6,7 @@ import {
     FaAward,
     FaUsers
 } from "react-icons/fa";
-import "./AboutModal.css";
+import "../styles/AboutModal.css";
 
 function AboutModal({  close,
     openContact,

@@ -1,0 +1,343 @@
+/* ==========================================
+   CONTACT POPUP
+========================================== */
+
+.contact-popup{
+
+    width:100%;
+
+    overflow:hidden;
+    padding: 30px;
+
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.contact-popup-title{
+
+    text-align:center;
+
+    color:var(--brown);
+
+    font-size:2.6rem;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.contact-popup-divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:#ddd1c5;
+
+    margin-bottom:35px;
+
+}
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.contact-popup-content{
+
+    display:grid;
+
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+
+    gap:35px;
+
+    align-items:start;
+
+}
+
+.contact-left,
+.contact-right{
+
+    min-width:0;
+
+}
+
+.contact-left{
+
+    padding-right:25px;
+
+    border-right:1px solid #ddd1c5;
+
+}
+
+.contact-right{
+
+    padding-left:10px;
+
+}
+
+/* ==========================================
+   HEADINGS
+========================================== */
+
+.contact-left h2,
+.contact-right h2{
+
+    color:var(--brown);
+
+    font-size:1.9rem;
+
+    margin-bottom:12px;
+
+}
+
+.contact-intro{
+
+    color:#666;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================================
+   DIVIDER
+========================================== */
+
+.contact-line{
+
+    width:100%;
+
+    height:1px;
+
+    background:#e5ddd4;
+
+    margin:18px 0;
+
+}
+
+/* ==========================================
+   CONTACT ITEMS
+========================================== */
+
+.contact-card{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+}
+
+.contact-icon{
+
+    color:var(--gold);
+
+    font-size:1.4rem;
+
+    margin-top:4px;
+
+    flex-shrink:0;
+
+}
+
+.contact-card h3{
+
+    color:var(--brown);
+
+    font-size:1.15rem;
+
+    margin-bottom:5px;
+
+}
+
+.contact-card p{
+
+    color:#555;
+
+    line-height:1.7;
+
+}
+
+.contact-card a{
+
+    color:var(--brown);
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+.contact-card a:hover{
+
+    color:var(--gold);
+
+}
+
+/* ==========================================
+   MAP
+========================================== */
+
+.contact-map-wrapper{
+
+    margin-top:20px;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+    border:1px solid #d8cabd;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+
+}
+
+.contact-map{
+
+    display:block;
+
+    width:100%;
+
+    height:160px;
+
+    border:none;
+
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+.contact-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+
+    padding:16px;
+
+    font-size:1rem;
+
+    font-family:inherit;
+
+    border:1px solid #d9cec3;
+
+    border-radius:8px;
+
+    outline:none;
+
+    transition:.3s;
+
+    background:#fff;
+
+    box-sizing:border-box;
+
+}
+
+.contact-form textarea{
+
+    resize:vertical;
+
+    min-height:170px;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    border-color:var(--gold);
+
+    box-shadow:0 0 0 3px rgba(185,140,75,.15);
+
+}
+
+.contact-form button{
+
+    margin-top:10px;
+
+    width:220px;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+.contact-popup-content{
+
+    grid-template-columns:1fr;
+
+}
+
+.contact-left{
+
+    border-right:none;
+
+    padding-right:0;
+
+}
+
+.contact-right{
+
+    padding-left:0;
+
+}
+
+.contact-form button{
+
+    width:100%;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.contact-popup-title{
+
+    font-size:2rem;
+
+}
+
+.contact-left h2,
+.contact-right h2{
+
+    font-size:1.5rem;
+
+}
+
+.contact-card{
+
+    gap:12px;
+
+}
+
+.contact-icon{
+
+    font-size:1.2rem;
+
+}
+
+.contact-map{
+
+    height:150px;
+
+}
+
+}

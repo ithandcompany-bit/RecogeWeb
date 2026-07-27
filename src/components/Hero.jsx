@@ -1,6 +1,8 @@
+import "../styles/hero.css";
+
 function Hero() {
     return (
-       <section className="hero">
+        <section className="hero">
 
             <div className="hero-content">
 
@@ -16,7 +18,6 @@ function Hero() {
 
                 <button>
                     <a href="#projects">View Our Work</a>
-                    
                 </button>
 
             </div>

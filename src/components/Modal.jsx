@@ -1,3 +1,6 @@
+
+import "../styles/modal.css";
+
 function Modal({ title, children, close }) {
 
     return (

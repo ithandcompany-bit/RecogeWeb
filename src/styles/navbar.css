@@ -1,0 +1,420 @@
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:90px;
+
+    padding:0 60px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#5B2C16;
+
+    z-index:1000;
+
+    box-sizing:border-box;
+
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    color:#f5f1eb;
+
+    line-height:1;
+
+    transform:scaleY(.95);
+
+    flex-shrink:0;
+
+}
+
+.logo h1{
+
+    margin:0;
+
+    font-size:2.5rem;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+}
+
+.logo p{
+
+    margin:0;
+
+    font-size:.85rem;
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+}
+
+/* ==========================================
+   NAV LINKS
+========================================== */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+.nav-links li{
+
+    list-style:none;
+
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+}
+
+.nav-links a,
+.nav-links button{
+
+    position:relative;
+
+    background:none;
+
+    border:none;
+
+    color:#f4ece5;
+
+    cursor:pointer;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    padding:8px 0;
+
+}
+
+.nav-links a:hover,
+.nav-links button:hover{
+
+    color:var(--gold);
+
+}
+
+.nav-links a::after,
+.nav-links button::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-4px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--gold);
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover::after,
+.nav-links button:hover::after{
+
+    width:100%;
+
+}
+
+/* ==========================================
+   ACTIVE BUTTON
+========================================== */
+
+.active{
+
+    background:rgba(1,58,110,.9);
+
+    border-bottom:3px solid #f4d1a7;
+
+    border-radius:4px;
+
+    padding:8px 14px !important;
+
+}
+
+/* ==========================================
+   MOBILE TOGGLE
+========================================== */
+
+.menu-toggle{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:2rem;
+
+    cursor:pointer;
+
+    z-index:1200;
+
+}
+
+/* ==========================================
+   LARGE DESKTOP
+========================================== */
+
+@media(max-width:1400px){
+
+.navbar{
+
+    padding:0 40px;
+
+}
+
+.nav-links{
+
+    gap:30px;
+
+}
+
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media(max-width:1100px){
+
+.navbar{
+
+    padding:0 30px;
+
+}
+
+.logo h1{
+
+    font-size:2.2rem;
+
+}
+
+.logo p{
+
+    font-size:.8rem;
+
+    letter-spacing:5px;
+
+}
+
+.nav-links{
+
+    gap:22px;
+
+}
+
+.nav-links button{
+
+    font-size:.9rem;
+
+}
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(max-width:900px){
+
+.navbar{
+
+    height:80px;
+
+    padding:0 25px;
+
+}
+
+.logo h1{
+
+    font-size:2rem;
+
+}
+
+.logo p{
+
+    font-size:.72rem;
+
+    letter-spacing:4px;
+
+}
+
+.nav-links{
+
+    gap:18px;
+
+}
+
+.nav-links button{
+
+    font-size:.85rem;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+.menu-toggle{
+
+    display:block;
+
+}
+
+.nav-links{
+
+    position:fixed;
+
+    top:80px;
+
+    left:-100%;
+
+    width:100%;
+
+    background:#5B2C16;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    align-items:center;
+
+    gap:30px;
+
+    padding:40px 0;
+
+    transition:.35s ease;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+.show-menu{
+
+    left:0;
+
+}
+
+.nav-links button{
+
+    font-size:1.1rem;
+
+}
+
+.nav-links a::after,
+.nav-links button::after{
+
+    display:none;
+
+}
+
+.active{
+
+    width:170px;
+
+}
+
+}
+
+/* ==========================================
+   SMALL PHONES
+========================================== */
+
+@media(max-width:480px){
+
+.navbar{
+
+    height:75px;
+
+    padding:0 18px;
+
+}
+
+.logo h1{
+
+    font-size:1.6rem;
+
+}
+
+.logo p{
+
+    font-size:.6rem;
+
+    letter-spacing:3px;
+
+}
+
+.menu-toggle{
+
+    font-size:1.8rem;
+
+}
+
+.nav-links{
+
+    top:75px;
+
+    gap:25px;
+
+}
+
+.nav-links button{
+
+    font-size:1rem;
+
+}
+
+}

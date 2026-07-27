@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import AboutModal from "../modals/AboutModal";
 
-import "./AboutServices.css";
+import "../styles/AboutServices.css";
 
 
 function AboutSection() {

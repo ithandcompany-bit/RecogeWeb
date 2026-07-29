@@ -1,6 +1,6 @@
-/* ==========================================
-   NAVBAR
-========================================== */
+/* ===========================================================
+                        NAVBAR
+=========================================================== */
 
 .navbar{
 
@@ -10,9 +10,10 @@
     left:0;
 
     width:100%;
+
     height:90px;
 
-    padding:0 60px;
+    padding:0 7%;
 
     display:flex;
 
@@ -20,61 +21,51 @@
 
     align-items:center;
 
-    background:#5B2C16;
+    background:rgba(20,20,20,.94);
+
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
 
     z-index:1000;
 
-    box-sizing:border-box;
+    transition:.35s ease;
 
 }
 
-/* ==========================================
-   LOGO
-========================================== */
+/* ===========================================================
+                        LOGO
+=========================================================== */
 
-.logo{
+.navbar-logo{
+
+    height:50px;
+
+    width:auto;
+
+    object-fit:contain;
+
+}
+
+.navbar-logo-container{
 
     display:flex;
 
-    flex-direction:column;
+    align-items:center;
 
-    color:#f5f1eb;
-
-    line-height:1;
-
-    transform:scaleY(.95);
-
-    flex-shrink:0;
+    max-width:220px;
 
 }
 
-.logo h1{
+.navbar-logo:hover{
 
-    margin:0;
-
-    font-size:2.5rem;
-
-    font-weight:800;
-
-    letter-spacing:2px;
+    transform:scale(1.04);
 
 }
 
-.logo p{
-
-    margin:0;
-
-    font-size:.85rem;
-
-    letter-spacing:6px;
-
-    text-transform:uppercase;
-
-}
-
-/* ==========================================
-   NAV LINKS
-========================================== */
+/* ===========================================================
+                     NAVIGATION
+=========================================================== */
 
 .nav-links{
 
@@ -82,30 +73,29 @@
 
     align-items:center;
 
-    gap:40px;
+    gap:34px;
 
     list-style:none;
-
-    margin:0;
-
-    padding:0;
 
 }
 
 .nav-links li{
 
-    list-style:none;
+    display:flex;
 
-}
-
-.nav-links a{
-
-    text-decoration:none;
+    align-items:center;
 
 }
 
 .nav-links a,
+
 .nav-links button{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
 
     position:relative;
 
@@ -113,28 +103,54 @@
 
     border:none;
 
-    color:#f4ece5;
+    color:white;
 
-    cursor:pointer;
-
-    font-size:.95rem;
+    font-size:.96rem;
 
     font-weight:600;
 
-    transition:.3s;
+    cursor:pointer;
 
-    padding:8px 0;
+    transition:.35s;
+
+}
+
+/* ===========================================================
+                      ICONS
+=========================================================== */
+
+.nav-icon{
+
+    color:var(--accent);
+
+    font-size:.95rem;
+
+    transition:.35s;
 
 }
 
 .nav-links a:hover,
+
 .nav-links button:hover{
 
-    color:var(--gold);
+    color:var(--accent);
 
 }
 
+.nav-links a:hover .nav-icon,
+
+.nav-links button:hover .nav-icon{
+
+    color:var(--secondary);
+
+}
+
+/* ===========================================================
+                     UNDERLINE
+=========================================================== */
+
 .nav-links a::after,
+
 .nav-links button::after{
 
     content:"";
@@ -143,44 +159,95 @@
 
     left:0;
 
-    bottom:-4px;
+    bottom:-8px;
 
     width:0;
 
     height:2px;
 
-    background:var(--gold);
+    background:var(--secondary);
 
-    transition:.3s;
+    transition:.35s;
 
 }
 
 .nav-links a:hover::after,
+
 .nav-links button:hover::after{
 
     width:100%;
 
 }
 
-/* ==========================================
-   ACTIVE BUTTON
-========================================== */
+/* ===========================================================
+                     ACTIVE
+=========================================================== */
 
-.active{
+.active-link{
 
-    background:rgba(1,58,110,.9);
-
-    border-bottom:3px solid #f4d1a7;
-
-    border-radius:4px;
-
-    padding:8px 14px !important;
+    color:var(--accent);
 
 }
 
-/* ==========================================
-   MOBILE TOGGLE
-========================================== */
+.active-link::after{
+
+    width:100% !important;
+
+    background:var(--accent) !important;
+
+}
+
+/* ===========================================================
+                  CONTACT BUTTON
+=========================================================== */
+
+.contact-button{
+
+    background:var(--accent) !important;
+
+    color:var(--primary) !important;
+
+    padding:12px 22px !important;
+
+    border-radius:10px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+}
+
+.contact-button .nav-icon{
+
+    color:var(--primary);
+
+}
+
+.contact-button:hover{
+
+    background:var(--secondary) !important;
+
+    color:white !important;
+
+    transform:translateY(-2px);
+
+}
+
+.contact-button:hover .nav-icon{
+
+    color:white;
+
+}
+
+.contact-button::after{
+
+    display:none;
+
+}
+
+/* ===========================================================
+                  MOBILE BUTTON
+=========================================================== */
 
 .menu-toggle{
 
@@ -192,125 +259,76 @@
 
     color:white;
 
-    font-size:2rem;
+    font-size:1.9rem;
 
     cursor:pointer;
 
-    z-index:1200;
-
 }
 
-/* ==========================================
-   LARGE DESKTOP
-========================================== */
 
-@media(max-width:1400px){
+
+/* ===========================================================
+                    TABLET
+=========================================================== */
+
+@media (max-width:1100px){
 
 .navbar{
 
-    padding:0 40px;
+    padding:0 5%;
 
 }
 
 .nav-links{
 
-    gap:30px;
+    gap:24px;
 
 }
 
-}
-
-/* ==========================================
-   LAPTOP
-========================================== */
-
-@media(max-width:1100px){
-
-.navbar{
-
-    padding:0 30px;
-
-}
-
-.logo h1{
-
-    font-size:2.2rem;
-
-}
-
-.logo p{
-
-    font-size:.8rem;
-
-    letter-spacing:5px;
-
-}
-
-.nav-links{
-
-    gap:22px;
-
-}
-
+.nav-links a,
 .nav-links button{
 
     font-size:.9rem;
 
 }
 
-}
+.navbar-logo{
 
-/* ==========================================
-   TABLET
-========================================== */
-
-@media(max-width:900px){
-
-.navbar{
-
-    height:80px;
-
-    padding:0 25px;
+    height:52px;
 
 }
 
-.logo h1{
+.contact-button{
 
-    font-size:2rem;
-
-}
-
-.logo p{
-
-    font-size:.72rem;
-
-    letter-spacing:4px;
-
-}
-
-.nav-links{
-
-    gap:18px;
-
-}
-
-.nav-links button{
-
-    font-size:.85rem;
+    padding:10px 18px !important;
 
 }
 
 }
 
-/* ==========================================
-   MOBILE
-========================================== */
+/* ===========================================================
+                  MOBILE NAVIGATION
+=========================================================== */
 
-@media(max-width:768px){
+@media (max-width:900px){
 
 .menu-toggle{
 
-    display:block;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:48px;
+
+    height:48px;
+
+}
+
+.menu-toggle:hover{
+
+    color:var(--accent);
 
 }
 
@@ -318,103 +336,252 @@
 
     position:fixed;
 
-    top:80px;
+    top:90px;
 
-    left:-100%;
+    left:0;
 
     width:100%;
 
-    background:#5B2C16;
+    background:rgba(21,21,21,.98);
+
+    backdrop-filter:blur(18px);
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 18px 45px rgba(0,0,0,.35);
 
     flex-direction:column;
 
-    justify-content:flex-start;
-
     align-items:center;
 
-    gap:30px;
+    justify-content:flex-start;
 
-    padding:40px 0;
+    gap:8px;
+
+    padding:25px 0;
+
+    transform:translateY(-120%);
+
+    opacity:0;
+
+    visibility:hidden;
 
     transition:.35s ease;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.2);
 
 }
 
 .show-menu{
 
-    left:0;
+    transform:translateY(0);
+
+    opacity:1;
+
+    visibility:visible;
 
 }
 
+.nav-links li{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.nav-links a,
+
 .nav-links button{
 
-    font-size:1.1rem;
+    width:88%;
+
+    justify-content:center;
+
+    padding:16px 0;
+
+    border-radius:12px;
+
+    font-size:1rem;
+
+}
+
+.nav-links a:hover,
+
+.nav-links button:hover{
+
+    background:rgba(255,255,255,.05);
 
 }
 
 .nav-links a::after,
+
 .nav-links button::after{
 
     display:none;
 
 }
 
-.active{
+.contact-button{
 
-    width:170px;
+    margin-top:10px;
+
+    width:88% !important;
+
+    justify-content:center;
 
 }
 
 }
 
-/* ==========================================
-   SMALL PHONES
-========================================== */
+/* ===========================================================
+                 SMALL PHONES
+=========================================================== */
 
-@media(max-width:480px){
+@media (max-width:600px){
 
 .navbar{
 
-    height:75px;
+    height:80px;
 
-    padding:0 18px;
-
-}
-
-.logo h1{
-
-    font-size:1.6rem;
+    padding:0 20px;
 
 }
 
-.logo p{
+.navbar-logo{
 
-    font-size:.6rem;
-
-    letter-spacing:3px;
+    height:46px;
 
 }
 
 .menu-toggle{
 
-    font-size:1.8rem;
+    font-size:1.6rem;
 
 }
 
 .nav-links{
 
-    top:75px;
-
-    gap:25px;
+    top:80px;
 
 }
+
+.nav-links a,
 
 .nav-links button{
 
-    font-size:1rem;
+    font-size:.95rem;
 
 }
+
+}
+
+/* ===========================================================
+               VERY SMALL DEVICES
+=========================================================== */
+
+@media (max-width:380px){
+
+.navbar{
+
+    padding:0 16px;
+
+}
+
+.navbar-logo{
+
+    height:42px;
+
+}
+
+.menu-toggle{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+.nav-links a,
+
+.nav-links button{
+
+    width:92%;
+
+    font-size:.9rem;
+
+}
+
+}
+
+/* ===========================================================
+                  SCROLL EFFECT
+=========================================================== */
+
+.navbar.scrolled{
+
+    background:rgba(10,10,10,.98);
+
+    box-shadow:0 12px 35px rgba(0,0,0,.25);
+
+}
+
+/* ===========================================================
+                    ANIMATIONS
+=========================================================== */
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.show-menu li{
+
+    animation:fadeDown .35s ease forwards;
+
+}
+
+.show-menu li:nth-child(1){
+
+    animation-delay:.05s;
+
+}
+
+.show-menu li:nth-child(2){
+
+    animation-delay:.1s;
+
+}
+
+.show-menu li:nth-child(3){
+
+    animation-delay:.15s;
+
+}
+
+.show-menu li:nth-child(4){
+
+    animation-delay:.2s;
+
+}
+
+.show-menu li:nth-child(5){
+
+    animation-delay:.25s;
 
 }

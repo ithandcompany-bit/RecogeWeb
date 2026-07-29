@@ -1,0 +1,58 @@
+/* ==========================================================
+                    RECOGE LTD DESIGN SYSTEM
+========================================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================================================
+                        COLORS
+========================================================== */
+
+:root{
+
+    /* Brand */
+
+    --primary:#0D1117;
+    --secondary:#C1121F;
+    --accent:#F4B400;
+
+    /* Backgrounds */
+
+    --white:#FFFFFF;
+    --light:#F8F9FA;
+    --section:#F3F5F7;
+
+    /* Text */
+
+    --heading:#111111;
+    --text:#5E6472;
+    --text-light:#E8E8E8;
+
+    /* Borders */
+
+    --border:#E6E8EB;
+
+    /* Glass */
+
+    --glass:rgba(13,17,23,.72);
+
+    /* Radius */
+
+    --radius-sm:12px;
+    --radius-md:18px;
+    --radius-lg:28px;
+
+    /* Shadows */
+
+    --shadow-sm:0 10px 25px rgba(0,0,0,.08);
+
+    --shadow-md:0 20px 45px rgba(0,0,0,.12);
+
+    --shadow-lg:0 30px 70px rgba(0,0,0,.18);
+
+    /* Transition */
+
+    --transition:.35s ease;
+
+}

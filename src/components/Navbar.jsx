@@ -1,5 +1,15 @@
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+
+import {
+    FaBars,
+    FaXmark,
+    FaHouse,
+    FaBuilding,
+    FaScrewdriverWrench,
+    FaHelmetSafety,
+    FaEnvelope
+} from "react-icons/fa6";
+
 import logo from "../assets/images/logo.png";
 
 import "../styles/navbar.css";
@@ -24,13 +34,27 @@ function Navbar({
 
         <nav className="navbar">
 
-            <div className="logo">
+            {/* Logo */}
 
-                <h1>RECOGE</h1>
+            <a
+                href="#hero"
+                className="navbar-logo-container"
+                onClick={closeMenu}
+            >
 
-                <p>CONSTRUCTION</p>
+                <img
 
-            </div>
+                    src={logo}
+
+                    alt="Recoge Ltd"
+
+                    className="navbar-logo"
+
+                />
+
+            </a>
+
+            {/* Mobile Button */}
 
             <button
 
@@ -38,13 +62,15 @@ function Navbar({
 
                 onClick={() => setMenuOpen(!menuOpen)}
 
+                aria-label="Toggle navigation"
+
             >
 
                 {
 
                     menuOpen ?
 
-                    <FaTimes />
+                    <FaXmark />
 
                     :
 
@@ -54,24 +80,25 @@ function Navbar({
 
             </button>
 
+            {/* Navigation */}
+
             <ul className={`nav-links ${menuOpen ? "show-menu" : ""}`}>
 
-                <li>
+               <li>
 
-                    <a
-                        href="#hero"
-                        onClick={closeMenu}
-                    >
+    <a
+        href="#hero"
+        className="active-link"
+        onClick={closeMenu}
+    >
 
-                        <button className="active">
+        <FaHouse className="nav-icon"/>
 
-                            Home
+        Home
 
-                        </button>
+    </a>
 
-                    </a>
-
-                </li>
+</li>
 
                 <li>
 
@@ -86,6 +113,8 @@ function Navbar({
                         }}
 
                     >
+
+                        <FaBuilding className="nav-icon"/>
 
                         About Us
 
@@ -107,6 +136,8 @@ function Navbar({
 
                     >
 
+                        <FaScrewdriverWrench className="nav-icon"/>
+
                         Services
 
                     </button>
@@ -116,15 +147,16 @@ function Navbar({
                 <li>
 
                     <a
+
                         href="#projects"
+
                         onClick={closeMenu}
+
                     >
 
-                        <button>
+                        <FaHelmetSafety className="nav-icon"/>
 
-                            Our Work
-
-                        </button>
+                        Our Work
 
                     </a>
 
@@ -133,6 +165,8 @@ function Navbar({
                 <li>
 
                     <button
+
+                        className="contact-button"
 
                         onClick={() => {
 
@@ -143,6 +177,8 @@ function Navbar({
                         }}
 
                     >
+
+                        <FaEnvelope className="nav-icon"/>
 
                         Contact Us
 

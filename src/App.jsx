@@ -42,7 +42,13 @@ function App(){
             openServices={() => setShowServices(true)}
             openContact={() => setShowContact(true)}
         />
-        <Hero/>
+       <Hero
+
+    openServices={() => setShowServices(true)}
+
+    openContact={() => setShowContact(true)}
+
+/>
          <main className="main-content">
             <AboutSection openAbout={() => setShowAbout(true)}/>
 

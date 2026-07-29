@@ -22,6 +22,20 @@
      
     --gold:#C88A3D;
 
+    --primary:#111111;
+
+    --secondary:#C81010;
+
+    --accent:#E5A000;
+
+    --background:#F8F8F8;
+
+    --surface:#FFFFFF;
+
+    --text:#222222;
+
+    --muted:#666666;
+
 }
 
 html{

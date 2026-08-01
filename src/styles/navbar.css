@@ -11,9 +11,7 @@
 
     width:100%;
 
-    height:90px;
-
-    padding:0 7%;
+    min-height:90px;
 
     display:flex;
 
@@ -21,17 +19,23 @@
 
     align-items:center;
 
-    background:rgba(20,20,20,.0);
+    padding:0 7%;
+
+    background:rgba(13,13,13,.08);
 
     backdrop-filter:blur(14px);
 
     border-bottom:1px solid rgba(255,255,255,.08);
 
+    transition:all .35s ease;
+
     z-index:1000;
 
-    transition:.35s ease;
-
 }
+
+/* ===========================================================
+                    NAVBAR OVERLAY
+=========================================================== */
 
 .nav-overlay{
 
@@ -44,28 +48,34 @@
 
     height:90px;
 
-    padding:0 7%;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.95),
+            rgba(13,13,13,.96)
+        );
 
-    background:linear-gradient(90deg,white,black);
+    z-index:1;
 
-    z-index: 1;
+    pointer-events:none;
+
+}
+
+/* ===========================================================
+                    SCROLL EFFECT
+=========================================================== */
+
+.navbar.scrolled{
+
+    background:rgba(13,13,13,.96);
+
+    box-shadow:0 12px 35px rgba(0,0,0,.22);
+
 }
 
 /* ===========================================================
                         LOGO
 =========================================================== */
-
-.navbar-logo{
-
-    height:50px;
-
-    width:auto;
-
-    border-radius: 50%;
-
-    object-fit:contain;
-
-}
 
 .navbar-logo-container{
 
@@ -74,6 +84,20 @@
     align-items:center;
 
     max-width:220px;
+
+    z-index:5;
+
+}
+
+.navbar-logo{
+
+    width:auto;
+
+    height:52px;
+
+    object-fit:contain;
+
+    transition:.35s;
 
 }
 
@@ -84,7 +108,7 @@
 }
 
 /* ===========================================================
-                     NAVIGATION
+                    NAVIGATION
 =========================================================== */
 
 .nav-links{
@@ -93,9 +117,7 @@
 
     align-items:center;
 
-    gap:34px;
-
-    list-style:none;
+    gap:28px;
 
 }
 
@@ -129,23 +151,21 @@
 
     font-weight:600;
 
-    cursor:pointer;
-
-    transition:.35s;
+    transition:all .3s ease;
 
 }
 
 /* ===========================================================
-                      ICONS
+                    ICONS
 =========================================================== */
 
 .nav-icon{
 
     color:var(--accent);
 
-    font-size:.95rem;
+    font-size:.92rem;
 
-    transition:.35s;
+    transition:.3s;
 
 }
 
@@ -154,6 +174,8 @@
 .nav-links button:hover{
 
     color:var(--accent);
+
+    transform:translateY(-2px);
 
 }
 
@@ -166,7 +188,7 @@
 }
 
 /* ===========================================================
-                     UNDERLINE
+                    UNDERLINE
 =========================================================== */
 
 .nav-links a::after,
@@ -200,7 +222,7 @@
 }
 
 /* ===========================================================
-                     ACTIVE
+                    ACTIVE LINK
 =========================================================== */
 
 .active-link{
@@ -218,22 +240,40 @@
 }
 
 /* ===========================================================
-                  CONTACT BUTTON
+                    CONTACT BUTTON
 =========================================================== */
 
 .contact-button{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:11px 18px !important;
 
     background:var(--accent) !important;
 
     color:var(--primary) !important;
 
-    padding:12px 22px !important;
-
-    border-radius:10px;
+    border-radius:var(--radius-md);
 
     box-shadow:var(--shadow-sm);
 
-    transition:.35s;
+    white-space:nowrap;
+
+    flex-shrink:0;
+
+    transition:all .35s ease;
+
+}
+
+.contact-button::after{
+
+    display:none;
 
 }
 
@@ -251,6 +291,8 @@
 
     transform:translateY(-2px);
 
+    box-shadow:var(--shadow-md);
+
 }
 
 .contact-button:hover .nav-icon{
@@ -259,90 +301,31 @@
 
 }
 
-.contact-button::after{
-
-    display:none;
-
-}
-
 /* ===========================================================
-                  MOBILE BUTTON
+                    MENU BUTTON
 =========================================================== */
 
 .menu-toggle{
 
     display:none;
-
-    background:none;
-
-    border:none;
-
-    color:white;
-
-    font-size:1.9rem;
-
-    cursor:pointer;
-
-}
-
-
-
-/* ===========================================================
-                    TABLET
-=========================================================== */
-
-@media (max-width:1100px){
-
-.navbar{
-
-    padding:0 5%;
-
-}
-
-.nav-links{
-
-    gap:24px;
-
-}
-
-.nav-links a,
-.nav-links button{
-
-    font-size:.9rem;
-
-}
-
-.navbar-logo{
-
-    height:52px;
-
-}
-
-.contact-button{
-
-    padding:10px 18px !important;
-
-}
-
-}
-
-/* ===========================================================
-                  MOBILE NAVIGATION
-=========================================================== */
-
-@media (max-width:900px){
-
-.menu-toggle{
-
-    display:flex;
-
-    align-items:center;
 
     justify-content:center;
+
+    align-items:center;
 
     width:48px;
 
     height:48px;
+
+    background:none;
+
+    color:white;
+
+    border:none;
+
+    font-size:1.8rem;
+
+    transition:.3s;
 
 }
 
@@ -352,23 +335,91 @@
 
 }
 
+/* ===========================================================
+                    TABLETS
+=========================================================== */
+
+@media(max-width:1150px){
+
+.navbar{
+
+    padding:0 5%;
+
+}
+
+.nav-links{
+
+    gap:20px;
+
+}
+
+.nav-links a,
+
+.nav-links button{
+
+    font-size:.92rem;
+
+}
+
+.contact-button{
+
+    padding:10px 16px !important;
+
+}
+
+.navbar-logo{
+
+    height:48px;
+
+}
+
+}
+
+/* ===========================================================
+                  MOBILE NAVIGATION
+=========================================================== */
+
+@media(max-width:900px){
+
+.navbar{
+
+    min-height:80px;
+
+    padding:0 24px;
+
+}
+
+.nav-overlay{
+
+    height:80px;
+
+}
+
+.menu-toggle{
+
+    display:flex;
+
+}
+
 .nav-links{
 
     position:fixed;
 
-    top:90px;
+    top:80px;
 
     left:0;
 
     width:100%;
 
-    background:rgba(21,21,21,.98);
+    background:rgba(13,13,13,.98);
 
     backdrop-filter:blur(18px);
 
     border-top:1px solid rgba(255,255,255,.08);
 
     box-shadow:0 18px 45px rgba(0,0,0,.35);
+
+    display:flex;
 
     flex-direction:column;
 
@@ -378,25 +429,35 @@
 
     gap:8px;
 
-    padding:25px 0;
+    padding:28px 0;
 
-    transform:translateY(-120%);
+    transform:translateY(-20px);
 
     opacity:0;
 
     visibility:hidden;
 
-    transition:.35s ease;
+    pointer-events:none;
+
+    transition:
+
+        opacity .35s ease,
+
+        transform .35s ease,
+
+        visibility .35s;
 
 }
 
 .show-menu{
 
-    transform:translateY(0);
-
     opacity:1;
 
     visibility:visible;
+
+    pointer-events:auto;
+
+    transform:translateY(0);
 
 }
 
@@ -414,13 +475,13 @@
 
 .nav-links button{
 
-    width:88%;
+    width:90%;
 
     justify-content:center;
 
-    padding:16px 0;
+    padding:16px 20px;
 
-    border-radius:12px;
+    border-radius:14px;
 
     font-size:1rem;
 
@@ -430,7 +491,7 @@
 
 .nav-links button:hover{
 
-    background:rgba(255,255,255,.05);
+    background:rgba(255,255,255,.06);
 
 }
 
@@ -444,37 +505,48 @@
 
 .contact-button{
 
-    margin-top:10px;
+    width:90%;
 
-    width:88% !important;
+    margin-top:12px;
 
-    justify-content:center;
+    padding:15px 20px !important;
+
+}
 
 }
 
-}
 
 /* ===========================================================
-                 SMALL PHONES
+                    SMALL PHONES
 =========================================================== */
 
-@media (max-width:600px){
+@media(max-width:600px){
 
 .navbar{
 
-    height:80px;
+    min-height:74px;
 
-    padding:0 20px;
+    padding:0 18px;
+
+}
+
+.nav-overlay{
+
+    height:74px;
 
 }
 
 .navbar-logo{
 
-    height:46px;
+    height:44px;
 
 }
 
 .menu-toggle{
+
+    width:44px;
+
+    height:44px;
 
     font-size:1.6rem;
 
@@ -482,7 +554,9 @@
 
 .nav-links{
 
-    top:80px;
+    top:74px;
+
+    padding:24px 0;
 
 }
 
@@ -492,33 +566,38 @@
 
     font-size:.95rem;
 
+    padding:15px 18px;
+
 }
 
 }
+
 
 /* ===========================================================
-               VERY SMALL DEVICES
+                VERY SMALL DEVICES
 =========================================================== */
 
-@media (max-width:380px){
+@media(max-width:380px){
 
 .navbar{
 
-    padding:0 16px;
+    padding:0 14px;
 
 }
 
 .navbar-logo{
 
-    height:42px;
+    height:40px;
 
 }
 
 .menu-toggle{
 
-    width:42px;
+    width:40px;
 
-    height:42px;
+    height:40px;
+
+    font-size:1.4rem;
 
 }
 
@@ -526,25 +605,22 @@
 
 .nav-links button{
 
-    width:92%;
+    width:94%;
 
     font-size:.9rem;
 
+    padding:14px;
+
+}
+
+.contact-button{
+
+    width:94%;
+
 }
 
 }
 
-/* ===========================================================
-                  SCROLL EFFECT
-=========================================================== */
-
-.navbar.scrolled{
-
-    background:rgba(10,10,10,.98);
-
-    box-shadow:0 12px 35px rgba(0,0,0,.25);
-
-}
 
 /* ===========================================================
                     ANIMATIONS
@@ -552,25 +628,27 @@
 
 @keyframes fadeDown{
 
-    from{
+from{
 
-        opacity:0;
+    opacity:0;
 
-        transform:translateY(-20px);
+    transform:translateY(-18px);
 
-    }
+}
 
-    to{
+to{
 
-        opacity:1;
+    opacity:1;
 
-        transform:translateY(0);
+    transform:translateY(0);
 
-    }
+}
 
 }
 
 .show-menu li{
+
+    opacity:0;
 
     animation:fadeDown .35s ease forwards;
 

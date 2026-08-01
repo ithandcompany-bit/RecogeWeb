@@ -10,6 +10,8 @@ import {
     FaClock
 } from "react-icons/fa";
 
+import logo from "../assets/images/logo.png";
+
 function Footer({
     openAbout,
     openServices,
@@ -32,7 +34,7 @@ function Footer({
     <div className="footer-logo-wrapper">
 
         <img
-            src="/src/assets/images/logo.png"
+            src={logo}
             alt="Recoge Logo"
             className="footer-logo"
         />

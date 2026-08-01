@@ -11,7 +11,9 @@ import SectionTitle from "./SectionTitle"
 
 import "../styles/workSection.css";
 
-function ProjectsSection() {
+function ProjectsSection( openContact,
+
+    openServices) {
 
     const [selectedProject, setSelectedProject] = useState(null);
     const [selectedResearch, setSelectedResearch] = useState(null);
@@ -127,13 +129,15 @@ function ProjectsSection() {
 
                     <ProjectModal
 
-                        project={selectedProject}
+    project={selectedProject}
 
-                        close={() =>
-                            setSelectedProject(null)
-                        }
+    close={() => setSelectedProject(null)}
 
-                    />
+    openContact={openContact}
+
+    openServices={openServices}
+
+/>
 
                 )
 

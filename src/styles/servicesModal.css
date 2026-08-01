@@ -1,243 +1,385 @@
-/* ===========================
-   SERVICES POPUP
-=========================== */
+/* =====================================================
+                    SERVICES MODAL
+===================================================== */
 
 .services-popup{
 
-    background-color:var(--cream);
+    background:#F5F5F5;
 
-    background-image:
-
-    radial-gradient(
-        rgba(120,90,50,.03) 1px,
-        transparent 1px
-    );
-
-    background-size:6px 6px;
-
-    padding-bottom: 30px;
-
-    padding-left: 30px;
-    padding-right: 30px;
+    padding:40px;
 
 }
 
-/* ===========================
-   TITLE
-=========================== */
+/* =====================================================
+                    HEADER
+===================================================== */
 
-.services-popup-title{
+.services-popup-header{
 
     text-align:center;
 
+    max-width:900px;
+
+    margin:0 auto 50px;
+
+}
+
+.services-popup-header h1{
+
+    color:#0D0D0D;
+
     font-size:2.6rem;
 
-   color:#6a2c12;
+    font-weight:700;
 
-    margin-bottom:25px;
-
-    padding-bottom:18px;
-
-    border-bottom:2px solid #d9c6b6;
+    margin-bottom:20px;
 
 }
 
-/* ===========================
-   SERVICES LIST
-=========================== */
+.services-popup-header p{
 
-.services-popup-list{
+    color:#666;
 
-    display:flex;
+    font-size:1.08rem;
 
-    flex-direction:column;
+    line-height:1.9;
 
 }
 
-/* ===========================
-   SINGLE SERVICE
-=========================== */
+.services-popup-header::after{
 
-.services-popup-item{
+    content:"";
+
+    display:block;
+
+    width:120px;
+
+    height:4px;
+
+    background:#F4B400;
+
+    border-radius:50px;
+
+    margin:30px auto 0;
+
+}
+
+/* =====================================================
+                    GRID
+===================================================== */
+
+.services-grid{
 
     display:grid;
 
-    grid-template-columns:240px 1fr;
+    grid-template-columns:repeat(3,1fr);
 
-    gap:22px;
-
-    align-items:center;
-
-    padding:14px 0;
-
-    border-bottom:2px solid #e3d5c8;
+    gap:35px;
 
 }
 
-/* ===========================
-   IMAGE
-=========================== */
+/* =====================================================
+                    CARD
+===================================================== */
 
-.services-popup-image{
+.service-card{
 
-    width:220px;
+    background:#FFFFFF;
 
-    height:120px;
+    border-radius:20px;
 
-    object-fit:cover;
+    overflow:hidden;
 
-    border:1px solid #d5c3b2;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
 
-}
-
-/* ===========================
-   CONTENT
-=========================== */
-
-.services-popup-content{
+    transition:.35s;
 
     display:flex;
 
     flex-direction:column;
 
-    justify-content:center;
+    border-top:5px solid #F4B400;
 
 }
 
-.services-popup-content h2{
+.service-card:hover{
 
-    color:var(--brown);
+    transform:translateY(-8px);
 
-    font-size:2rem;
+    box-shadow:0 20px 45px rgba(0,0,0,.16);
 
-    margin-bottom:12px;
-
-    padding-bottom:10px;
-
-    border-bottom:1px solid #ded0c2;
+    border-top-color:#C8102E;
 
 }
 
-.services-popup-content p{
+/* =====================================================
+                    IMAGE
+===================================================== */
 
-    color:#2d2d2d;
+.service-image{
 
-    font-size:1.35rem;
+    width:100%;
 
-    line-height:1.5;
+    height:230px;
+
+    object-fit:cover;
+
+    transition:.45s;
 
 }
 
-/* ===========================
-   BUTTONS
-=========================== */
+.service-card:hover .service-image{
 
-.services-popup-buttons{
+    transform:scale(1.08);
+
+}
+
+/* =====================================================
+                    CONTENT
+===================================================== */
+
+.service-content{
+
+    padding:28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+/* =====================================================
+                    TITLE
+===================================================== */
+
+.service-heading{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    margin-bottom:18px;
+
+}
+
+.service-heading h2{
+
+    color:#0D0D0D;
+
+    font-size:1.25rem;
+
+    font-weight:700;
+
+    line-height:1.4;
+
+}
+
+/* =====================================================
+                    ICON
+===================================================== */
+
+.service-icon{
+
+    width:56px;
+
+    height:56px;
+
+    min-width:56px;
 
     display:flex;
 
     justify-content:center;
 
-    gap:30px;
+    align-items:center;
 
-    margin-top:35px;
+    background:#0D0D0D;
 
-    padding-top:20px;
+    color:#F4B400;
 
-    border-top:2px solid #d9c6b6;
+    border:2px solid #F4B400;
+
+    border-radius:14px;
+
+    font-size:1.3rem;
+
+    transition:.35s;
 
 }
 
-/* ===========================
-   BUTTONS
-=========================== */
+.service-card:hover .service-icon{
 
-.services-popup-quote,
-.services-popup-contact{
+    background:#F4B400;
 
-    width:320px;
+    color:#0D0D0D;
 
-    padding:18px 0;
+}
 
-    font-size:1.45rem;
+/* =====================================================
+                    DESCRIPTION
+===================================================== */
 
-    font-weight:600;
+.service-content p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:.97rem;
+
+}
+
+/* =====================================================
+                    FOOTER
+===================================================== */
+
+.services-footer{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    margin-top:50px;
+
+}
+
+/* =====================================================
+                    BUTTONS
+===================================================== */
+
+.quote-button,
+.contact-button{
+
+    width:250px;
+
+    height:52px;
+
+    border:1px solid #0D0D0D;
+
+    border-radius:10px;
 
     color:white;
 
+    font-size:1rem;
+
     cursor:pointer;
+
+    transition:.3s;
+
+}
+
+/* Primary Button */
+
+.quote-button{
+
+      background:#C8102E;
+
+    color:#FFFFFF;
 
     border:none;
 
-    transition:.25s;
+    padding:16px 34px;
 
-    box-shadow:
-        inset 0 1px rgba(255,255,255,.25),
-        0 5px 10px rgba(0,0,0,.18);
+    border-radius:10px;
 
-}
+    font-size:1rem;
 
-/* LEFT BUTTON */
+    font-weight:600;
 
-.services-popup-quote{
+    cursor:pointer;
 
-    background:
-    linear-gradient(
-        to bottom,
-        #b45a18,
-        #8a3907
-    );
+    transition:.35s;
 
 }
 
-/* RIGHT BUTTON */
+.quote-button:hover{
 
-.services-popup-contact{
+    background:#A40D24;
 
-    background:
-    linear-gradient(
-        to bottom,
-        #6a2c12,
-        #431707
-    );
+    transform:translateY(-4px);
 
 }
 
-.services-popup-quote:hover{
+/* Secondary Button */
 
-    background:#8d3e09;
-     transform:translateY(-2px);
+.contact-button{
+
+    background:transparent;
+
+    color:#FFFFFF;
+
+    border:2px solid #F4B400;
+
+    padding:16px 34px;
+
+    border-radius:10px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
 
 }
 
-.services-popup-contact:hover{
+.contact-button:hover{
 
-    background:#3b1708;
-    transform:translateY(-2px);
+  background:#F4B400;
+
+    color:#0D0D0D;
+
+    transform:translateY(-4px);
 
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
+/* =====================================================
+                    RESPONSIVE
+===================================================== */
 
-@media(max-width:900px){
+@media(max-width:1100px){
 
-.services-popup-item{
+.services-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.services-popup{
+
+    padding:25px;
+
+}
+
+.services-popup-header h1{
+
+    font-size:2rem;
+
+}
+
+.services-grid{
 
     grid-template-columns:1fr;
 
 }
 
-.services-popup-image{
+.service-image{
 
-    width:100%;
-
-    height:220px;
+    height:240px;
 
 }
 
-.services-popup-buttons{
+.services-footer{
 
     flex-direction:column;
 
@@ -245,11 +387,63 @@
 
 }
 
-.services-popup-quote,
+.quote-button,
 
-.services-popup-contact{
+.contact-button{
 
     width:100%;
+
+    max-width:350px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.services-popup{
+
+    padding:18px;
+
+}
+
+.services-popup-header h1{
+
+    font-size:1.6rem;
+
+}
+
+.services-popup-header p{
+
+    font-size:.95rem;
+
+}
+
+.service-content{
+
+    padding:22px;
+
+}
+
+.service-heading{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+}
+
+.service-heading h2{
+
+    font-size:1.1rem;
+
+}
+
+.service-image{
+
+    height:210px;
 
 }
 

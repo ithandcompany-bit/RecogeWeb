@@ -4,7 +4,7 @@ import {
     FaArrowRight,
     FaPhone,
     FaBuilding,
-    FaDraftingCompass,
+    // FaDraftingCompass,
     FaShieldHalved,
     FaLocationDot
 } from "react-icons/fa6";
@@ -15,14 +15,7 @@ function Hero({ openServices, openContact }) {
 
         <section className="hero" id="hero">
 
-            <img
-                src="/src/assets/images/hero-site.jpg"
-                alt="Recoge Ltd Project"
-                className="hero-bg"
-            />
-
-            <div className="hero-overlay"></div>
-
+           
             <div className="hero-content">
 
                 <span className="hero-top">
@@ -46,11 +39,6 @@ function Hero({ openServices, openContact }) {
                     Engineering, Architectural and Construction Consultancy
                     delivering innovative, sustainable and reliable
                     solutions across Rwanda.
-
-                    <br /><br />
-
-                    Wherever your project is,
-                    our team is ready to reach you.
 
                 </p>
 
@@ -82,74 +70,49 @@ function Hero({ openServices, openContact }) {
 
             </div>
 
-            <div className="hero-stats">
+            <div className="hero-panel">
 
-                <div
-                    className="hero-stat"
-                    onClick={openServices}
-                >
+    <div className="hero-panel-item">
 
-                    <FaBuilding/>
+        <FaBuilding />
 
-                    <div>
+        <span>Engineering</span>
 
-                        <h3>Engineering</h3>
+    </div>
 
-                        <p>Civil & Structural</p>
+    <div className="hero-divider"></div>
 
-                    </div>
+    <div className="hero-panel-item">
 
-                </div>
+        {/* Replace with FaDraftingCompass when ready */}
 
-                <div
-                    className="hero-stat"
-                    onClick={openServices}
-                >
+        <FaBuilding />
 
-                    <FaDraftingCompass/>
+        <span>Architecture</span>
 
-                    <div>
+    </div>
 
-                        <h3>Architecture</h3>
+    <div className="hero-divider"></div>
 
-                        <p>Planning & Design</p>
+    <div className="hero-panel-item">
 
-                    </div>
+        <FaShieldHalved />
 
-                </div>
+        <span>Quality</span>
 
-                <div
-                    className="hero-stat"
-                    onClick={openServices}
-                >
+    </div>
 
-                    <FaShieldHalved/>
+    <div className="hero-divider"></div>
 
-                    <div>
+    <div className="hero-panel-item">
 
-                        <h3>Quality</h3>
+        <FaLocationDot />
 
-                        <p>Safety First</p>
+        <span>Rwanda</span>
 
-                    </div>
+    </div>
 
-                </div>
-
-                <div className="hero-stat">
-
-                    <FaLocationDot/>
-
-                    <div>
-
-                        <h3>Nationwide</h3>
-
-                        <p>Serving all Rwanda</p>
-
-                    </div>
-
-                </div>
-
-            </div>
+</div>
 
         </section>
 

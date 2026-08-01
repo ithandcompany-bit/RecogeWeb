@@ -1,108 +1,173 @@
-/* Main container */
+/*==================================
+        SECTION HEADER
+==================================*/
 
-.main-content {
+.about-services-section{
 
-    display: grid;
+    width:min(1280px,92%);
 
-    grid-template-columns: 1fr 1fr;
-
-    gap: 40px;
-
-    padding: 80px;
+    margin:120px auto;
 
 }
 
+.section-heading{
 
+    text-align:center;
 
-/* Shared card style */
-
-.about-card,
-.services-card {
-
-    background-color: #faf7f2;
-
-    border: 1px solid #d9d1c8;
-
-    padding: 30px;
-
-    border-radius: 10px;
-
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-
-    transition: transform .3s ease;
+    margin-bottom:70px;
 
 }
 
+.section-heading span{
 
-.about-card:hover,
-.services-card:hover {
+    color:var(--secondary);
 
-    transform: translateY(-6px);
+    font-weight:700;
 
-}
+    letter-spacing:2px;
 
+    font-size:.85rem;
 
-
-/* About */
-
-.about-card {
-
-    height: 350px;
+    text-transform:uppercase;
 
 }
 
+.section-heading h2{
 
+    margin:18px 0;
 
-.about-card h2,
-.services-card h2 {
+    font-size:clamp(2rem,5vw,3rem);
 
-    color:#5a2305;
-
-    font-size:2rem;
-
-    margin-bottom:15px;
+    color:var(--heading);
 
 }
 
+.section-heading p{
 
+    max-width:720px;
 
-.about-card hr,
-.services-card hr {
-
-    border:none;
-
-    height:1px;
-
-    background-color:#d9d1c8;
-
-    margin-bottom:25px;
-
-}
-
-
-
-.about-card p {
-
-    font-size:1.2rem;
+    margin:auto;
 
     line-height:1.8;
 
-    color:#444;
+    color:var(--text);
 
-    margin-bottom:40px;
+}
+
+.section-heading::after{
+
+    content:"";
+
+    width:90px;
+
+    height:2px;
+
+    background:var(--secondary);
+
+    display:block;
+
+    margin:25px auto 0;
+
+    border-radius:20px;
 
 }
 
 
 
-/* Services */
+/*=====================================================
+            ABOUT + SERVICES
+=====================================================*/
 
+.main-content{
 
-.services-card ul {
+    width:min(1280px,92%);
+
+    margin:120px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+}
+
+/*========================*/
+
+.about-card,
+.services-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:45px;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+    border:1px solid rgba(0,0,0,.06);
+
+}
+
+.about-card:hover,
+.services-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+/*========================*/
+
+.about-card h2,
+.services-card h2{
+
+    font-size:2.2rem;
+
+    color:var(--heading);
+
+    margin-bottom:18px;
+
+}
+
+/*========================*/
+
+.section-line{
+
+    width:80px;
+
+    height:2px;
+
+    background:var(--secondary);
+
+    border-radius:10px;
+
+    margin-bottom:30px;
+
+}
+
+/*========================*/
+
+.about-card p{
+
+    color:var(--text);
+
+    line-height:1.9;
+
+    font-size:1.08rem;
+
+    margin-bottom:45px;
+
+}
+
+/*========================*/
+
+.services-card ul{
 
     list-style:none;
-
-    padding:0;
 
     display:flex;
 
@@ -110,196 +175,146 @@
 
     gap:18px;
 
+    margin-bottom:40px;
+
 }
 
-
-
-.services-card li {
-
-    font-size:1.1rem;
-
-    color:#5a2305;
-
-    font-weight:600;
+.services-card li{
 
     display:flex;
 
     align-items:center;
 
-    gap:12px;
-
-}
-
-
-
-.icon-item {
-
-    font-size:1.3rem;
-
-    color:#6b2600;
-
-}
-
-
-
-/* Buttons */
-
-
-.about-card button,
-.services-card button {
-
-    background-color:#6b2600;
-
-    color:white;
-
-    border:none;
-
-    padding:12px 30px;
+    gap:16px;
 
     font-size:1rem;
 
-    cursor:pointer;
+    color:var(--text);
 
     transition:.3s;
 
 }
 
+.services-card li:hover{
 
+    transform:translateX(8px);
 
-.service-button {
-
-    margin-top:20px;
+    color:var(--primary);
 
 }
 
+.services-card svg{
 
+    width:42px;
+
+    height:42px;
+
+    padding:10px;
+
+    border-radius:12px;
+
+    background:#FFF8E6;
+
+    color:var(--accent);
+
+    flex-shrink:0;
+
+}
+
+/*========================*/
+
+.about-card button,
+.services-card button{
+
+    padding:16px 32px;
+
+    background:var(--accent);
+
+    color:#111;
+
+    border:none;
+
+    border-radius:14px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
 
 .about-card button:hover,
-.services-card button:hover {
+.services-card button:hover{
 
-    background-color:#8c3600;
+    transform:translateY(-4px);
 
-    transform:translateY(-3px);
-
-}
-
-
-
-/* ======================= */
-/* RESPONSIVENESS           */
-/* ======================= */
-
-
-/* Tablets */
-
-@media(max-width:900px){
-
-
-    .main-content {
-
-        grid-template-columns:1fr;
-
-        padding:50px;
-
-        gap:30px;
-
-    }
-
-
-
-    .about-card {
-
-        height:auto;
-
-    }
-
+    background:#ffd54f;
 
 }
 
+/*========================*/
 
+@media(max-width:992px){
 
-/* Mobile */
+.main-content{
+
+    grid-template-columns:1fr;
+
+}
+
+.about-card,
+.services-card{
+
+    padding:35px;
+
+}
+
+}
+
+/*========================*/
 
 @media(max-width:600px){
 
+.main-content{
 
-    .main-content {
-
-        padding:25px 20px;
-
-    }
-
-
-
-    .about-card,
-    .services-card {
-
-        padding:25px;
-
-    }
-
-
-
-    .about-card h2,
-    .services-card h2 {
-
-        font-size:1.6rem;
-
-    }
-
-
-
-    .about-card p {
-
-        font-size:1rem;
-
-        line-height:1.6;
-
-    }
-
-
-
-    .services-card li {
-
-        font-size:.95rem;
-
-    }
-
-
-
-    .about-card button,
-    .services-card button {
-
-        width:100%;
-
-        padding:12px;
-
-    }
-
+    margin:80px auto;
 
 }
 
+.about-card,
+.services-card{
 
+    padding:25px;
 
-/* Small phones */
+}
 
-@media(max-width:400px){
+.about-card h2,
+.services-card h2{
 
+    font-size:1.8rem;
 
-    .about-card,
-    .services-card {
+}
 
-        padding:20px;
+.about-card button,
+.services-card button{
 
-    }
+    width:100%;
 
+}
 
+.services-card li{
 
-    .about-card h2,
-    .services-card h2 {
+    font-size:.95rem;
 
-        font-size:1.4rem;
+}
 
-    }
+.services-card svg{
+
+    width:38px;
+
+    height:38px;
+
+}
 
 }

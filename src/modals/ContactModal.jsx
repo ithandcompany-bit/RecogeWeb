@@ -2,59 +2,87 @@ import Modal from "../components/Modal";
 import "../styles/contactModal.css";
 
 import {
-    FaPhone,
-    FaWhatsapp,
-    FaLinkedin,
-    FaLocationDot
-} from "react-icons/fa6";
+    FaPhoneAlt,
+    FaEnvelope,
+    FaMapMarkerAlt,
+    FaClock,
+    FaPaperPlane
+} from "react-icons/fa";
 
 function ContactModal({ close }) {
 
     return (
 
-        <Modal close={close} title="Get In Touch With Us">
+        <Modal
+            close={close}
+            title="Start Your Project With RECOGE"
+        >
 
             <div className="contact-popup">
 
-            
-                <div className="contact-popup-divider"></div>
+                <div className="contact-hero">
+
+                    <h2>
+
+    Let's Build Rwanda's Future Together
+
+</h2>
+
+<p>
+
+    RECOGE Engineering & Consultancy provides
+    multidisciplinary engineering, geotechnical
+    investigations, architectural design,
+    environmental studies and construction
+    consultancy across Rwanda. Our experienced
+    professionals are ready to support your
+    project from planning through completion.
+
+</p>
+
+                </div>
 
                 <div className="contact-popup-content">
 
-                    {/* LEFT SIDE */}
+                    {/* LEFT */}
 
                     <div className="contact-left">
 
-                        <h2>
-
-                            Contact Information
-
-                        </h2>
-
-                        <p className="contact-intro">
-
-                            We'd love to hear about your project.
-                            Reach us through any of the channels below.
-
-                        </p>
-
-                        <div className="contact-line"></div>
-
                         <div className="contact-card">
 
-                            <FaPhone className="contact-icon"/>
+                            <div className="contact-icon">
+
+                                <FaPhoneAlt/>
+
+                            </div>
 
                             <div>
 
-                                <h3>
+                                <h3>Phone</h3>
 
-                                    Phone
+                                <p>(+250) 790 288 833</p>
+                                <p>(+250) 785 445 075</p>
+                                <p>(+250) 788 263 543</p>
 
-                                </h3>
+                            </div>
+
+                        </div>
+
+                        <div className="contact-card">
+
+                            <div className="contact-icon">
+
+                                <FaEnvelope/>
+
+                            </div>
+
+                            <div>
+
+                                <h3>Email</h3>
 
                                 <p>
 
-                                    +250 788 123 456
+                                   recogeltd@gmail.com
 
                                 </p>
 
@@ -62,83 +90,50 @@ function ContactModal({ close }) {
 
                         </div>
 
-                        <div className="contact-line"></div>
-
                         <div className="contact-card">
 
-                            <FaWhatsapp className="contact-icon"/>
+                            <div className="contact-icon">
 
-                            <div>
-
-                                <h3>
-
-                                    WhatsApp
-
-                                </h3>
-
-                                <a
-                                    href="https://wa.me/250788123456"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-
-                                    Start Conversation
-
-                                </a>
+                                <FaMapMarkerAlt/>
 
                             </div>
 
-                        </div>
-
-                        <div className="contact-line"></div>
-
-                        <div className="contact-card">
-
-                            <FaLinkedin className="contact-icon"/>
-
                             <div>
 
-                                <h3>
-
-                                    LinkedIn
-
-                                </h3>
-
-                                <a
-                                    href="#"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-
-                                    Visit our Company Page
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                        <div className="contact-line"></div>
-
-                        <div className="contact-card">
-
-                            <FaLocationDot className="contact-icon"/>
-
-                            <div>
-
-                                <h3>
-
-                                    Office Location
-
-                                </h3>
+                                <h3>Office</h3>
 
                                 <p>
 
-                                    KG 7 Avenue<br/>
+                                  KN 5 Rd<br/>
 
-                                    Nyarutarama<br/>
+            Kicukiro Center<br/>
 
-                                    Kigali, Rwanda
+            Kigali, Rwanda
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div className="contact-card">
+
+                            <div className="contact-icon">
+
+                                <FaClock/>
+
+                            </div>
+
+                            <div>
+
+                                <h3>Working Hours</h3>
+
+                                <p>
+
+                                    Monday - Friday
+
+                                    <br/>
+
+                                    8:00 AM – 5:00 PM
 
                                 </p>
 
@@ -152,21 +147,21 @@ function ContactModal({ close }) {
 
                                 className="contact-map"
 
-                                title="Location"
+                                title="RECOGE Location"
 
                                 loading="lazy"
 
                                 allowFullScreen
 
-                                src="https://www.google.com/maps?q=Kigali,Rwanda&output=embed"
+                                src="https://www.google.com/maps?q=KN+5+Rd,+Kicukiro+Center,+Kigali,+Rwanda&output=embed"
 
-                            ></iframe>
+                            />
 
                         </div>
 
                     </div>
 
-                    {/* RIGHT SIDE */}
+                    {/* RIGHT */}
 
                     <div className="contact-right">
 
@@ -176,41 +171,54 @@ function ContactModal({ close }) {
 
                         </h2>
 
-                        <p className="contact-intro">
+                        <p>
 
-                            Complete the form below and we'll
-                            get back to you shortly.
+                            Fill in the form below and our team
+                            will contact you as soon as possible.
 
                         </p>
-
-                        <div className="contact-line"></div>
 
                         <form className="contact-form">
 
                             <input
+
                                 type="text"
+
                                 placeholder="Your Name"
+
                             />
 
                             <input
+
                                 type="email"
+
                                 placeholder="Email Address"
+
                             />
 
                             <input
+
                                 type="text"
+
                                 placeholder="Subject"
+
                             />
 
                             <textarea
-                                rows="7"
-                                placeholder="Write your message..."
+
+                                placeholder="Tell us about your project..."
+
                             ></textarea>
 
                             <button
+
                                 type="submit"
-                                className="popup-button popup-primary"
+
+                                className="contact-submit"
+
                             >
+
+                                <FaPaperPlane/>
 
                                 Send Message
 

@@ -1,80 +1,207 @@
-/* ======================================================
-   ABOUT POPUP
-====================================================== */
+/* =====================================================
+                ABOUT MODAL
+===================================================== */
 
 .about-popup{
-    width:100%;
-    background:#f7f4ef;
-}
-
-
-/* ======================================================
-   HEADER
-====================================================== */
-
-
-
-
-/* ======================================================
-   HERO IMAGE
-====================================================== */
-
-.about-popup-image-wrapper{
 
     width:100%;
+
+    background:#F5F5F5;
+
+    padding-bottom:60px;
 
 }
 
-.about-popup-image{
+/* =====================================================
+                HERO
+===================================================== */
+
+.about-hero{
+
+    position:relative;
 
     width:100%;
 
-    height:330px;
+    height:380px;
 
-    display:block;
+    overflow:hidden;
+
+}
+
+.about-hero-image{
+
+    width:100%;
+
+    height:100%;
 
     object-fit:cover;
 
 }
 
+.about-hero-overlay{
 
-/* ======================================================
-   CONTENT
-====================================================== */
+    position:absolute;
 
-.about-popup-section{
+    inset:0;
 
-    padding:45px 55px;
+    background:
+    linear-gradient(
+        rgba(13,13,13,.35),
+        rgba(13,13,13,.75)
+    );
 
-}
+    display:flex;
 
-.about-popup-heading{
+    flex-direction:column;
 
-    margin:0;
+    justify-content:center;
 
-    color:#4d2412;
+    align-items:center;
 
-    font-size:1.45rem;
+    text-align:center;
 
-    font-weight:600;
-
-}
-
-.about-popup-divider{
-
-    width:100%;
-
-    height:1px;
-
-    background:#d7d7d7;
-
-    margin:18px 0 28px;
+    padding:40px;
 
 }
 
-.about-popup-text{
+.about-hero-overlay h1{
 
-    color:#555;
+    color:white;
+
+    font-size:3rem;
+
+    margin-bottom:18px;
+
+    font-weight:700;
+
+}
+
+.about-hero-overlay p{
+
+    color:#F4F4F4;
+
+    max-width:750px;
+
+    line-height:1.8;
+
+    font-size:1.08rem;
+
+}
+
+.about-hero-overlay::after{
+
+    content:"";
+
+    width:120px;
+
+    height:5px;
+
+    background:#F4B400;
+
+    margin-top:25px;
+
+    border-radius:50px;
+
+}
+
+/* =====================================================
+                SECTION CARD
+===================================================== */
+
+.about-card{
+
+    background:white;
+
+    margin:35px;
+
+    padding:45px;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.about-card:hover .section-title svg{
+
+    background:#F4B400;
+
+    color:#0D0D0D;
+
+    transform:rotate(-8deg) scale(1.08);
+
+}
+
+/* =====================================================
+                HEADINGS
+===================================================== */
+
+.section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.section-title svg{
+
+    width:52px;
+
+    height:52px;
+
+    padding:14px;
+
+    background:#0D0D0D;
+
+    color:#F4B400;
+
+    border:2px solid #F4B400;
+
+    border-radius:14px;
+
+    flex-shrink:0;
+
+    transition:.35s;
+
+}
+
+.section-title h2{
+
+    color:#0D0D0D;
+
+    font-size:1.7rem;
+
+    font-weight:700;
+
+}
+
+.section-divider{
+
+    width:90px;
+
+    height:4px;
+
+    background:#F4B400;
+
+    border-radius:50px;
+
+    margin:20px 0 30px;
+
+}
+
+/* =====================================================
+                PARAGRAPH
+===================================================== */
+
+.about-card p{
+
+    color:#5A5A5A;
 
     line-height:1.9;
 
@@ -82,45 +209,157 @@
 
 }
 
+/* =====================================================
+                VALUES & EXPERTISE
+===================================================== */
 
-/* ======================================================
-   TWO COLUMNS
-====================================================== */
-
-.about-popup-two-columns{
+.two-column-grid{
 
     display:grid;
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:60px;
+    gap:22px;
 
 }
 
-.about-popup-list{
+.list-card{
 
-    margin:0;
+    display:flex;
 
-    padding-left:20px;
+    align-items:center;
+
+    gap:15px;
+
+    background:#FAFAFA;
+
+    padding:20px;
+
+    border-radius:16px;
+
+    border-left:5px solid #F4B400;
+
+    transition:.35s;
 
 }
 
-.about-popup-list li{
+.list-card:hover{
 
-    color:#555;
+    transform:translateX(8px);
 
-    line-height:2;
+    border-left-color:#C8102E;
 
-    margin-bottom:8px;
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.08);
 
 }
 
+.list-icon{
 
-/* ======================================================
-   TEAM
-====================================================== */
+    color:#F4B400;
 
-.about-popup-team-grid{
+    background:#0D0D0D;
+
+    width:28px;
+
+    height:28px;
+
+    padding:6px;
+
+    border-radius:50%;
+
+    border:1px solid #F4B400;
+
+    flex-shrink:0;
+
+}
+
+.list-card span{
+
+    color:#333;
+
+    font-weight:500;
+
+    line-height:1.6;
+
+}
+
+/* =====================================================
+                ACHIEVEMENTS
+===================================================== */
+
+.achievement-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.achievement-card{
+
+    background:white;
+
+    border-top:5px solid #F4B400;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.achievement-card:hover{
+
+    transform:translateY(-8px);
+
+    border-top-color:#C8102E;
+
+}
+
+.achievement-icon{
+
+    width:50px;
+
+    height:50px;
+
+    padding:18px;
+
+    background:#0D0D0D;
+
+    color:#F4B400;
+
+    border:2px solid #F4B400;
+
+    border-radius:50%;
+
+    margin:0 auto 20px;
+
+}
+
+.achievement-card p{
+
+    color:#0D0D0D;
+
+    font-weight:600;
+
+    line-height:1.7;
+
+}
+
+/* =====================================================
+                    TEAM
+===================================================== */
+
+.team-grid{
 
     display:grid;
 
@@ -130,212 +369,398 @@
 
 }
 
-.about-popup-member{
+.team-card{
+
+    background:#FFFFFF;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    border-bottom:4px solid transparent;
+
+}
+
+.team-card:hover{
+
+    transform:translateY(-8px);
+
+    border-bottom:4px solid #C8102E;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.team-image-wrapper{
+
+    overflow:hidden;
+
+}
+
+.team-image{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+.team-card:hover .team-image{
+
+    transform:scale(1.08);
+
+}
+
+.team-content{
+
+    padding:25px;
 
     text-align:center;
 
 }
 
-.about-popup-member-image{
+.team-content h3{
 
-    width:100%;
-
-    height:190px;
-
-    object-fit:cover;
-
-}
-
-.about-popup-member-name{
-
-    margin:18px 0 8px;
-
-    color:#4d2412;
-
-    font-size:1.05rem;
-
-}
-
-.about-popup-member-role{
-
-    margin:0;
-
-    color:#555;
-
-    font-size:.95rem;
-
-}
-
-.about-popup-member-degree{
-
-    margin-top:8px;
-
-    color:#777;
-
-    line-height:1.6;
-
-    font-size:.9rem;
-
-}
-
-
-
-/* ======================================================*/
-                ICONS
-
-
-.about-popup-heading{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    color:#4A2412;
-
-    font-size:1.45rem;
-
-    font-weight:600;
-
-}
-
-.about-popup-icon{
-
-    color:#A97142;
+    color:#0D0D0D;
 
     font-size:1.2rem;
 
-    margin-right: 12px;
+    margin-bottom:8px;
 
 }
-/* ======================================================
-   BUTTONS
-====================================================== */
 
-.about-popup-footer{
+.team-content span{
+
+    display:block;
+
+    color:#C8102E;
+
+    font-weight:600;
+
+    margin-bottom:12px;
+
+}
+
+.team-content p{
+
+    color:#666;
+
+    font-size:.95rem;
+
+    line-height:1.7;
+
+}
+
+/* =====================================================
+                    CTA
+===================================================== */
+
+.about-cta{
+
+    margin:35px;
+
+    background:#0D0D0D;
+
+    border-radius:20px;
+
+    padding:60px;
+
+    text-align:center;
+
+    color:#FFFFFF;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.about-cta::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:#F4B400;
+
+}
+
+.about-cta h2{
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+
+}
+
+.about-cta p{
+
+    max-width:750px;
+
+    margin:0 auto 35px;
+
+    color:#DDDDDD;
+
+    line-height:1.9;
+
+}
+
+/* =====================================================
+                    BUTTONS
+===================================================== */
+
+.about-buttons{
 
     display:flex;
 
     justify-content:center;
 
-    gap:25px;
+    gap:20px;
 
-    padding:55px;
+    flex-wrap:wrap;
 
 }
 
-.about-popup-button{
+.primary-button{
 
-    width:250px;
+    background:#C8102E;
 
-    height:52px;
+    color:#FFFFFF;
 
-    border:1px solid #4a2412;
+    border:none;
 
-    background:linear-gradient(
-        to bottom,
-        #7b4b2b 0%,
-        #623019 55%,
-        #4a2412 100%
-    );
+    padding:16px 34px;
 
-    color:white;
+    border-radius:10px;
 
     font-size:1rem;
 
+    font-weight:600;
+
     cursor:pointer;
 
-    transition:.3s;
+    transition:.35s;
 
 }
 
-.about-popup-button:hover{
+.primary-button:hover{
 
-    background:linear-gradient(
-        to bottom,
-        #8b5733 0%,
-        #744023 55%,
-        #5b2d16 100%
-    );
+    background:#A40D24;
+
+    transform:translateY(-4px);
 
 }
 
+.secondary-button{
 
-/* ======================================================
-   RESPONSIVE
-====================================================== */
+    background:transparent;
 
-@media(max-width:992px){
+    color:#FFFFFF;
 
-    .about-popup-team-grid{
+    border:2px solid #F4B400;
 
-        grid-template-columns:repeat(2,1fr);
+    padding:16px 34px;
 
-    }
+    border-radius:10px;
 
-    .about-popup-two-columns{
+    font-size:1rem;
 
-        grid-template-columns:1fr;
+    font-weight:600;
 
-        gap:10px;
+    cursor:pointer;
 
-    }
+    transition:.35s;
 
 }
 
+.secondary-button:hover{
+
+    background:#F4B400;
+
+    color:#0D0D0D;
+
+    transform:translateY(-4px);
+
+}
+
+/* =====================================================
+                    RESPONSIVE
+===================================================== */
+
+@media(max-width:1100px){
+
+.team-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.two-column-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.achievement-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
 
 @media(max-width:768px){
 
-    .about-popup-header{
+.about-card{
 
-        padding:25px;
+    margin:20px;
 
-    }
-
-    .about-popup-title{
-
-        font-size:1.6rem;
-
-    }
-
-    .about-popup-image{
-
-        height:240px;
-
-    }
-
-    .about-popup-section{
-
-        padding:35px;
-
-    }
+    padding:30px;
 
 }
 
+.about-hero{
+
+    height:300px;
+
+}
+
+.about-hero-overlay h1{
+
+    font-size:2.2rem;
+
+}
+
+.about-hero-overlay p{
+
+    font-size:.95rem;
+
+}
+
+.about-cta{
+
+    margin:20px;
+
+    padding:40px 25px;
+
+}
+
+.about-cta h2{
+
+    font-size:1.7rem;
+
+}
+
+}
 
 @media(max-width:600px){
 
-    .about-popup-team-grid{
+.team-grid{
 
-        grid-template-columns:1fr;
+    grid-template-columns:1fr;
 
-    }
+}
 
-    .about-popup-footer{
+.achievement-grid{
 
-        flex-direction:column;
+    grid-template-columns:1fr;
 
-        align-items:center;
+}
 
-    }
+.about-buttons{
 
-    .about-popup-button{
+    flex-direction:column;
 
-        width:100%;
+}
 
-        max-width:280px;
+.primary-button,
 
-    }
+.secondary-button{
+
+    width:100%;
+
+}
+
+.section-title{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.about-hero{
+
+    height:240px;
+
+}
+
+.about-hero-overlay{
+
+    padding:20px;
+
+}
+
+.about-hero-overlay h1{
+
+    font-size:1.8rem;
+
+}
+
+.about-card{
+
+    margin:15px;
+
+    padding:25px;
+
+}
+
+.about-cta{
+
+    margin:15px;
+
+    border-radius:15px;
+
+}
+
+.about-cta h2{
+
+    font-size:1.5rem;
+
+}
+
+.about-cta p{
+
+    font-size:.95rem;
+
+}
+
+.team-image{
+
+    height:220px;
+
+}
 
 }

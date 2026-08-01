@@ -1,49 +1,72 @@
 import Modal from "../components/Modal";
 import aboutData from "../data/aboutData";
+
 import {
-    FaCheckCircle,
     FaBuilding,
+    FaCheckCircle,
     FaAward,
-    FaUsers
+    FaUsers,
+    FaArrowRight
 } from "react-icons/fa";
+
 import "../styles/AboutModal.css";
 
-function AboutModal({  close,
+function AboutModal({
+    close,
     openContact,
-    scrollToProjects }) {
+    scrollToProjects
+}) {
 
     return (
 
-        <Modal  title="About Recoge Construction"
-
-    close={close}>
+        <Modal
+            title="About Recoge Construction"
+            close={close}
+        >
 
             <div className="about-popup">
 
-               
+                {/* ================= HERO ================= */}
 
-                <div className="about-popup-image-wrapper">
+                <section className="about-hero">
 
                     <img
                         src={aboutData.heroImage}
                         alt={aboutData.title}
-                        className="about-popup-image"
+                        className="about-hero-image"
                     />
 
-                </div>
+                    <div className="about-hero-overlay">
+
+                        <h1>{aboutData.title}</h1>
+
+                        <p>
+
+                            Building Rwanda's Future Through
+                            Engineering Excellence,
+                            Innovation and Quality Construction.
+
+                        </p>
+
+                    </div>
+
+                </section>
 
                 {/* ================= COMPANY OVERVIEW ================= */}
 
-                <section className="about-popup-section">
+                <section className="about-card">
 
-                    <h2 className="about-popup-heading">
-    <FaBuilding className="about-popup-icon" />
-    Company Overview
-</h2>
+                    <div className="section-title">
 
-                    <div className="about-popup-divider"></div>
+                        <FaBuilding />
 
-                    <p className="about-popup-text">
+                        <h2>Company Overview</h2>
+
+                    </div>
+
+                    <div className="section-divider"></div>
+
+                    <p>
 
                         {aboutData.overview}
 
@@ -53,48 +76,38 @@ function AboutModal({  close,
 
                 {/* ================= VALUES ================= */}
 
-                <section className="about-popup-section">
+                <section className="about-card">
 
-                    <h2 className="about-popup-heading">
-    <FaCheckCircle className="about-popup-icon" />
-    Our Values
-</h2>
+                    <div className="section-title">
 
-                    <div className="about-popup-divider"></div>
+                        <FaCheckCircle />
 
-                    <div className="about-popup-two-columns">
+                        <h2>Core Values</h2>
 
-                        <ul className="about-popup-list">
+                    </div>
 
-                            {aboutData.values
-                                .slice(0, Math.ceil(aboutData.values.length / 2))
-                                .map(value => (
+                    <div className="section-divider"></div>
 
-                                    <li key={value}>
+                    <div className="two-column-grid">
 
-                                        {value}
+                        {
+                            aboutData.values.map(value => (
 
-                                    </li>
+                                <div
+                                    className="list-card"
+                                    key={value}
+                                >
 
-                                ))}
+                                    <FaCheckCircle
+                                        className="list-icon"
+                                    />
 
-                        </ul>
+                                    <span>{value}</span>
 
-                        <ul className="about-popup-list">
+                                </div>
 
-                            {aboutData.values
-                                .slice(Math.ceil(aboutData.values.length / 2))
-                                .map(value => (
-
-                                    <li key={value}>
-
-                                        {value}
-
-                                    </li>
-
-                                ))}
-
-                        </ul>
+                            ))
+                        }
 
                     </div>
 
@@ -102,48 +115,38 @@ function AboutModal({  close,
 
                 {/* ================= EXPERTISE ================= */}
 
-                <section className="about-popup-section">
+                <section className="about-card">
 
-                   <h2 className="about-popup-heading">
-    <FaBuilding className="about-popup-icon" />
-    Our Expertise
-</h2>
+                    <div className="section-title">
 
-                    <div className="about-popup-divider"></div>
+                        <FaBuilding />
 
-                    <div className="about-popup-two-columns">
+                        <h2>Areas of Expertise</h2>
 
-                        <ul className="about-popup-list">
+                    </div>
 
-                            {aboutData.expertise
-                                .slice(0, Math.ceil(aboutData.expertise.length / 2))
-                                .map(item => (
+                    <div className="section-divider"></div>
 
-                                    <li key={item}>
+                    <div className="two-column-grid">
 
-                                        {item}
+                        {
+                            aboutData.expertise.map(item => (
 
-                                    </li>
+                                <div
+                                    className="list-card"
+                                    key={item}
+                                >
 
-                                ))}
+                                    <FaArrowRight
+                                        className="list-icon"
+                                    />
 
-                        </ul>
+                                    <span>{item}</span>
 
-                        <ul className="about-popup-list">
+                                </div>
 
-                            {aboutData.expertise
-                                .slice(Math.ceil(aboutData.expertise.length / 2))
-                                .map(item => (
-
-                                    <li key={item}>
-
-                                        {item}
-
-                                    </li>
-
-                                ))}
-
-                        </ul>
+                            ))
+                        }
 
                     </div>
 
@@ -151,78 +154,99 @@ function AboutModal({  close,
 
                 {/* ================= ACHIEVEMENTS ================= */}
 
-                <section className="about-popup-section">
+                <section className="about-card">
 
-                    <h2 className="about-popup-heading">
-    <FaAward className="about-popup-icon" />
-    Our Achievements
-</h2>
+                    <div className="section-title">
 
-                    <div className="about-popup-divider"></div>
+                        <FaAward />
 
-                    <div className="about-popup-two-columns">
+                        <h2>Achievements</h2>
 
-                        <ul className="about-popup-list">
+                    </div>
 
-                            <li>{aboutData.achievements[0]}</li>
+                    <div className="section-divider"></div>
 
-                        </ul>
+                    <div className="achievement-grid">
 
-                        <ul className="about-popup-list">
+                        {
+                            aboutData.achievements.map(
+                                (item, index) => (
 
-                            <li>{aboutData.achievements[1]}</li>
+                                    <div
+                                        className="achievement-card"
+                                        key={index}
+                                    >
 
-                        </ul>
+                                        <FaAward className="achievement-icon"/>
+
+                                        <p>{item}</p>
+
+                                    </div>
+
+                                )
+                            )
+                        }
 
                     </div>
 
                 </section>
 
-                {/* ================= TEAM ================= */}
+                                {/* ================= TEAM ================= */}
 
-                <section className="about-popup-section">
+                <section className="about-card">
 
-                    <h2 className="about-popup-heading">
-    <FaUsers className="about-popup-icon" />
-    Our Team
-</h2>
+                    <div className="section-title">
 
-                    <div className="about-popup-divider"></div>
+                        <FaUsers />
 
-                    <div className="about-popup-team-grid">
+                        <h2>Meet Our Team</h2>
+
+                    </div>
+
+                    <div className="section-divider"></div>
+
+                    <div className="team-grid">
 
                         {
 
                             aboutData.team.map(member => (
 
                                 <div
-                                    className="about-popup-member"
+                                    className="team-card"
                                     key={member.id}
                                 >
 
-                                    <img
-                                        src={member.image}
-                                        alt={member.name}
-                                        className="about-popup-member-image"
-                                    />
+                                    <div className="team-image-wrapper">
 
-                                    <h3 className="about-popup-member-name">
+                                        <img
+                                            src={member.image}
+                                            alt={member.name}
+                                            className="team-image"
+                                        />
 
-                                        {member.name}
+                                    </div>
 
-                                    </h3>
+                                    <div className="team-content">
 
-                                    <p className="about-popup-member-role">
+                                        <h3>
 
-                                        {member.role}
+                                            {member.name}
 
-                                    </p>
+                                        </h3>
 
-                                    <p className="about-popup-member-degree">
+                                        <span>
 
-                                        {member.qualification}
+                                            {member.role}
 
-                                    </p>
+                                        </span>
+
+                                        <p>
+
+                                            {member.qualification}
+
+                                        </p>
+
+                                    </div>
 
                                 </div>
 
@@ -234,45 +258,74 @@ function AboutModal({  close,
 
                 </section>
 
-                {/* ================= BUTTONS ================= */}
+                {/* ================= CTA ================= */}
 
-                <div className="about-popup-footer">
+                <section className="about-cta">
 
-                    <button
-    className="about-popup-button"
-    onClick={() => {
+                    <h2>
 
-        close();
+                        Let's Build Something Exceptional Together
 
-        setTimeout(() => {
+                    </h2>
 
-            scrollToProjects();
+                    <p>
 
-        }, 250);
+                        Whether you're planning an engineering study,
+                        infrastructure project, commercial building or
+                        residential development, our experienced team
+                        is ready to transform your vision into reality.
 
-    }}
->
-    Explore Our Work
-</button>
+                    </p>
 
-                   <button
-    className="about-popup-button"
-    onClick={() => {
+                    <div className="about-buttons">
 
-        close();
+                        <button
 
-        setTimeout(() => {
+                            className="primary-button"
 
-            openContact();
+                            onClick={() => {
 
-        }, 250);
+                                close();
 
-    }}
->
-    Contact Us
-</button>
+                                setTimeout(() => {
 
-                </div>
+                                    scrollToProjects();
+
+                                },250);
+
+                            }}
+
+                        >
+
+                            Explore Our Work
+
+                        </button>
+
+                        <button
+
+                            className="secondary-button"
+
+                            onClick={() => {
+
+                                close();
+
+                                setTimeout(() => {
+
+                                    openContact();
+
+                                },250);
+
+                            }}
+
+                        >
+
+                            Contact Us
+
+                        </button>
+
+                    </div>
+
+                </section>
 
             </div>
 

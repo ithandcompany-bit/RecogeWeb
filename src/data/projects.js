@@ -2,242 +2,197 @@ export const projects = [
 
 {
     id:1,
-
-    title:"Luxury Villa Project",
-
-    category:"Residential",
-
-    year:"2026",
-
-    image:"/images/projects/villa-card.jpg",
-
+    title:"Renovation of Amahoro National Stadium",
+    category:"Infrastructure",
+    year:"2022",
+    image:"/images/p1.png",
     designImage:"/images/projects/villa-design.jpg",
-
     plotImage:"/images/projects/villa-plot.jpg",
-
     progressImage:"/images/projects/villa-progress.jpg",
-
-    description:
-        "Luxury villa designed with sustainability and contemporary living in mind.",
-
-    details:
-        "This luxury villa project combines elegant contemporary architecture with premium finishes and spacious interiors. Situated on a prime site, the development prioritizes energy efficiency, comfort, and long-term durability while progressing steadily toward completion."
+    description:"Construction material testing.",
+    details:"Construction material testing services carried out during the renovation of Rwanda's national stadium to ensure quality, durability and compliance with engineering standards."
 },
 
 {
     id:2,
-
-    title:"Modern Office Complex",
-
-    category:"Commercial",
-
-    year:"2026",
-
+    title:"Construction of Ruliba Clay Plant B",
+    category:"Industrial",
+    year:"",
     image:"/images/projects/office-card.jpg",
-
     designImage:"/images/projects/office-design.jpg",
-
     plotImage:"/images/projects/office-plot.jpg",
-
     progressImage:"/images/projects/office-progress.jpg",
-
-    description:
-        "Flexible office spaces built for modern businesses.",
-
-    details:
-        "A contemporary office development providing adaptable workspaces, meeting facilities, and sustainable building systems designed to support business growth."
+    description:"Construction material testing.",
+    details:"Construction material testing services supporting quality control during the construction of the Ruliba Clay Plant B."
 },
 
 {
     id:3,
-
-    title:"Green Hills Apartments",
-
-    category:"Residential",
-
-    year:"2025",
-
-    image:"/images/projects/apartment-card.jpg",
-
+    title:"Rehabilitation of Kingdom Halls",
+    category:"Institutional",
+    year:"2024",
+     image:"/images/p3.png",
     designImage:"/images/projects/apartment-design.jpg",
-
     plotImage:"/images/projects/apartment-plot.jpg",
-
     progressImage:"/images/projects/apartment-progress.jpg",
-
-    description:
-        "Modern apartment community with landscaped surroundings.",
-
-    details:
-        "A residential apartment development offering comfortable homes, secure parking, recreational areas, and thoughtfully planned green spaces."
+    description:"Building rehabilitation.",
+    details:"Engineering support and rehabilitation works for Kingdom Halls to improve structural integrity and extend the service life of the buildings."
 },
 
 {
     id:4,
-
-    title:"Lakeside Resort",
-
-    category:"Hospitality",
-
+    title:"Proposed Kagarama Housing",
+    category:"Residential",
     year:"2025",
-
     image:"/images/projects/resort-card.jpg",
-
     designImage:"/images/projects/resort-design.jpg",
-
     plotImage:"/images/projects/resort-plot.jpg",
-
     progressImage:"/images/projects/resort-progress.jpg",
-
-    description:
-        "Luxury resort overlooking beautiful natural scenery.",
-
-    details:
-        "An exclusive hospitality development featuring premium accommodation, restaurants, conference facilities, and leisure amenities."
+    description:"Geotechnical study.",
+    details:"Comprehensive geotechnical investigation carried out to determine soil conditions and provide engineering recommendations for foundation design."
 },
 
 {
     id:5,
-
-    title:"City Shopping Centre",
-
-    category:"Commercial",
-
-    year:"2024",
-
+    title:"ADEPR Nyamata Hospital Extension",
+    category:"Healthcare",
+    year:"",
     image:"/images/projects/mall-card.jpg",
-
     designImage:"/images/projects/mall-design.jpg",
-
     plotImage:"/images/projects/mall-plot.jpg",
-
     progressImage:"/images/projects/mall-progress.jpg",
-
-    description:
-        "Large retail and entertainment destination.",
-
-    details:
-        "A modern shopping center integrating retail stores, restaurants, entertainment facilities, and spacious public gathering areas."
+    description:"Geotechnical study.",
+    details:"Geotechnical investigations conducted for the construction of extension buildings at ADEPR Nyamata Hospital."
 },
 
 {
     id:6,
-
-    title:"Community Health Center",
-
-    category:"Healthcare",
-
+    title:"Post-Harvest Storage Facilities",
+    category:"Agriculture",
     year:"2024",
-
     image:"/images/projects/health-card.jpg",
-
     designImage:"/images/projects/health-design.jpg",
-
     plotImage:"/images/projects/health-plot.jpg",
-
     progressImage:"/images/projects/health-progress.jpg",
-
-    description:
-        "Healthcare facility serving the growing community.",
-
-    details:
-        "A patient-focused medical facility designed for efficiency, accessibility, and high-quality healthcare delivery."
+    description:"Geotechnical investigations.",
+    details:"Geotechnical investigations supporting the construction of post-harvest handling and grain storage facilities."
 },
 
 {
     id:7,
-
-    title:"Sunrise Primary School",
-
-    category:"Education",
-
+    title:"Rwangingo–Karangazi Irrigation Scheme",
+    category:"Infrastructure",
     year:"2025",
-
     image:"/images/projects/school-card.jpg",
-
     designImage:"/images/projects/school-design.jpg",
-
     plotImage:"/images/projects/school-plot.jpg",
-
     progressImage:"/images/projects/school-progress.jpg",
-
-    description:
-        "Modern learning environment for young students.",
-
-    details:
-        "A contemporary educational campus featuring classrooms, science laboratories, sports facilities, and outdoor learning spaces."
+    description:"Feasibility study update.",
+    details:"Review and update of the feasibility study and detailed engineering design for rehabilitation and upgrading of the 937-hectare irrigation scheme."
 },
 
 {
     id:8,
-
-    title:"Industrial Warehouse",
-
-    category:"Industrial",
-
+    title:"Rehabilitation of Cyarubare Dam",
+    category:"Infrastructure",
     year:"2026",
-
     image:"/images/projects/warehouse-card.jpg",
-
     designImage:"/images/projects/warehouse-design.jpg",
-
     plotImage:"/images/projects/warehouse-plot.jpg",
-
     progressImage:"/images/projects/warehouse-progress.jpg",
-
-    description:
-        "Efficient logistics and storage facility.",
-
-    details:
-        "A durable industrial warehouse engineered for large-scale storage, logistics operations, and future expansion."
+    description:"Construction material testing.",
+    details:"Construction material testing services supporting the rehabilitation works of Cyarubare Dam."
 },
 
 {
     id:9,
-
-    title:"Mountain View Hotel",
-
-    category:"Hospitality",
-
+    title:"Construction of Kivugiza Bridge",
+    category:"Bridge",
     year:"2025",
-
-    image:"/images/projects/hotel-card.jpg",
-
+    image:"/images/p9.png",
     designImage:"/images/projects/hotel-design.jpg",
-
     plotImage:"/images/projects/hotel-plot.jpg",
-
     progressImage:"/images/projects/hotel-progress.jpg",
-
-    description:
-        "Boutique hotel with exceptional guest experience.",
-
-    details:
-        "A modern hotel combining elegant accommodation, conference spaces, fine dining, and panoramic views."
+    description:"Geotechnical investigations.",
+    details:"Geotechnical investigations and construction material testing for the successful construction of Kivugiza Bridge."
 },
 
 {
     id:10,
-
-    title:"Riverside Mixed Development",
-
-    category:"Mixed Use",
-
+    title:"Muringa Water Supply Rehabilitation",
+    category:"Water Infrastructure",
     year:"2026",
-
     image:"/images/projects/mixed-card.jpg",
-
     designImage:"/images/projects/mixed-design.jpg",
-
     plotImage:"/images/projects/mixed-plot.jpg",
-
     progressImage:"/images/projects/mixed-progress.jpg",
+    description:"Geotechnical investigations.",
+    details:"Geotechnical investigations supporting rehabilitation and extension of water supply systems in Muringa, Jomba and Bigogwe sectors."
+},
 
-    description:
-        "Integrated residential and commercial development.",
+{
+    id:11,
+    title:"Rwimbogo–Munini–Gikobwa Road",
+    category:"Road Infrastructure",
+    year:"2026",
+    image:"/images/projects/mixed-card.jpg",
+    designImage:"/images/projects/mixed-design.jpg",
+    plotImage:"/images/projects/mixed-plot.jpg",
+    progressImage:"/images/projects/mixed-progress.jpg",
+    description:"Feasibility study.",
+    details:"Geotechnical investigations carried out for the feasibility study of the Rwimbogo–Munini–Gikobwa road project."
+},
 
-    details:
-        "A mixed-use development combining apartments, office spaces, retail outlets, and public spaces into one vibrant community."
+{
+    id:12,
+    title:"Proposed Coffee Washing Station",
+    category:"Agriculture",
+    year:"2026",
+    image:"/images/projects/mixed-card.jpg",
+    designImage:"/images/projects/mixed-design.jpg",
+    plotImage:"/images/projects/mixed-plot.jpg",
+    progressImage:"/images/projects/mixed-progress.jpg",
+    description:"Geotechnical study.",
+    details:"Geotechnical study supporting the construction of the proposed coffee washing station."
+},
+
+{
+    id:13,
+    title:"Construction of Rugunga Playground",
+    category:"Sports Infrastructure",
+    year:"2026",
+    image:"/images/projects/mixed-card.jpg",
+    designImage:"/images/projects/mixed-design.jpg",
+    plotImage:"/images/projects/mixed-plot.jpg",
+    progressImage:"/images/projects/mixed-progress.jpg",
+    description:"Geotechnical study.",
+    details:"Site investigation and geotechnical study for the construction of the proposed Rugunga Playground."
+},
+
+{
+    id:14,
+    title:"Gitwe SDA College Extension",
+    category:"Education",
+    year:"2026",
+    image:"/images/projects/mixed-card.jpg",
+    designImage:"/images/projects/mixed-design.jpg",
+    plotImage:"/images/projects/mixed-plot.jpg",
+    progressImage:"/images/projects/mixed-progress.jpg",
+    description:"Geotechnical investigations.",
+    details:"Geotechnical investigations and construction material testing supporting the construction and extension of Gitwe SDA College."
+},
+
+{
+    id:15,
+    title:"Proposed Residential Building",
+    category:"Residential",
+    year:"2026",
+    image:"/images/projects/mixed-card.jpg",
+    designImage:"/images/projects/mixed-design.jpg",
+    plotImage:"/images/projects/mixed-plot.jpg",
+    progressImage:"/images/projects/mixed-progress.jpg",
+    description:"Geotechnical investigations.",
+    details:"Comprehensive geotechnical investigations providing engineering recommendations for safe residential building construction."
 }
 
 ];

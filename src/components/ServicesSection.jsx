@@ -1,15 +1,28 @@
 import {useState} from "react";
 import ServicesModal from "../modals/ServicesModal";
 import {
+
     FaBuilding,
+
+    FaHelmetSafety,
+
+    FaCompassDrafting,
+
     FaHammer,
-    FaPaintBrush,
-    FaRulerCombined
-} from "react-icons/fa";
+
+    FaPaintRoller,
+
+    FaClipboardList,
+
+    FaScrewdriverWrench
+
+} from "react-icons/fa6";
 
 import { BsBuildingGear } from "react-icons/bs";
 
-import {GrUserWorker, GrPlan}  from  "react-icons/gr"
+import {GrUserWorker, GrPlan}  from  "react-icons/gr";
+
+import services from "../data/services";
 
 function ServicesSection() {
 
@@ -22,29 +35,38 @@ function ServicesSection() {
 
             <h2>OUR SERVICES</h2>
 
-            <hr />
+            <div className="section-line"></div>
 
-            <ul>
+            {/* <ul>
 
-            <li> <span className="icon-item"><FaBuilding/></span>  Residential Construction</li>
+<li><FaBuilding/> Residential Construction</li>
 
-            <li>  <span className="icon-item"><GrUserWorker/></span>  Commercial Projects</li>
+<li><FaHelmetSafety/> Commercial Projects</li>
 
-            <li> <span className="icon-item"><FaHammer/></span> Renovations & Remodeling</li>
+<li><FaHammer/> Renovation & Remodeling</li>
 
-            <li> <span className="icon-item"><FaRulerCombined/></span> Custom Design Solutions</li>
+<li><FaCompassDrafting/> Architectural Design</li>
 
-            <li> <span className="icon-item"><FaPaintBrush/></span> Interior Design & Finishes</li>
+<li><FaPaintRoller/> Interior Finishes</li>
 
-            <li>  <span className="icon-item"><GrPlan/></span> Project Planning & Consultation</li>
+<li><FaClipboardList/> Project Consultancy</li>
 
-            <li> <span className="icon-item"><BsBuildingGear /></span> Structural Engineering Support</li>
+<li><FaScrewdriverWrench/> Structural Engineering</li>
 
-            </ul>
+</ul> */}
 
-            <button onClick={setShowServices} className="service-button">
-                View Details
-            </button>
+<ul>
+    {services.map(service=>< li key={service.id}><service.icon/>{service.title}</li>)}
+</ul>
+
+            <button
+    className="service-button"
+    onClick={() => setShowServices(true)}
+>
+
+    View All Details →
+
+</button>
 
             
 

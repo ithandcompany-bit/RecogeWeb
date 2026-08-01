@@ -1,4 +1,7 @@
 import "../styles/ctaSection.css";
+import { FaFileSignature, FaTools } from "react-icons/fa";
+
+
 
 function CTASection({ openContact, openServices }) {
 
@@ -25,19 +28,15 @@ function CTASection({ openContact, openServices }) {
 
                 <div className="cta-buttons">
 
-                    <button
-                        className="primary-btn"
-                        onClick={openContact}
-                    >
-                        Request a Quote
-                    </button>
+                    <button className="primary-btn" onClick={openContact}>
+    <FaFileSignature />
+    Request a Quote
+</button>
 
-                    <button
-                        className="secondary-btn"
-                        onClick={openServices}
-                    >
-                        Our Services
-                    </button>
+<button className="secondary-btn" onClick={openServices}>
+    <FaTools />
+    Our Services
+</button>
 
                 </div>
 

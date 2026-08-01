@@ -5,6 +5,8 @@ import AboutModal from "../modals/AboutModal";
 import "../styles/AboutServices.css";
 
 
+
+
 function AboutSection() {
 
     const [showAbout, setShowAbout] = useState(false);
@@ -13,21 +15,23 @@ function AboutSection() {
         <>
             <section className="about-card">
 
-                <h2>ABOUT US</h2>
+               <h2>About Us</h2>
 
-                <hr />
+<div className="section-line"></div>
 
-                <p>
-            Recoge Construction is a trusted company with years
-            of experience in delivering exceptional residential
-            and commercial projects.
-                </p>
+<p>
+    Recoge Ltd is a multidisciplinary engineering consultancy
+    delivering innovative engineering, architectural and construction
+    solutions across Rwanda. We combine technical expertise,
+    quality workmanship and client-focused service to turn ideas
+    into successful projects.
+</p>
 
-                <button
-                    onClick={() => setShowAbout(true)}
-                >
-                    Read More
-                </button>
+               <button onClick={() => setShowAbout(true)}>
+
+    Learn More →
+
+</button>
 
             </section>
 

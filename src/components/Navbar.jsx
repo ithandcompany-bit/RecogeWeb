@@ -32,6 +32,8 @@ function Navbar({
 
     return (
 
+        <>
+
         <nav className="navbar">
 
             {/* Logo */}
@@ -189,6 +191,11 @@ function Navbar({
             </ul>
 
         </nav>
+
+
+<div className="nav-overlay"></div>
+
+</>
 
     );
 

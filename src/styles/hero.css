@@ -8,58 +8,34 @@
 
     width:100%;
 
-    height:100vh;
-
-    min-height:760px;
-
-    margin-top:90px;
-
-    overflow:hidden;
+    min-height:100vh;
 
     display:flex;
 
     align-items:center;
 
-}
+    overflow:hidden;
 
-/* ================= IMAGE ================= */
-
-.hero-bg{
-
-    position:absolute;
-
-    inset:0;
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    object-position:right center;
-
-    animation:heroZoom 20s linear infinite alternate;
-
-}
-
-/* ================= OVERLAY ================= */
-
-.hero-overlay{
-
-    position:absolute;
-
-    inset:0;
+    padding:120px 7% 220px;
 
     background:
-    linear-gradient(
-        90deg,
-        rgba(8,8,8,.90) 0%,
-        rgba(8,8,8,.82) 30%,
-        rgba(8,8,8,.45) 65%,
-        rgba(8,8,8,.15) 100%
-    );
+        linear-gradient(
+            90deg,
+            rgba(8,8,8,.88) 0%,
+            rgba(8,8,8,.72) 35%,
+            rgba(8,8,8,.30) 70%,
+            rgba(8,8,8,.05) 100%
+        ),
+        url("/src/assets/images/heroImage.png");
+
+    background-size:cover;
+
+    background-position:right center;
+
+    background-repeat:no-repeat;
 
 }
+
 
 /* ================= CONTENT ================= */
 
@@ -67,11 +43,9 @@
 
     position:relative;
 
-    z-index:5;
+    z-index:2;
 
-    width:650px;
-
-    margin-left:7%;
+    width:min(650px,100%);
 
     color:white;
 
@@ -99,13 +73,13 @@
 
 .hero-content h1{
 
-    font-size:5rem;
+    font-size:clamp(2.5rem,6vw,5rem);
 
-    line-height:1;
+    line-height:1.05;
 
-    font-weight:800;
+    font-weight:700;
 
-    margin-bottom:28px;
+    margin-bottom:25px;
 
 }
 
@@ -119,15 +93,13 @@
 
 .hero-content p{
 
-    width:92%;
+    max-width:580px;
 
-    font-size:1.15rem;
+    font-size:clamp(1rem,2vw,1.2rem);
 
-    color:#e5e5e5;
+    line-height:1.8;
 
-    line-height:1.9;
-
-    margin-bottom:45px;
+    margin-bottom:40px;
 
 }
 
@@ -137,7 +109,7 @@
 
     display:flex;
 
-    gap:20px;
+    gap:18px;
 
     flex-wrap:wrap;
 
@@ -207,77 +179,95 @@
 
 /* ================= FLOATING PANEL ================= */
 
-.hero-stats{
+/*====================================================
+                GLASS PANEL
+====================================================*/
+
+.hero-panel{
 
     position:absolute;
 
     left:50%;
 
-    bottom:45px;
+    bottom:35px;
 
     transform:translateX(-50%);
 
-    width:min(1200px,92%);
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:22px;
-
-    z-index:10;
-
-}
-
-.hero-stat{
+    width:min(900px,92%);
 
     display:flex;
 
+    justify-content:space-between;
+
     align-items:center;
 
-    gap:18px;
+    background:rgba(15,15,15,.72);
 
-    background:rgba(15,15,15,.78);
-
-    backdrop-filter:blur(12px);
+    backdrop-filter:blur(16px);
 
     border:1px solid rgba(255,255,255,.08);
 
-    border-radius:18px;
+    border-radius:22px;
 
-    padding:22px;
+    padding:18px 12px;
+
+    z-index:20;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+
+}
+
+.hero-panel-item{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
 
     color:white;
+
+    cursor:pointer;
 
     transition:.35s;
 
 }
 
-.hero-stat svg{
+.hero-panel-item:hover{
+
+    color:var(--accent);
+
+}
+
+.hero-panel-item svg{
 
     font-size:2rem;
 
     color:var(--accent);
 
-    flex-shrink:0;
+}
+
+.hero-panel-item span{
+
+    font-size:.95rem;
+
+    font-weight:600;
 
 }
 
-.hero-stat h3{
+.hero-divider{
 
-    font-size:1.05rem;
+    width:1px;
 
-    margin-bottom:5px;
+    height:55px;
 
-}
-
-.hero-stat p{
-
-    color:#d0d0d0;
-
-    font-size:.92rem;
-
-    line-height:1.5;
+    background:rgba(255,255,255,.15);
 
 }
 
@@ -311,117 +301,76 @@
 
 /* ================= TABLET ================= */
 
-@media(max-width:1100px){
+@media(max-width:900px){
 
 .hero{
 
-    height:auto;
-
-    min-height:900px;
-
-    justify-content:center;
+    padding-bottom:170px;
 
 }
 
-.hero-content{
+.hero-panel{
 
-    width:90%;
-
-    margin:120px auto 0;
-
-    text-align:center;
+    width:94%;
 
 }
 
-.hero-content p{
+.hero-panel-item svg{
 
-    width:100%;
-
-}
-
-.hero-buttons{
-
-    justify-content:center;
+    font-size:1.6rem;
 
 }
 
-.hero-stats{
+.hero-panel-item span{
+
+    font-size:.8rem;
+
+}
+
+}
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+.hero{
+
+    padding-bottom:240px;
+
+}
+
+.hero-panel{
+
+    display:grid;
 
     grid-template-columns:repeat(2,1fr);
 
-    bottom:35px;
+    gap:18px;
+
+    padding:20px;
 
 }
 
-.hero-bg{
+.hero-divider{
 
-    object-position:70% center;
-
-}
+    display:none;
 
 }
 
-/* ================= MOBILE ================= */
+.hero-panel-item{
 
-@media(max-width:768px){
-
-.hero{
-
-    min-height:1080px;
+    gap:8px;
 
 }
 
-.hero-content{
+.hero-panel-item svg{
 
-    margin-top:100px;
-
-}
-
-.hero-content h1{
-
-    font-size:3rem;
+    font-size:1.5rem;
 
 }
 
-.hero-content p{
+.hero-panel-item span{
 
-    font-size:1rem;
-
-}
-
-.hero-buttons{
-
-    flex-direction:column;
-
-    align-items:center;
-
-}
-
-.hero-btn-primary,
-
-.hero-btn-secondary{
-
-    width:100%;
-
-    max-width:320px;
-
-    justify-content:center;
-
-}
-
-.hero-stats{
-
-    grid-template-columns:1fr;
-
-    gap:16px;
-
-    width:90%;
-
-}
-
-.hero-bg{
-
-    object-position:75% center;
+    font-size:.8rem;
 
 }
 
@@ -429,35 +378,43 @@
 
 /* ================= SMALL MOBILE ================= */
 
-@media(max-width:480px){
+@media(max-width:500px){
 
 .hero{
 
-    min-height:1150px;
+    padding-bottom:350px;
+    
+    background-position: bottom right;
 
 }
 
-.hero-content h1{
+.hero-stats{
 
-    font-size:2.35rem;
-
-}
-
-.hero-top{
-
-    font-size:.72rem;
+    grid-template-columns:repeat(2,1fr);
 
 }
 
 .hero-stat{
 
-    padding:18px;
+    flex-direction:column;
+
+    text-align:center;
+
+    gap:10px;
+
+    padding:15px;
 
 }
 
-.hero-stat svg{
+.hero-stat p{
 
-    font-size:1.6rem;
+    display:none;
+
+}
+
+.hero-stat h3{
+
+    font-size:.9rem;
 
 }
 

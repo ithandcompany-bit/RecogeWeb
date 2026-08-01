@@ -11,48 +11,33 @@
 
 :root{
 
-    /* Brand */
+    /* ========= BRAND ========= */
 
-    --primary:#0D1117;
-    --secondary:#C1121F;
+    --primary:#0D0D0D;
+    --secondary:#C8102E;
     --accent:#F4B400;
 
-    /* Backgrounds */
+    /* ========= BACKGROUNDS ========= */
 
-    --white:#FFFFFF;
-    --light:#F8F9FA;
-    --section:#F3F5F7;
+    --bg:#F7F7F7;
+    --surface:#FFFFFF;
 
-    /* Text */
+    /* ========= TEXT ========= */
 
     --heading:#111111;
-    --text:#5E6472;
-    --text-light:#E8E8E8;
+    --text:#555555;
+    --muted:#888888;
 
-    /* Borders */
+    /* ========= BORDERS ========= */
 
-    --border:#E6E8EB;
+    --border:#E5E5E5;
 
-    /* Glass */
+    /* ========= SHADOW ========= */
 
-    --glass:rgba(13,17,23,.72);
+    --shadow:
+        0 10px 25px rgba(0,0,0,.08);
 
-    /* Radius */
-
-    --radius-sm:12px;
-    --radius-md:18px;
-    --radius-lg:28px;
-
-    /* Shadows */
-
-    --shadow-sm:0 10px 25px rgba(0,0,0,.08);
-
-    --shadow-md:0 20px 45px rgba(0,0,0,.12);
-
-    --shadow-lg:0 30px 70px rgba(0,0,0,.18);
-
-    /* Transition */
-
-    --transition:.35s ease;
+    --shadow-hover:
+        0 18px 40px rgba(0,0,0,.15);
 
 }

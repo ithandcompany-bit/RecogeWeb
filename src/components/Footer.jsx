@@ -25,21 +25,27 @@ function Footer({
 
                 {/* Company */}
 
-                <div className="footer-column footer-company">
+               <div className="footer-column footer-company">
 
-                    <h2>RECOGE</h2>
+   <div className="footer-column footer-company">
 
-                    <span>CONSTRUCTION</span>
+    <div className="footer-logo-wrapper">
 
-                    <p>
+        <img
+            src="/src/assets/images/logo.png"
+            alt="Recoge Logo"
+            className="footer-logo"
+        />
 
-                        Building stronger communities through
-                        innovative construction, quality craftsmanship
-                        and dependable project delivery.
+    </div>
 
-                    </p>
+    <p>
+        Building stronger communities through
+        innovative construction, quality craftsmanship
+        and dependable project delivery.
+    </p>
 
-                    <div className="footer-social">
+   <div className="footer-social">
 
                         <a href="#">
                             <FaFacebookF />
@@ -54,6 +60,9 @@ function Footer({
                         </a>
 
                     </div>
+</div>
+
+                    
 
                 </div>
 
@@ -144,7 +153,7 @@ function Footer({
 
                 <p>
 
-                    © 2026 Recoge Construction. All Rights Reserved.
+                    © 2026 Recoge Ltd. All Rights Reserved.
 
                 </p>
 

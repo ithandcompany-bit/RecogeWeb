@@ -4,90 +4,100 @@ import "../styles/projectModal.css";
 function ProjectModal({
 
     project,
-
     close,
+    openContact,
+    openServices
 
-    openContact
+}) {
 
-}){
+    return (
 
-    return(
-
-        <Modal close={close} title={project.title}>
+        <Modal
+            close={close}
+            title={project.title}
+        >
 
             <div className="project-popup">
 
-
-                <div className="project-popup-divider"></div>
-
                 <img
-                    src={project.designImage}
-                    alt="Design Concept"
+
+                    src={project.image}
+
+                    alt={project.title}
+
                     className="project-popup-image"
+
                 />
 
-                <h2 className="project-popup-heading">
+                <div className="project-popup-content">
 
-                    Design Concept
+                    <span className="project-category">
 
-                </h2>
+                        {project.category}
 
-                <div className="project-popup-divider"></div>
+                    </span>
 
-                <img
-                    src={project.plotImage}
-                    alt="Plot View"
-                    className="project-popup-image"
-                />
+                    <h2>
 
-                <h2 className="project-popup-heading">
+                        {project.title}
 
-                    Plot View
+                    </h2>
 
-                </h2>
+                    <div className="project-divider"></div>
 
-                <div className="project-popup-divider"></div>
+                    <p className="project-popup-description">
 
-                <img
-                    src={project.progressImage}
-                    alt="Current State"
-                    className="project-popup-image"
-                />
+                        {project.details}
 
-                <h2 className="project-popup-heading">
+                    </p>
 
-                    Current State
+                    <div className="project-popup-buttons">
 
-                </h2>
+    <button
 
-                <div className="project-popup-divider"></div>
+        className="quote-button"
 
-                <p className="project-popup-description">
+        onClick={() => {
 
-                    {project.details}
+            close();
 
-                </p>
+            setTimeout(() => {
 
-                <div className="project-popup-divider"></div>
+                openContact();
 
-                <div className="project-popup-buttons">
+            },250);
 
-                    <button
-                        className="project-popup-quote"
-                    >
+        }}
 
-                        Request a Quote
+    >
 
-                    </button>
+        Request a Quote
 
-                    <button
-                        className="project-popup-contact"
-                        onClick={openContact}
-                    >
+    </button>
 
-                        Contact Us
+    <button
 
-                    </button>
+        className="service-button"
+
+        onClick={() => {
+
+            close();
+
+            setTimeout(() => {
+
+                openServices();
+
+            },250);
+
+        }}
+
+    >
+
+        Our Services
+
+    </button>
+
+</div>
 
                 </div>
 
@@ -95,7 +105,7 @@ function ProjectModal({
 
         </Modal>
 
-    )
+    );
 
 }
 

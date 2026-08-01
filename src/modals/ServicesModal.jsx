@@ -12,55 +12,100 @@ function ServicesModal({
 
     return (
 
-        <Modal close={close} title="Recoge Construction Services">
+        <Modal
+            close={close}
+            title="Our Professional Services"
+        >
 
             <div className="services-popup">
 
-                <div className="services-popup-list">
+                <div className="services-popup-header">
+
+                    <h1>
+
+                        Engineering Excellence Across Every Discipline
+
+                    </h1>
+
+                    <p>
+
+                        RECOGE delivers comprehensive engineering,
+                        geotechnical, construction and consultancy
+                        solutions that meet international standards
+                        while responding to Rwanda's infrastructure
+                        development needs.
+
+                    </p>
+
+                </div>
+
+                <div className="services-grid">
 
                     {
 
-                        services.map(service => (
+                        services.map(service => {
 
-                            <div
-                                key={service.id}
-                                className="services-popup-item"
-                            >
+                            const Icon = service.icon;
 
-                                <img
-                                    src={service.image}
-                                    alt={service.title}
-                                    className="services-popup-image"
-                                />
+                            return (
 
-                                <div className="services-popup-content">
+                                <div
+                                    key={service.id}
+                                    className="service-card"
+                                >
 
-                                    <h2>
+                                    <img
 
-                                        {service.title}
+                                        src={service.image}
 
-                                    </h2>
+                                        alt={service.title}
 
-                                    <p>
+                                        className="service-image"
 
-                                        {service.description}
+                                    />
 
-                                    </p>
+                                    <div className="service-content">
+
+                                        <div className="service-heading">
+
+                                            <div className="service-icon">
+
+                                                <Icon />
+
+                                            </div>
+
+                                            <h2>
+
+                                                {service.title}
+
+                                            </h2>
+
+                                        </div>
+
+                                        <p>
+
+                                            {service.description}
+
+                                        </p>
+
+                                    </div>
 
                                 </div>
 
-                            </div>
+                            );
 
-                        ))
+                        })
 
                     }
 
                 </div>
 
-                <div className="services-popup-buttons">
+                <div className="services-footer">
 
                     <button
-                        className="services-popup-quote"
+
+                        className="quote-button"
+
                     >
 
                         Request a Quote
@@ -68,8 +113,11 @@ function ServicesModal({
                     </button>
 
                     <button
-                        className="services-popup-contact"
+
+                        className="contact-button"
+
                         onClick={openContact}
+
                     >
 
                         Contact Us

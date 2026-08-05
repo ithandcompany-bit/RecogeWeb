@@ -1,196 +1,230 @@
 import { useEffect, useState } from "react";
 
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import {
 
-import SectionTitle from "./SectionTitle";
+    FaChevronLeft,
+    FaChevronRight,
+    FaStar
+
+} from "react-icons/fa";
 
 import "../styles/testimonials.css";
 
+import avatar from "../assets/images/avatar.png";
 
-function TestimonialsSection() {
+function TestimonialsSection(){
 
-
-    const testimonials = [
+    const testimonials=[
 
         {
-            id: 1,
-            initials: "MJ",
-            name: "Michael Johnson",
-            role: "Home Owner",
-            text: "The team delivered our dream house with professionalism and incredible attention to detail."
+
+            id:1,
+
+            image:avatar,
+
+            name:"Michael Johnson",
+
+            position:"Project Manager",
+
+            company:"ABC Construction Ltd",
+
+            text:
+            "RECOGE delivered outstanding engineering services. Their professionalism, technical expertise and commitment to quality exceeded our expectations."
+
         },
 
         {
-            id: 2,
-            initials: "SW",
-            name: "Sarah Williams",
-            role: "Business Owner",
-            text: "From planning to completion, the whole process was smooth and transparent."
+
+            id:2,
+
+            image:avatar,
+
+            name:"Sarah Williams",
+
+            position:"Business Owner",
+
+            company:"Prime Holdings",
+
+            text:
+            "The entire project was completed on schedule with exceptional communication from the engineering team."
+
         },
 
         {
-            id: 3,
-            initials: "DB",
-            name: "David Brown",
-            role: "Property Developer",
-            text: "Outstanding quality and excellent communication throughout the project."
+
+            id:3,
+
+            image:avatar,
+
+            name:"David Brown",
+
+            position:"Property Developer",
+
+            company:"Brown Developers",
+
+            text:
+            "Their geotechnical recommendations helped us make confident engineering decisions from day one."
+
         }
 
     ];
 
+    const [current,setCurrent]=useState(0);
 
+    useEffect(()=>{
 
-    const [current, setCurrent] = useState(0);
+        const timer=setInterval(()=>{
 
+            setCurrent(previous=>
 
+                (previous+1)%testimonials.length
 
-    useEffect(() => {
-
-        const interval = setInterval(() => {
-
-            setCurrent(previous =>
-                (previous + 1) % testimonials.length
             );
 
-        }, 4000);
+        },7000);
 
+        return()=>clearInterval(timer);
 
-        return () => clearInterval(interval);
+    },[]);
 
+        function nextSlide(){
 
-    }, []);
+        setCurrent(previous=>
 
-
-
-    function nextSlide() {
-
-        setCurrent(previous =>
-            (previous + 1) % testimonials.length
-        );
-
-    }
-
-
-
-    function previousSlide() {
-
-        setCurrent(previous =>
-
-            previous === 0
-
-                ? testimonials.length - 1
-
-                : previous - 1
+            (previous+1)%testimonials.length
 
         );
 
     }
 
+    function previousSlide(){
 
+        setCurrent(previous=>
 
-    return (
+            previous===0
 
-        <section className="testimonials-section">
+            ? testimonials.length-1
 
+            : previous-1
 
-            <SectionTitle title="What Our Clients Say" />
+        );
 
+    }
 
+    return(
 
-            <div className="testimonial-slider">
+<section className="testimonials-section">
 
+    <div className="section-heading">
 
+        <span>
 
-                <button
-                    className="slider-button"
-                    onClick={previousSlide}
-                >
+            TESTIMONIALS
 
-                    <FaChevronLeft />
+        </span>
 
-                </button>
+        <h3>
 
+            What Our Clients Say
 
+        </h3>
 
+        <p>
 
+            Hear from organizations, institutions and private
+            clients who trusted RECOGE for engineering,
+            geotechnical and construction consultancy services.
 
-                <div className="testimonial-card">
+        </p>
 
+    </div>
 
-                    <p className="quote">
-                        ❝
-                    </p>
+    <div className="testimonial-card">
 
+        <button
 
+            className="testimonial-arrow testimonial-prev"
 
+            onClick={previousSlide}
 
-                    <p className="testimonial-text">
+        >
 
-                        {testimonials[current].text}
+            <FaChevronLeft/>
 
-                    </p>
+        </button>
 
+        <button
 
+            className="testimonial-arrow testimonial-next"
 
+            onClick={nextSlide}
 
-                    <div className="client">
+        >
 
+            <FaChevronRight/>
 
-                        <div className="client-avatar">
+        </button>
 
-                            {testimonials[current].initials}
+                <div className="testimonial-image">
 
-                        </div>
+            <img
 
+                src={testimonials[current].image}
 
+                alt={testimonials[current].name}
 
+            />
 
-                        <h3>
+        </div>
 
-                            {testimonials[current].name}
+        <div className="testimonial-content">
 
-                        </h3>
+            <div className="testimonial-stars">
 
-
-
-
-                        <span>
-
-                            {testimonials[current].role}
-
-                        </span>
-
-
-                    </div>
-
-
-
-                </div>
-
-
-
-
-
-                <button
-                    className="slider-button"
-                    onClick={nextSlide}
-                >
-
-                    <FaChevronRight />
-
-                </button>
-
-
+                <FaStar/>
+                <FaStar/>
+                <FaStar/>
+                <FaStar/>
+                <FaStar/>
 
             </div>
 
+            <p className="testimonial-text">
 
+                "{testimonials[current].text}"
 
-        </section>
+            </p>
+
+            <div className="testimonial-client">
+
+                <h4>
+
+                    {testimonials[current].name}
+
+                </h4>
+
+                <span>
+
+                    {testimonials[current].position}
+
+                </span>
+
+                <small>
+
+                    {testimonials[current].company}
+
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
     );
 
 }
-
 
 export default TestimonialsSection;

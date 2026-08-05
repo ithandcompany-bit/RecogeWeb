@@ -111,6 +111,7 @@
 
 }
 
+
 .about-card:hover,
 .services-card:hover{
 
@@ -127,7 +128,7 @@
 
     font-size:2.2rem;
 
-    color:var(--heading);
+    color:var(--accent);
 
     margin-bottom:18px;
 
@@ -197,7 +198,7 @@
 
 .services-card li:hover{
 
-    transform:translateX(8px);
+    transform:translateX(6px);
 
     color:var(--primary);
 
@@ -242,6 +243,8 @@
 
     transition:.35s;
 
+    color: white;
+
 }
 
 .about-card button:hover,
@@ -249,7 +252,11 @@
 
     transform:translateY(-4px);
 
-    background:#ffd54f;
+    background: var(--primary);
+
+    color: var(--secondary);
+
+    border: 2px solid var(--secondary);
 
 }
 
@@ -314,6 +321,155 @@
     width:38px;
 
     height:38px;
+
+}
+
+}
+
+
+/*==========================================================
+                SERVICE GROUPS
+==========================================================*/
+
+.service-groups{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+    margin-bottom:38px;
+
+}
+
+/*========================*/
+
+.service-group{
+
+    padding-bottom:20px;
+
+    border-bottom:1px solid rgba(0,0,0,.08);
+
+}
+
+.service-group:last-child{
+
+    border-bottom:none;
+
+    padding-bottom:0;
+
+}
+
+/*========================*/
+
+.group-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    margin-bottom:14px;
+
+}
+
+/*========================*/
+
+.group-icon{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(235,180,48,.12);
+
+    border:1px solid rgba(235,180,48,.25);
+
+    color:var(--accent);
+
+    flex-shrink:0;
+
+}
+
+.group-icon svg{
+
+    font-size:1.2rem;
+
+}
+
+/*========================*/
+
+.group-header h3{
+
+    color:var(--secondary);
+
+    font-size:1.05rem;
+
+    font-weight:700;
+
+}
+
+/*========================*/
+
+.service-group ul{
+
+    list-style:none;
+
+    padding-left:60px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.service-group li{
+
+    color:var(--text);
+
+    font-size:.95rem;
+
+    line-height:1.6;
+
+    transition:.3s ease;
+
+}
+
+.service-group li:hover{
+
+    color:var(--primary);
+
+    transform:translateX(5px);
+
+}
+
+/*==========================================================
+                RESPONSIVE
+==========================================================*/
+
+@media(max-width:768px){
+
+.service-group ul{
+
+    padding-left:0;
+
+}
+
+.group-header{
+
+    align-items:flex-start;
 
 }
 

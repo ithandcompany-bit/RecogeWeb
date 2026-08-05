@@ -1,39 +1,72 @@
 import Modal from "../components/Modal";
+
+import {
+    FaLocationDot,
+    FaCalendarDays,
+    FaBuilding,
+    FaCircleCheck,
+    FaArrowRight
+} from "react-icons/fa6";
+
 import "../styles/projectModal.css";
 
 function ProjectModal({
 
     project,
+
     close,
+
     openContact,
+
     openServices
 
-}) {
+}){
 
-    return (
+    const status = project.status || "Ongoing";
 
-        <Modal
-            close={close}
-            title={project.title}
-        >
+    return(
+
+        <Modal close={close}>
 
             <div className="project-popup">
 
-                <img
+                {/*=====================================
+                        HERO IMAGE
+                =====================================*/}
 
-                    src={project.image}
+                <div className="project-hero">
 
-                    alt={project.title}
+                    <img
 
-                    className="project-popup-image"
+                        src={project.gallery[0]}
 
-                />
+                        alt={project.title}
+
+                        className="project-popup-image"
+
+                    />
+
+                    <span
+
+                        className={`project-status ${status.toLowerCase().replace(" ","-")}`}
+
+                    >
+
+                        {status}
+
+                    </span>
+
+                </div>
+
+                {/*=====================================
+                        CONTENT
+                =====================================*/}
 
                 <div className="project-popup-content">
 
-                    <span className="project-category">
+                    <span className="project-service">
 
-                        {project.category}
+                        {project.service}
 
                     </span>
 
@@ -43,61 +76,271 @@ function ProjectModal({
 
                     </h2>
 
+                    <div className="project-meta">
+
+                        <div>
+
+                            <FaLocationDot/>
+
+                            <span>
+
+                                {
+
+                                    project.location ||
+
+                                    "Rwanda"
+
+                                }
+
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <FaBuilding/>
+
+                            <span>
+
+                                {
+
+                                    project.client ||
+
+                                    "Client Available Upon Request"
+
+                                }
+
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <FaCalendarDays/>
+
+                            <span>
+
+                                {
+
+                                    project.year ||
+
+                                    "Ongoing"
+
+                                }
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
                     <div className="project-divider"></div>
 
-                    <p className="project-popup-description">
+                    <section className="project-overview">
 
-                        {project.details}
+                        <h3>
 
-                    </p>
+                            Project Overview
+
+                        </h3>
+
+                        <p>
+
+                            {project.overview}
+
+                        </p>
+
+                    </section>
+
+                    <div className="project-divider"></div>
+
+                    <section className="project-scope">
+
+                        <h3>
+
+                            Services Provided
+
+                        </h3>
+
+                        <div className="scope-list">
+
+                            {
+
+                                project.scope.map((item,index)=>(
+
+                                    <div
+
+                                        key={index}
+
+                                        className="scope-item"
+
+                                    >
+
+                                        <FaCircleCheck/>
+
+                                        <span>
+
+                                            {item}
+
+                                        </span>
+
+                                    </div>
+
+                                ))
+
+                            }
+
+                        </div>
+
+                    </section>
+
+                                        <div className="project-divider"></div>
+
+                    {/*=====================================
+                            PROJECT INFORMATION
+                    =====================================*/}
+
+                    <section className="project-information">
+
+                        <h3>
+
+                            Project Information
+
+                        </h3>
+
+                        <div className="information-grid">
+
+                            <div className="information-card">
+
+                                <span>
+
+                                    Service
+
+                                </span>
+
+                                <strong>
+
+                                    {project.service}
+
+                                </strong>
+
+                            </div>
+
+                            <div className="information-card">
+
+                                <span>
+
+                                    Sector
+
+                                </span>
+
+                                <strong>
+
+                                    {project.sector}
+
+                                </strong>
+
+                            </div>
+
+                            <div className="information-card">
+
+                                <span>
+
+                                    Status
+
+                                </span>
+
+                                <strong>
+
+                                    {status}
+
+                                </strong>
+
+                            </div>
+
+                            <div className="information-card">
+
+                                <span>
+
+                                    Year
+
+                                </span>
+
+                                <strong>
+
+                                    {
+
+                                        project.year ||
+
+                                        "Ongoing"
+
+                                    }
+
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <div className="project-divider"></div>
+
+                    {/*=====================================
+                                ACTIONS
+                    =====================================*/}
 
                     <div className="project-popup-buttons">
 
-    <button
+                        <button
 
-        className="quote-button"
+                            className="quote-button"
 
-        onClick={() => {
+                            onClick={() => {
 
-            close();
+                                close();
 
-            setTimeout(() => {
+                                setTimeout(() => {
 
-                openContact();
+                                    openContact();
 
-            },250);
+                                },250);
 
-        }}
+                            }}
 
-    >
+                        >
 
-        Request a Quote
+                            Request a Quote
 
-    </button>
+                            <FaArrowRight/>
 
-    <button
+                        </button>
 
-        className="service-button"
+                        <button
 
-        onClick={() => {
+                            className="service-button"
 
-            close();
+                            onClick={() => {
 
-            setTimeout(() => {
+                                close();
 
-                openServices();
+                                setTimeout(() => {
 
-            },250);
+                                    openServices();
 
-        }}
+                                },250);
 
-    >
+                            }}
 
-        Our Services
+                        >
 
-    </button>
+                            Our Services
 
-</div>
+                            <FaArrowRight/>
+
+                        </button>
+
+                    </div>
 
                 </div>
 

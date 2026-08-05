@@ -120,6 +120,15 @@ export const services = [
     image: "/images/serImages/image12.png",
     description:
       "Reliable supply of construction materials, engineering equipment, technical products, and project support resources."
+  },
+
+  {
+    id: 13,
+    title: "Structure Audit",
+    icon: FaTruck,
+    image: "/images/serImages/image13.png",
+    description:
+      "Reliable supply of construction materials, engineering equipment, technical products, and project support resources."
   }
 ];
 

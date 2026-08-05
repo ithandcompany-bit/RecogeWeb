@@ -1,85 +1,174 @@
-/* =====================================================
+/* ==========================================================
                         HERO
-===================================================== */
+========================================================== */
 
 .hero{
 
     position:relative;
 
-    width:100%;
-
     min-height:100vh;
 
     display:flex;
 
+    width: 100vw;
+
     align-items:center;
 
-    overflow:hidden;
+    overflow:visible;
 
-    padding:120px 7% 220px;
+    padding:140px 7% 120px; 
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(8,8,8,.88) 0%,
-            rgba(8,8,8,.72) 35%,
-            rgba(8,8,8,.30) 70%,
-            rgba(8,8,8,.05) 100%
-        ),
-        url("/src/assets/images/heroImage.png");
-
-    background-size:cover;
-
-    background-position:right center;
-
-    background-repeat:no-repeat;
+     margin-top: -40px;
 
 }
 
+/* ==========================================================
+                    SLIDES
+========================================================== */
 
-/* ================= CONTENT ================= */
+.hero-slides{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+}
+
+.hero-slide{
+
+    position:absolute;
+
+    inset:0;
+
+    background-size:cover;
+
+    background-position:top right;
+
+    background-repeat:no-repeat;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    width: 100%;
+
+}
+
+.hero-slide.active-slide{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+/* ==========================================================
+                    OVERLAY
+========================================================== */
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+
+            51deg,
+
+            rgba(5,3,2,.82) 0%,
+
+            rgba(5,3,2,.70) 40%,
+
+            rgba(5,3,2,.35) 70%,
+
+            rgba(5,3,2,.10) 100%
+
+        );
+
+}
+
+/* ==========================================================
+                    CONTENT
+========================================================== */
 
 .hero-content{
 
     position:relative;
 
-    z-index:2;
+    z-index:10;
 
-    width:min(650px,100%);
+    /* width:min(720px,100%); */
 
     color:white;
 
+    
+
+    border: none;
+
+   
+
+    
+
 }
+
+/* ==========================================================
+                    DIAMOND
+========================================================== */
+
+.hero-diamond{
+
+    width:14px;
+
+    height:14px;
+
+    background:var(--secondary);
+
+    transform:rotate(45deg);
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================================================
+                    LABEL
+========================================================== */
 
 .hero-top{
 
-    display:inline-block;
+    display:block;
 
-    margin-bottom:22px;
+    margin-bottom:24px;
 
-    color:var(--accent);
+    font-size:.9rem;
 
     font-weight:700;
 
-    letter-spacing:2px;
+    letter-spacing:4px;
 
-    font-size:.82rem;
+    color:var(--secondary);
 
-    border-left:4px solid var(--secondary);
-
-    padding-left:15px;
+    text-transform:uppercase;
 
 }
 
+/* ==========================================================
+                    TITLE
+========================================================== */
+
 .hero-content h1{
 
-    font-size:clamp(2.5rem,6vw,5rem);
+    max-width:620px;
 
-    line-height:1.05;
+    font-size:clamp(2rem,4vw,3rem);
 
-    font-weight:700;
+    line-height:1.08;
 
-    margin-bottom:25px;
+    font-weight:500;
+
+    margin-bottom:22px;
 
 }
 
@@ -87,27 +176,171 @@
 
     display:block;
 
-    color:var(--accent);
+    color:var(--secondary);
+
+    font-size:1.08em;
+
+    font-weight:800;
+
+    line-height:1.05;
 
 }
+
+/* ==========================================================
+                    PARAGRAPH
+========================================================== */
 
 .hero-content p{
 
-    max-width:580px;
+    max-width:620px;
 
-    font-size:clamp(1rem,2vw,1.2rem);
+    line-height:1.9;
 
-    line-height:1.8;
+    font-size:1.05rem;
 
-    margin-bottom:40px;
+    color:#F6F4F2;
 
 }
 
-/* ================= BUTTONS ================= */
+/* ==========================================================
+                    DIVIDER
+========================================================== */
+
+.hero-line{
+
+    width:90px;
+
+    height:3px;
+
+    border-radius:999px;
+
+    background:var(--secondary);
+
+    margin:35px 0;
+
+}
+
+/* ==========================================================
+                    SERVICES
+========================================================== */
+
+.hero-services{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(260px,1fr));
+
+    gap:18px 40px;
+
+    margin:40px 0;
+
+}
+
+.hero-service{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:white;
+
+    font-size:clamp(.95rem,1vw,1.05rem);
+
+    font-weight:500;
+
+    transition:all .3s ease;
+
+}
+
+.service-check{
+
+    color:var(--accent);
+
+    font-size:1.1rem;
+
+    flex-shrink:0;
+
+    transition:all .3s ease;
+
+}
+
+.active-service{
+
+    color:var(--secondary);
+
+    font-weight:700;
+
+    transform:translateX(6px);
+
+}
+
+.active-service .service-check{
+
+    color:var(--secondary);
+
+    transform:scale(1.15);
+
+}
+
+.hero-service svg{
+
+    flex-shrink:0;
+
+    margin-top:3px;
+
+    color:var(--accent);
+
+    font-size:1rem;
+
+    transition:.35s;
+
+}
+
+.hero-service span{
+
+    font-size:clamp(.96rem,1vw,1.05rem);
+
+    font-weight:600;
+
+    line-height:1.6;
+
+    color:white;
+
+    transition:.35s;
+
+}
+
+/* ==========================================================
+                    ACTIVE SERVICE
+========================================================== */
+
+
+
+.active-service svg{
+
+    color:var(--secondary);
+
+    transform:scale(1.15);
+
+}
+
+.active-service span{
+
+    color:var(--secondary);
+
+}
+
+/* ==========================================================
+                    BUTTONS
+========================================================== */
 
 .hero-buttons{
 
     display:flex;
+
+    align-items:center;
 
     gap:18px;
 
@@ -115,115 +348,10 @@
 
 }
 
-.hero-btn-primary{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    background:var(--accent);
-
-    color:#111;
-
-    padding:18px 34px;
-
-    border-radius:14px;
-
-    font-weight:700;
-
-    transition:.35s;
-
-}
-
-.hero-btn-primary:hover{
-
-    transform:translateY(-4px);
-
-    background:#ffd44f;
-
-}
-
+.hero-btn-primary,
 .hero-btn-secondary{
 
     display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    background:transparent;
-
-    border:2px solid rgba(255,255,255,.25);
-
-    color:white;
-
-    padding:18px 34px;
-
-    border-radius:14px;
-
-    cursor:pointer;
-
-    transition:.35s;
-
-}
-
-.hero-btn-secondary:hover{
-
-    background:var(--secondary);
-
-    border-color:var(--secondary);
-
-}
-
-/* ================= FLOATING PANEL ================= */
-
-/*====================================================
-                GLASS PANEL
-====================================================*/
-
-.hero-panel{
-
-    position:absolute;
-
-    left:50%;
-
-    bottom:35px;
-
-    transform:translateX(-50%);
-
-    width:min(900px,92%);
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    background:rgba(15,15,15,.72);
-
-    backdrop-filter:blur(16px);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    border-radius:22px;
-
-    padding:18px 12px;
-
-    z-index:20;
-
-    box-shadow:0 20px 60px rgba(0,0,0,.25);
-
-}
-
-.hero-panel-item{
-
-    flex:1;
-
-    display:flex;
-
-    flex-direction:column;
 
     align-items:center;
 
@@ -231,7 +359,15 @@
 
     gap:12px;
 
-    color:white;
+    height:58px;
+
+    padding:0 34px;
+
+    border-radius:14px;
+
+    font-size:clamp(.95rem,1vw,1rem);
+
+    font-weight:600;
 
     cursor:pointer;
 
@@ -239,183 +375,507 @@
 
 }
 
-.hero-panel-item:hover{
+/* PRIMARY */
 
-    color:var(--accent);
+.hero-btn-primary{
 
-}
+    border:none;
 
-.hero-panel-item svg{
+    background:var(--accent);
 
-    font-size:2rem;
-
-    color:var(--accent);
+    color:white;
 
 }
 
-.hero-panel-item span{
+.hero-btn-primary:hover{
 
-    font-size:.95rem;
+    background:var(--primary);
 
-    font-weight:600;
+    color: var(--secondary);
 
-}
+    transform:translateY(-3px);
 
-.hero-divider{
-
-    width:1px;
-
-    height:55px;
-
-    background:rgba(255,255,255,.15);
+    border:1px solid var(--secondary);
 
 }
 
-.hero-stat:hover{
+.hero-btn-primary:hover svg{
 
-    transform:translateY(-8px);
+    color:var(--secondary);
 
-    border-color:var(--accent);
-
-    cursor:pointer;
+    
 
 }
 
-/* ================= ANIMATION ================= */
+/* SECONDARY */
 
-@keyframes heroZoom{
+.hero-btn-secondary{
 
-    from{
+    background:transparent;
 
-        transform:scale(1);
+    color:white;
 
-    }
-
-    to{
-
-        transform:scale(1.04);
-
-    }
+    border:2px solid rgba(255,255,255,.35);
 
 }
 
-/* ================= TABLET ================= */
+.hero-btn-secondary:hover{
+
+    /* background:white; */
+
+    /* color:var(--primary); */
+
+    /* border-color:white; */
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/* ==========================================================
+                    PROGRESS BAR
+========================================================== */
+
+.hero-progress{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:30px;
+
+}
+
+.hero-progress span{
+
+    width:55px;
+
+    height:4px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.25);
+
+    transition:.4s;
+
+}
+
+.hero-progress .active{
+
+    background:var(--secondary);
+
+}
+
+/* ==========================================================
+                    LARGE TABLETS
+========================================================== */
+
+@media(max-width:1100px){
+
+.hero{
+
+    padding:120px 5% 100px;
+
+}
+
+.hero-content{
+
+    width:min(650px,100%);
+
+}
+
+.hero-content h1{
+
+    font-size:clamp(2.5rem,5vw,4.2rem);
+
+}
+
+.hero-services{
+
+    gap:18px 24px;
+
+}
+
+}
+
+/* ==========================================================
+                    TABLETS
+========================================================== */
 
 @media(max-width:900px){
 
-.hero{
 
-    padding-bottom:170px;
+
+.hero-content{
+
+    width:min(700px,100%);
 
 }
 
-.hero-panel{
+
+
+
+
+.hero-content p{
+
+    margin:auto;
+
+}
+
+.hero-services{
+
+    grid-template-columns:1fr;
+
+    gap:16px;
+
+    margin-top:35px;
+
+}
+
+.hero-service{
+
+    justify-content:flex-start;
+
+    text-align:left;
+
+}
+
+.hero-overlay{
+
+    background: #000203c3;
+    
+}
+
+}
+
+/* ===========================================================
+                    MOBILE (600px)
+=========================================================== */
+
+@media (max-width:600px){
+
+.navbar{
+
+    height:76px;
+
+    padding:0 18px;
+
+}
+
+.nav-overlay{
+
+    height:76px;
+
+}
+
+.nav-links{
+
+    top:76px;
+
+}
+
+.navbar-logo-container{
+
+    width:54px;
+
+    height:54px;
+
+}
+
+.navbar-logo{
+
+    width:40px;
+
+    height:40px;
+
+}
+
+.menu-toggle{
+
+    width:42px;
+
+    height:42px;
+
+    font-size:1.45rem;
+
+}
+
+.nav-links a,
+.nav-links button{
 
     width:94%;
 
-}
+    padding:15px 16px;
 
-.hero-panel-item svg{
-
-    font-size:1.6rem;
+    font-size:.95rem;
 
 }
 
-.hero-panel-item span{
+.contact-button{
 
-    font-size:.8rem;
+    width:auto !important;
 
-}
+    min-width:220px;
 
-}
-/* ================= MOBILE ================= */
+    margin-top:12px;
 
-@media(max-width:600px){
-
-.hero{
-
-    padding-bottom:240px;
+    justify-content:center;
 
 }
 
-.hero-panel{
+.hero-overlay{
 
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:18px;
-
-    padding:20px;
+    background: #000203c3;
+    
+}
 
 }
 
-.hero-divider{
 
-    display:none;
+
+/* ===========================================================
+                VERY SMALL DEVICES
+=========================================================== */
+
+@media (max-width:380px){
+
+.navbar{
+
+    padding:0 14px;
 
 }
 
-.hero-panel-item{
+.navbar-logo-container{
+
+    width:48px;
+
+    height:48px;
+
+}
+
+.navbar-logo{
+
+    width:36px;
+
+    height:36px;
+
+}
+
+.menu-toggle{
+
+    width:40px;
+
+    height:40px;
+
+    font-size:1.3rem;
+
+}
+
+.nav-links a,
+.nav-links button{
+
+    width:95%;
+
+    font-size:.9rem;
 
     gap:8px;
 
 }
 
-.hero-panel-item svg{
+.contact-button{
 
-    font-size:1.5rem;
-
-}
-
-.hero-panel-item span{
-
-    font-size:.8rem;
+    min-width:200px;
 
 }
 
 }
 
-/* ================= SMALL MOBILE ================= */
+/* ===========================================================
+                    SCROLL STATE
+=========================================================== */
 
-@media(max-width:500px){
+.navbar.scrolled{
 
-.hero{
+    background:white;
 
-    padding-bottom:350px;
-    
-    background-position: bottom right;
-
-}
-
-.hero-stats{
-
-    grid-template-columns:repeat(2,1fr);
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
 
 }
 
-.hero-stat{
+.navbar.scrolled .nav-links a,
+.navbar.scrolled .nav-links button{
 
-    flex-direction:column;
-
-    text-align:center;
-
-    gap:10px;
-
-    padding:15px;
+    color:var(--primary);
 
 }
 
-.hero-stat p{
+.navbar.scrolled .menu-toggle{
 
-    display:none;
+    color:var(--primary);
+
+}
+
+.navbar.scrolled .active-link{
+
+    color:var(--secondary) !important;
 
 }
 
-.hero-stat h3{
+.navbar.scrolled .active-link .nav-icon{
 
-    font-size:.9rem;
+    color:var(--secondary);
 
 }
+
+/* ===========================================================
+                    MENU ANIMATION
+=========================================================== */
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-16px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.show-menu li{
+
+    opacity:0;
+
+    animation:fadeDown .35s ease forwards;
+
+}
+
+.show-menu li:nth-child(1){
+
+    animation-delay:.05s;
+
+}
+
+.show-menu li:nth-child(2){
+
+    animation-delay:.10s;
+
+}
+
+.show-menu li:nth-child(3){
+
+    animation-delay:.15s;
+
+}
+
+.show-menu li:nth-child(4){
+
+    animation-delay:.20s;
+
+}
+
+.show-menu li:nth-child(5){
+
+    animation-delay:.25s;
+
+}
+
+/* ===========================================================
+                    FOCUS ACCESSIBILITY
+=========================================================== */
+
+.nav-links a:focus-visible,
+.nav-links button:focus-visible,
+.menu-toggle:focus-visible{
+
+    outline:2px solid var(--accent);
+
+    outline-offset:4px;
+
+    border-radius:8px;
+
+}
+
+.contact-button:focus-visible{
+
+    outline:2px solid white;
+
+}
+
+/* ===========================================================
+                REDUCED MOTION
+=========================================================== */
+
+@media (prefers-reduced-motion: reduce){
+
+*{
+
+    animation:none !important;
+
+    transition:none !important;
+
+    scroll-behavior:auto !important;
+
+}
+
+}
+
+/* ===========================================================
+                ULTRA-WIDE SCREENS
+=========================================================== */
+
+@media (min-width:1600px){
+
+.navbar{
+
+    padding:0 8%;
+
+}
+
+.nav-links{
+
+    gap:42px;
+
+}
+
+.nav-links a,
+.nav-links button{
+
+    font-size:1rem;
+
+}
+
+}
+
+/* ===========================================================
+                FINAL TRANSITIONS
+=========================================================== */
+
+.navbar,
+.nav-links,
+.nav-links a,
+.nav-links button,
+.nav-icon,
+.contact-button,
+.menu-toggle,
+.navbar-logo,
+.navbar-logo-container{
+
+    transition:
+        background-color .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
 
 }

@@ -1,90 +1,103 @@
-import {useState} from "react";
-import ServicesModal from "../modals/ServicesModal";
-import {
+import { FaArrowRight } from "react-icons/fa6";
 
-    FaBuilding,
+import serviceGroups from "../data/serviceGroups";
 
-    FaHelmetSafety,
+function ServicesSection({
 
-    FaCompassDrafting,
+    openServices
 
-    FaHammer,
+}){
 
-    FaPaintRoller,
+    return(
 
-    FaClipboardList,
+        <div className="services-card">
 
-    FaScrewdriverWrench
+            <h2>
 
-} from "react-icons/fa6";
+                Our Services
 
-import { BsBuildingGear } from "react-icons/bs";
-
-import {GrUserWorker, GrPlan}  from  "react-icons/gr";
-
-import services from "../data/services";
-
-function ServicesSection() {
-
-    const [showServices, setShowServices] = useState(false);
-
-
-    return (
-        <>
-        <section className="services-card">
-
-            <h2>OUR SERVICES</h2>
+            </h2>
 
             <div className="section-line"></div>
 
-            {/* <ul>
+            <div className="service-groups">
 
-<li><FaBuilding/> Residential Construction</li>
+                {
 
-<li><FaHelmetSafety/> Commercial Projects</li>
+                    serviceGroups.map((group)=>{
 
-<li><FaHammer/> Renovation & Remodeling</li>
+                        const Icon = group.icon;
 
-<li><FaCompassDrafting/> Architectural Design</li>
+                        return(
 
-<li><FaPaintRoller/> Interior Finishes</li>
+                            <div
 
-<li><FaClipboardList/> Project Consultancy</li>
+                                key={group.id}
 
-<li><FaScrewdriverWrench/> Structural Engineering</li>
+                                className="service-group"
 
-</ul> */}
+                            >
 
-<ul>
-    {services.map(service=>< li key={service.id}><service.icon/>{service.title}</li>)}
-</ul>
+                                <div className="group-header">
+
+                                    <div className="group-icon">
+
+                                        <Icon/>
+
+                                    </div>
+
+                                    <h3>
+
+                                        {group.title}
+
+                                    </h3>
+
+                                </div>
+
+                                <ul>
+
+                                    {
+
+                                        group.services.map((service,index)=>(
+
+                                            <li key={index}>
+
+                                                • {service}
+
+                                            </li>
+
+                                        ))
+
+                                    }
+
+                                </ul>
+
+                            </div>
+
+                        );
+
+                    })
+
+                }
+
+            </div>
 
             <button
-    className="service-button"
-    onClick={() => setShowServices(true)}
->
 
-    View All Details →
+                onClick={openServices}
 
-</button>
+            >
 
-            
+                Explore Services →
 
-        </section>
+                
 
-        {
-                showServices && (
+            </button>
 
-                    <ServicesModal
-                        close={() =>
-                            setShowServices(false)
-                        }
-                    />
+        </div>
 
-                )
-            }
-        </>
     );
+
 }
 
 export default ServicesSection;

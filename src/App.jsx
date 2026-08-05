@@ -2,8 +2,7 @@ import { useState } from "react";
 
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import AboutSection from "./components/AboutSection";
-import ServicesSection from "./components/ServicesSection";
+import AboutServicesSection from "./components/AboutServicesSection";
 import ProjectsSection from "./components/ProjectsSection";
 import Testimonials from "./components/Testimonials";
 import CtaSection from "./components/CtaSection";
@@ -105,7 +104,7 @@ function App() {
 
             />
 
-            <Hero
+            <Hero 
 
                 openServices={openServices}
 
@@ -117,54 +116,19 @@ function App() {
                         ABOUT + SERVICES
             =========================================== */}
 
-            <section className="about-services-section">
+            <AboutServicesSection
 
-                <div className="section-heading">
+    openAbout={openAbout}
 
-                    <span>
+    openServices={openServices}
 
-                        ABOUT RECOGE LTD
-
-                    </span>
-
-                    <h2>
-
-                        Engineering Excellence Across Rwanda
-
-                    </h2>
-
-                    <p>
-
-                        We provide multidisciplinary engineering,
-                        architecture and construction consultancy
-                        with quality, innovation and professionalism
-                        at the heart of every project.
-
-                    </p>
-
-                </div>
-
-                <div className="main-content">
-
-                    <AboutSection
-
-                        openAbout={openAbout}
-
-                    />
-
-                    <ServicesSection
-
-                        openServices={openServices}
-
-                    />
-
-                </div>
-
-            </section>
+/>
 
             {/* ===========================================
                         PROJECTS
             =========================================== */}
+
+             
 
             <ProjectsSection
 

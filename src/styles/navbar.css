@@ -11,7 +11,9 @@
 
     width:100%;
 
-    min-height:90px;
+    height:clamp(76px,6vw,96px);
+
+    padding:0 clamp(18px,5vw,7%);
 
     display:flex;
 
@@ -19,13 +21,9 @@
 
     align-items:center;
 
-    padding:0 7%;
+    background:rgba(28,28,28,.28);
 
-    background:rgba(13,13,13,.08);
-
-    backdrop-filter:blur(14px);
-
-    border-bottom:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(16px);
 
     transition:all .35s ease;
 
@@ -34,7 +32,19 @@
 }
 
 /* ===========================================================
-                    NAVBAR OVERLAY
+                    NAVBAR ON SCROLL
+=========================================================== */
+
+.navbar.scrolled{
+
+    background:white;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+/* ===========================================================
+                    OVERLAY
 =========================================================== */
 
 .nav-overlay{
@@ -46,36 +56,36 @@
 
     width:100%;
 
-    height:90px;
+    height:clamp(76px,6vw,96px);
 
     background:
         linear-gradient(
-            90deg,
-            rgba(255,255,255,.95),
-            rgba(13,13,13,.96)
+            to right,
+            rgba(28,28,28,.18),
+            rgba(28,28,28,.02)
         );
-
-    z-index:1;
 
     pointer-events:none;
 
-}
-
-/* ===========================================================
-                    SCROLL EFFECT
-=========================================================== */
-
-.navbar.scrolled{
-
-    background:rgba(13,13,13,.96);
-
-    box-shadow:0 12px 35px rgba(0,0,0,.22);
+    z-index:1;
 
 }
 
 /* ===========================================================
-                        LOGO
+                    LOGO
 =========================================================== */
+
+
+
+.navbar.scrolled .navbar-logo-container{
+
+    transform:scale(.94);
+
+}
+
+/*==================================
+        LOGO
+==================================*/
 
 .navbar-logo-container{
 
@@ -83,27 +93,39 @@
 
     align-items:center;
 
-    max-width:220px;
+    gap:16px;
 
-    z-index:5;
+    text-decoration:none;
+
+    background-color: white;
 
 }
 
 .navbar-logo{
 
-    width:auto;
+    width:68px;
 
-    height:52px;
+    height:auto;
 
-    object-fit:contain;
-
-    transition:.35s;
+    flex-shrink:0;
 
 }
 
-.navbar-logo:hover{
+.navbar-logo-meaning{
 
-    transform:scale(1.04);
+    color: var(--accent);
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    line-height:1.5;
+
+    letter-spacing:.4px;
+
+    text-transform:uppercase;
+
+    max-width:260px;
 
 }
 
@@ -117,7 +139,9 @@
 
     align-items:center;
 
-    gap:28px;
+    gap:clamp(18px,2vw,32px);
+
+    list-style:none;
 
 }
 
@@ -130,60 +154,52 @@
 }
 
 .nav-links a,
-
 .nav-links button{
+
+    position:relative;
 
     display:flex;
 
     align-items:center;
 
-    gap:8px;
-
-    position:relative;
-
-    background:none;
+    gap:10px;
 
     border:none;
 
+    background:none;
+
     color:white;
 
-    font-size:.96rem;
+    font-size:clamp(.88rem,.95vw,.98rem);
 
-    font-weight:600;
+    font-weight:500;
 
-    transition:all .3s ease;
+    cursor:pointer;
+
+    transition:.3s;
+
+    letter-spacing: .5px;
+
+}
+
+.navbar.scrolled .nav-links a,
+.navbar.scrolled .nav-links button{
+
+    color:var(--primary);
 
 }
 
 /* ===========================================================
-                    ICONS
+                    ICON
 =========================================================== */
 
 .nav-icon{
 
-    color:var(--accent);
+    font-size:1rem;
 
-    font-size:.92rem;
-
-    transition:.3s;
-
-}
-
-.nav-links a:hover,
-
-.nav-links button:hover{
-
-    color:var(--accent);
-
-    transform:translateY(-2px);
-
-}
-
-.nav-links a:hover .nav-icon,
-
-.nav-links button:hover .nav-icon{
-
-    color:var(--secondary);
+    transition:
+        transform .25s ease,
+        color .25s ease;
 
 }
 
@@ -192,50 +208,67 @@
 =========================================================== */
 
 .nav-links a::after,
-
 .nav-links button::after{
 
     content:"";
 
     position:absolute;
 
-    left:0;
+    left:50%;
 
-    bottom:-8px;
+    bottom:-12px;
+
+    transform:translateX(-50%);
 
     width:0;
 
-    height:2px;
+    height:3px;
 
-    background:var(--secondary);
+    border-radius:999px;
 
-    transition:.35s;
+    background:var(--accent);
+
+    transition:width .25s ease;
 
 }
 
-.nav-links a:hover::after,
+/* ===========================================================
+                    HOVER
+=========================================================== */
 
+.nav-links a:hover::after,
 .nav-links button:hover::after{
 
     width:100%;
 
 }
 
+.nav-links a:hover .nav-icon,
+.nav-links button:hover .nav-icon{
+
+    transform:scale(1.12);
+
+}
+
+
+
 /* ===========================================================
-                    ACTIVE LINK
+                    ACTIVE
 =========================================================== */
 
-.active-link{
 
-    color:var(--accent);
+
+.active-link .nav-icon{
+
+    /* color:var(--accent); */
+
+    transform:scale(1.12);
 
 }
 
 .active-link::after{
 
     width:100% !important;
-
-    background:var(--accent) !important;
 
 }
 
@@ -245,59 +278,40 @@
 
 .contact-button{
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:8px;
-
-    padding:11px 18px !important;
+    padding:12px 20px !important;
 
     background:var(--accent) !important;
 
-    color:var(--primary) !important;
+    color:white !important;
 
-    border-radius:var(--radius-md);
+    border-radius:999px;
 
-    box-shadow:var(--shadow-sm);
+    transition:.35s;
 
-    white-space:nowrap;
-
-    flex-shrink:0;
-
-    transition:all .35s ease;
-
-}
-
-.contact-button::after{
-
-    display:none;
-
-}
-
-.contact-button .nav-icon{
-
-    color:var(--primary);
+    
 
 }
 
 .contact-button:hover{
 
-    background:var(--secondary) !important;
+    background:var(--primary) !important;
 
-    color:white !important;
+    color:var(--secondary) !important;
 
-    transform:translateY(-2px);
-
-    box-shadow:var(--shadow-md);
+    border:2px solid var(--secondary);
 
 }
 
-.contact-button:hover .nav-icon{
 
-    color:white;
+
+.contact-button:hover svg{
+
+    color:var(--secondary);
+
+}
+
+#conta:hover::after{
+    width: 0;
 
 }
 
@@ -309,37 +323,39 @@
 
     display:none;
 
+    width:46px;
+
+    height:46px;
+
     justify-content:center;
 
     align-items:center;
 
-    width:48px;
-
-    height:48px;
+    border:none;
 
     background:none;
 
     color:white;
 
-    border:none;
+    font-size:1.7rem;
 
-    font-size:1.8rem;
+    cursor:pointer;
 
     transition:.3s;
 
 }
 
-.menu-toggle:hover{
+.navbar.scrolled .menu-toggle{
 
-    color:var(--accent);
+    color:var(--primary);
 
 }
 
 /* ===========================================================
-                    TABLETS
+                    TABLET
 =========================================================== */
 
-@media(max-width:1150px){
+@media (max-width:1100px){
 
 .navbar{
 
@@ -349,49 +365,33 @@
 
 .nav-links{
 
-    gap:20px;
-
-}
-
-.nav-links a,
-
-.nav-links button{
-
-    font-size:.92rem;
+    gap:22px;
 
 }
 
 .contact-button{
 
-    padding:10px 16px !important;
-
-}
-
-.navbar-logo{
-
-    height:48px;
+    padding:11px 18px !important;
 
 }
 
 }
 
 /* ===========================================================
-                  MOBILE NAVIGATION
+                    MOBILE
 =========================================================== */
 
-@media(max-width:900px){
+@media (max-width:900px){
 
 .navbar{
 
-    min-height:80px;
-
-    padding:0 24px;
+    padding:0 22px;
 
 }
 
 .nav-overlay{
 
-    height:80px;
+    height:84px;
 
 }
 
@@ -405,19 +405,11 @@
 
     position:fixed;
 
-    top:80px;
+    top:84px;
 
     left:0;
 
     width:100%;
-
-    background:rgba(13,13,13,.98);
-
-    backdrop-filter:blur(18px);
-
-    border-top:1px solid rgba(255,255,255,.08);
-
-    box-shadow:0 18px 45px rgba(0,0,0,.35);
 
     display:flex;
 
@@ -425,13 +417,15 @@
 
     align-items:center;
 
-    justify-content:flex-start;
-
-    gap:8px;
+    gap:10px;
 
     padding:28px 0;
 
-    transform:translateY(-20px);
+    background:rgba(28,28,28,.98);
+
+    backdrop-filter:blur(20px);
+
+    transform:translateY(-120%);
 
     opacity:0;
 
@@ -440,24 +434,29 @@
     pointer-events:none;
 
     transition:
-
-        opacity .35s ease,
-
         transform .35s ease,
+        opacity .35s ease,
+        visibility .35s ease;
 
-        visibility .35s;
+    box-shadow:0 18px 40px rgba(0,0,0,.22);
+
+}
+
+.navbar.scrolled .nav-links{
+
+    background:white;
 
 }
 
 .show-menu{
+
+    transform:translateY(0);
 
     opacity:1;
 
     visibility:visible;
 
     pointer-events:auto;
-
-    transform:translateY(0);
 
 }
 
@@ -472,59 +471,60 @@
 }
 
 .nav-links a,
-
 .nav-links button{
 
-    width:90%;
+    width:92%;
 
-    justify-content:center;
+    justify-content:flex-start;
 
-    padding:16px 20px;
-
-    border-radius:14px;
+    padding:15px 18px;
 
     font-size:1rem;
 
 }
 
-.nav-links a:hover,
-
-.nav-links button:hover{
-
-    background:rgba(255,255,255,.06);
-
-}
-
 .nav-links a::after,
-
 .nav-links button::after{
 
-    display:none;
+    bottom:8px;
 
 }
 
 .contact-button{
 
-    width:90%;
+    width:92%;
 
-    margin-top:12px;
+    justify-content:center !important;
 
-    padding:15px 20px !important;
+    margin-top:10px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.navbar-logo{
+
+    width:55px;
+
+}
+
+.navbar-logo-meaning{
+
+    display:none;
 
 }
 
 }
-
 
 /* ===========================================================
                     SMALL PHONES
 =========================================================== */
 
-@media(max-width:600px){
+@media (max-width:600px){
 
 .navbar{
-
-    min-height:74px;
 
     padding:0 18px;
 
@@ -532,84 +532,50 @@
 
 .nav-overlay{
 
-    height:74px;
-
-}
-
-.navbar-logo{
-
-    height:44px;
-
-}
-
-.menu-toggle{
-
-    width:44px;
-
-    height:44px;
-
-    font-size:1.6rem;
+    height:76px;
 
 }
 
 .nav-links{
 
-    top:74px;
-
-    padding:24px 0;
+    top:76px;
 
 }
 
-.nav-links a,
+.navbar-logo-container{
 
-.nav-links button{
+    width:56px;
 
-    font-size:.95rem;
-
-    padding:15px 18px;
-
-}
-
-}
-
-
-/* ===========================================================
-                VERY SMALL DEVICES
-=========================================================== */
-
-@media(max-width:380px){
-
-.navbar{
-
-    padding:0 14px;
+    height:56px;
 
 }
 
 .navbar-logo{
 
-    height:40px;
+    width:42px;
+
+    height:42px;
 
 }
 
 .menu-toggle{
 
-    width:40px;
+    width:42px;
 
-    height:40px;
+    height:42px;
 
-    font-size:1.4rem;
+    font-size:1.45rem;
 
 }
 
 .nav-links a,
-
 .nav-links button{
 
     width:94%;
 
-    font-size:.9rem;
+    font-size:.95rem;
 
-    padding:14px;
+    padding:14px 16px;
 
 }
 
@@ -621,9 +587,55 @@
 
 }
 
+/* ===========================================================
+                VERY SMALL DEVICES
+=========================================================== */
+
+@media (max-width:380px){
+
+.navbar{
+
+    padding:0 14px;
+
+}
+
+.navbar-logo-container{
+
+    width:52px;
+
+    height:52px;
+
+}
+
+.navbar-logo{
+
+    width:38px;
+
+    height:38px;
+
+}
+
+.nav-links a,
+.nav-links button{
+
+    width:95%;
+
+    font-size:.9rem;
+
+    gap:8px;
+
+}
+
+.contact-button{
+
+    width:95%;
+
+}
+
+}
 
 /* ===========================================================
-                    ANIMATIONS
+                MENU ANIMATION
 =========================================================== */
 
 @keyframes fadeDown{
@@ -632,7 +644,7 @@ from{
 
     opacity:0;
 
-    transform:translateY(-18px);
+    transform:translateY(-15px);
 
 }
 
@@ -662,7 +674,7 @@ to{
 
 .show-menu li:nth-child(2){
 
-    animation-delay:.1s;
+    animation-delay:.10s;
 
 }
 
@@ -674,7 +686,7 @@ to{
 
 .show-menu li:nth-child(4){
 
-    animation-delay:.2s;
+    animation-delay:.20s;
 
 }
 
@@ -683,3 +695,24 @@ to{
     animation-delay:.25s;
 
 }
+
+/* ===========================================================
+                SMOOTH TRANSITIONS
+=========================================================== */
+
+.navbar,
+.nav-links,
+.nav-links a,
+.nav-links button,
+.nav-icon,
+.contact-button,
+.menu-toggle,
+.navbar-logo,
+.navbar-logo-container{
+
+    transition:all .3s ease;
+
+}
+
+
+

@@ -1,36 +1,84 @@
-// import "../styles/projectCard.css";
 import { FaArrowRight } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 
-function ProjectCard({ project, openProject }) {
+function ProjectCard({
+
+    project,
+
+    openProject
+
+}) {
+
     return (
-        <div className="project-card">
 
-            <img 
-                src={project.image} 
-                alt={project.title}
-            />
+        <article
+            className="project-card"
+            onClick={() => openProject(project)}
+        >
 
-            <div className="project-content">
+            {/* ================= IMAGE ================= */}
 
-                <h3>{project.title}</h3>
+            <div className="project-image">
 
-                <p>
-                    {project.description.length > 80
-                        ? project.description.substring(0, 80) + "..."
-                        : project.description}
-                </p>
-
-                <span 
-                    className="view-project"
-                    onClick={() => openProject(project)}
-                >
-                    View Project <FaArrowRight />
-                </span>
+                <img
+                    src={project.image}
+                    alt={project.title}
+                />
 
             </div>
 
-        </div>
+            {/* ================= CONTENT ================= */}
+
+            <div className="project-content">
+
+                <div className="project-top">
+
+                    {/* <span className="project-service">
+
+                        {project.service}
+
+                    </span> */}
+
+                    {/* <div className="project-location">
+
+                        <FaLocationDot />
+
+                        <span>
+
+                            {
+
+                                project.location ||
+
+                                "Rwanda"
+
+                            }
+
+                        </span>
+
+                    </div> */}
+
+                </div>
+
+                <h4>
+
+                    {project.title}
+
+                </h4>
+
+                <button className="project-link">
+
+                    View Project
+
+                    <FaArrowRight />
+
+                </button>
+
+            </div>
+
+        </article>
+
     );
+
 }
 
 export default ProjectCard;

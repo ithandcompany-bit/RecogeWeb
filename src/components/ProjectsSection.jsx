@@ -38,13 +38,33 @@ function ProjectsSection( openContact,
             id="projects"
         >
 
-           <SectionTitle title="OUR WORK"/>
+           <div className="section-heading">
 
-            <p className="section-subtitle">
+    <span>
 
-    Recent Projects and Case Studies
+        FEATURED PROJECTS
 
-</p>
+    </span>
+
+    <h2 className="work-title">
+
+        Our Work
+
+    </h2>
+
+    <p>
+
+        Explore a selection of engineering,
+        geotechnical and construction projects
+        demonstrating RECOGE's commitment to
+        quality, innovation and technical excellence
+        across Rwanda.
+
+    </p>
+
+</div>
+
+           
 
             <div className="work-tabs">
 
@@ -82,31 +102,57 @@ function ProjectsSection( openContact,
 
             </div>
 
-            <div className="projects-grid">
+           <div className="projects-grid">
 
-                {
-                    displayedItems
-                        .slice(0, visibleProjects)
-                        .map(item => (
+    {
 
-                            <ProjectCard
+        displayedItems.length === 0 ? (
 
-                                key={item.id}
+            <div className="empty-projects">
 
-                                project={item}
+                <h3>
 
-                                openProject={
-                                    activeTab === "projects"
-                                        ? setSelectedProject
-                                        : setSelectedResearch
-                                }
+                    Case Studies Coming Soon
 
-                            />
+                </h3>
 
-                        ))
-                }
+                <p>
+
+                    We are preparing detailed engineering case studies
+                    showcasing our research, technical expertise and
+                    innovative solutions. Please check back soon.
+
+                </p>
 
             </div>
+
+        ) : (
+
+            displayedItems
+                .slice(0, visibleProjects)
+                .map(item => (
+
+                    <ProjectCard
+
+                        key={item.id}
+
+                        project={item}
+
+                        openProject={
+                            activeTab === "projects"
+                                ? setSelectedProject
+                                : setSelectedResearch
+                        }
+
+                    />
+
+                ))
+
+        )
+
+    }
+
+</div>
 
             {
 

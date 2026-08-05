@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import {
     FaBars,
@@ -22,89 +22,246 @@ function Navbar({
 
 }) {
 
+    /* ===========================================
+                    STATE
+    =========================================== */
+
     const [menuOpen, setMenuOpen] = useState(false);
 
-    function closeMenu() {
+    const [scrolled, setScrolled] = useState(false);
+
+    const [activeSection, setActiveSection] = useState("home");
+
+    /* ===========================================
+                MENU
+    =========================================== */
+
+    function closeMenu(){
 
         setMenuOpen(false);
 
     }
 
-    return (
+    /* ===========================================
+                SCROLL EFFECT
+    =========================================== */
+
+    useEffect(() => {
+
+        function handleScroll(){
+
+            setScrolled(window.scrollY > 30);
+
+            const sections = [
+
+                { id:"hero", value:"home" },
+
+                { id:"about", value:"about" },
+
+                { id:"services", value:"services" },
+
+                { id:"projects", value:"projects" }
+
+            ];
+
+            const scrollPosition = window.scrollY + 150;
+
+            sections.forEach(section => {
+
+                const element = document.getElementById(section.id);
+
+                if(!element) return;
+
+                if(
+
+                    scrollPosition >= element.offsetTop &&
+                    scrollPosition < element.offsetTop + element.offsetHeight
+
+                ){
+
+                    setActiveSection(section.value);
+
+                }
+
+            });
+
+        }
+
+        handleScroll();
+
+        window.addEventListener(
+
+            "scroll",
+
+            handleScroll
+
+        );
+
+        return () => {
+
+            window.removeEventListener(
+
+                "scroll",
+
+                handleScroll
+
+            );
+
+        };
+
+    }, []);
+
+    /* ===========================================
+                CLOSE MENU ON RESIZE
+    =========================================== */
+
+    useEffect(() => {
+
+        function handleResize(){
+
+            if(window.innerWidth > 900){
+
+                setMenuOpen(false);
+
+            }
+
+        }
+
+        window.addEventListener(
+
+            "resize",
+
+            handleResize
+
+        );
+
+        return () => {
+
+            window.removeEventListener(
+
+                "resize",
+
+                handleResize
+
+            );
+
+        };
+
+    }, []);
+
+    return(
 
         <>
 
-        <nav className="navbar">
+        <nav
 
-            {/* Logo */}
+            className={`navbar ${scrolled ? "scrolled" : ""}`}
 
-            <a
-                href="#hero"
-                className="navbar-logo-container"
-                onClick={closeMenu}
-            >
+        >
 
-                <img
+            {/* =======================
+                    LOGO
+            ======================== */}
 
-                    src={logo}
+           <a
+    href="#hero"
+    className="navbar-logo-container"
+    onClick={closeMenu}
+>
 
-                    alt="Recoge Ltd"
+    <img
+        src={logo}
+        alt="RECOGE LTD"
+        className="navbar-logo"
+    />
 
-                    className="navbar-logo"
+    <span className="navbar-logo-meaning">
 
-                />
+        Reinforced Construction & Geotechnical Company Ltd
 
-            </a>
+    </span>
 
-            {/* Mobile Button */}
+</a>
+
+            {/* =======================
+                MOBILE BUTTON
+            ======================== */}
 
             <button
 
                 className="menu-toggle"
 
-                onClick={() => setMenuOpen(!menuOpen)}
+                onClick={() =>
 
-                aria-label="Toggle navigation"
+                    setMenuOpen(prev => !prev)
+
+                }
+
+                aria-expanded={menuOpen}
+
+                aria-controls="main-navigation"
+
+                aria-label="Toggle Navigation"
 
             >
 
                 {
 
-                    menuOpen ?
+                    menuOpen
 
-                    <FaXmark />
+                    ?
+
+                    <FaXmark/>
 
                     :
 
-                    <FaBars />
+                    <FaBars/>
 
                 }
 
             </button>
 
-            {/* Navigation */}
+            {/* =======================
+                    NAVIGATION
+            ======================== */}
 
-            <ul className={`nav-links ${menuOpen ? "show-menu" : ""}`}>
+            <ul
 
-               <li>
+                id="main-navigation"
 
-    <a
-        href="#hero"
-        className="active-link"
-        onClick={closeMenu}
-    >
+                className={`nav-links ${menuOpen ? "show-menu" : ""}`}
 
-        <FaHouse className="nav-icon"/>
+            >
 
-        Home
+                <li>
 
-    </a>
+                    <a
 
-</li>
+                        href="#hero"
+
+                        className="active-link"
+
+                        onClick={closeMenu}
+
+                    >
+
+                        <span className="icon-wrapper">
+
+                            <FaHouse className="nav-icon"/>
+
+                        </span>
+
+                        Home
+
+                    </a>
+
+                </li>
 
                 <li>
 
                     <button
+
+                       
 
                         onClick={() => {
 
@@ -116,7 +273,11 @@ function Navbar({
 
                     >
 
-                        <FaBuilding className="nav-icon"/>
+                        <span className="icon-wrapper">
+
+                            <FaBuilding className="nav-icon"/>
+
+                        </span>
 
                         About Us
 
@@ -128,6 +289,8 @@ function Navbar({
 
                     <button
 
+                      
+
                         onClick={() => {
 
                             openServices();
@@ -138,7 +301,11 @@ function Navbar({
 
                     >
 
-                        <FaScrewdriverWrench className="nav-icon"/>
+                        <span className="icon-wrapper">
+
+                            <FaScrewdriverWrench className="nav-icon"/>
+
+                        </span>
 
                         Services
 
@@ -150,13 +317,17 @@ function Navbar({
 
                     <a
 
-                        href="#projects"
+                       
 
                         onClick={closeMenu}
 
                     >
 
-                        <FaHelmetSafety className="nav-icon"/>
+                        <span className="icon-wrapper">
+
+                            <FaHelmetSafety className="nav-icon"/>
+
+                        </span>
 
                         Our Work
 
@@ -165,10 +336,9 @@ function Navbar({
                 </li>
 
                 <li>
+                     <button
 
-                    <button
-
-                        className="contact-button"
+                        className="contact-button" id="conta"
 
                         onClick={() => {
 
@@ -180,22 +350,21 @@ function Navbar({
 
                     >
 
-                        <FaEnvelope className="nav-icon"/>
+                        <FaEnvelope/>
 
                         Contact Us
 
                     </button>
-
                 </li>
 
             </ul>
 
+           
         </nav>
 
+       
 
-<div className="nav-overlay"></div>
-
-</>
+        </>
 
     );
 

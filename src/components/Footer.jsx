@@ -4,164 +4,409 @@ import {
     FaFacebookF,
     FaInstagram,
     FaLinkedinIn,
+
     FaMapMarkerAlt,
     FaPhoneAlt,
     FaEnvelope,
-    FaClock
+    FaClock,
+
+    FaChevronRight,
+
+    FaMountain,
+    FaFlask,
+    FaHardHat,
+    FaDraftingCompass,
+    FaMapMarkedAlt
+
 } from "react-icons/fa";
 
 import logo from "../assets/images/logo.png";
 
 function Footer({
+
     openAbout,
+
     openServices,
+
     openContact,
+
     scrollToProjects
-}) {
 
-    return (
+}){
 
-        <footer className="footer">
+    function scrollToTestimonials(){
 
-            <div className="footer-container">
+        document
 
-                {/* Company */}
+            .getElementById("testimonials")
 
-               <div className="footer-column footer-company">
+            ?.scrollIntoView({
 
-   <div className="footer-column footer-company">
+                behavior:"smooth"
+
+            });
+
+    }
+
+    return(
+
+<footer className="footer">
+
+<div className="footer-top-line"></div>
+
+<div className="footer-container">
+
+{/* =====================================
+            COMPANY
+===================================== */}
+
+<div className="footer-company">
 
     <div className="footer-logo-wrapper">
 
         <img
+
             src={logo}
-            alt="Recoge Logo"
+
+            alt="RECOGE LTD"
+
             className="footer-logo"
+
         />
 
     </div>
 
     <p>
-        Building stronger communities through
-        innovative construction, quality craftsmanship
-        and dependable project delivery.
+
+        RECOGE Ltd delivers engineering consultancy,
+        geotechnical investigations, laboratory testing,
+        construction supervision and surveying services
+        for residential, commercial and infrastructure
+        projects across Rwanda.
+
     </p>
 
-   <div className="footer-social">
+   
 
-                        <a href="#">
-                            <FaFacebookF />
-                        </a>
-
-                        <a href="#">
-                            <FaInstagram />
-                        </a>
-
-                        <a href="#">
-                            <FaLinkedinIn />
-                        </a>
-
-                    </div>
 </div>
 
-                    
+{/* =====================================
+            COMPANY
+===================================== */}
 
-                </div>
+<div className="footer-column">
 
-                {/* Quick Links */}
+<h3>
 
-                <div className="footer-column">
+Company
 
-                    <h3>Quick Links</h3>
+</h3>
 
-                    <ul>
+<ul>
 
-                        <li>
-                            <button onClick={openAbout}>
-                                About Us
-                            </button>
-                        </li>
+<li>
 
-                        <li>
-                            <button onClick={openServices}>
-                                Services
-                            </button>
-                        </li>
+<button onClick={openAbout}>
 
-                        <li>
-                            <button onClick={scrollToProjects}>
-                                Our Work
-                            </button>
-                        </li>
+<FaChevronRight className="footer-arrow"/>
 
-                        <li>
-                            <button onClick={openContact}>
-                                Contact
-                            </button>
-                        </li>
+About Us
 
-                    </ul>
+About Us
 
-                </div>
+</button>
 
+</li>
 
-                {/* Contact */}
+<li>
 
-                <div className="footer-column">
+<button onClick={scrollToProjects}>
 
-                    <h3>Contact Us</h3>
+<FaChevronRight className="footer-arrow"/>
 
-                    <div className="footer-contact">
+Our Work
 
-                        <p>
+</button>
 
-                            <FaMapMarkerAlt />
+</li>
 
-                            Kigali, Rwanda
+<li>
 
-                        </p>
+<button onClick={scrollToTestimonials}>
 
-                        <p>
+<FaChevronRight className="footer-arrow"/>
 
-                            <FaPhoneAlt />
+Testimonials
 
-                            +250 788 123 456
+</button>
 
-                        </p>
+</li>
 
-                        <p>
+<li>
 
-                            <FaEnvelope />
+<button onClick={openContact}>
 
-                            info@recogeconstruction.com
+<FaChevronRight className="footer-arrow"/>
 
-                        </p>
+Contact
 
-                        <p>
+</button>
 
-                            <FaClock />
+</li>
 
-                            Mon - Fri | 8:00 AM - 5:00 PM
+</ul>
 
-                        </p>
+</div>
 
-                    </div>
+{/* =====================================
+            SERVICES
+===================================== */}
 
-                </div>
+<div className="footer-column">
 
-            </div>
+    <h3>
 
-            <div className="footer-bottom">
+        Services
+
+    </h3>
+
+    <ul>
+
+        <li>
+
+            <button onClick={openServices}>
+
+               <FaChevronRight className="footer-arrow"/>
+
+Geotechnical Studies & Material Testing
+
+            </button>
+
+        </li>
+
+        <li>
+
+            <button onClick={openServices}>
+
+                <FaChevronRight className="footer-arrow"/>
+
+               Civil Engineering & Archtectural Design
+
+            </button>
+
+        </li>
+
+        <li>
+
+            <button onClick={openServices}>
+
+               <FaChevronRight className="footer-arrow"/>
+
+                Surveying & Environment Management
+
+            </button>
+
+        </li>
+
+        <li>
+
+            <button onClick={openServices}>
+
+               <FaChevronRight className="footer-arrow"/>
+
+               Property Management and General Supply
+
+            </button>
+
+        </li>
+
+        <li>
+
+            <button onClick={openServices}>
+
+                <FaChevronRight className="footer-arrow"/>
+
+                Surveying
+
+            </button>
+
+        </li>
+
+    </ul>
+
+</div>
+
+{/* =====================================
+            CONTACT
+===================================== */}
+
+<div className="footer-column">
+
+    <h3>
+
+        Contact
+
+    </h3>
+
+    <div className="footer-contact">
+
+        <div className="footer-contact-item">
+
+            <span className="footer-icon">
+
+                <FaMapMarkerAlt/>
+
+            </span>
+
+            <div>
+
+                <h4>
+
+                    Address
+
+                </h4>
 
                 <p>
 
-                    © 2026 Recoge Ltd. All Rights Reserved.
+                    Kigali, Rwanda, KN5 Rd
 
                 </p>
 
             </div>
 
-        </footer>
+        </div>
+
+        <div className="footer-contact-item">
+
+            <span className="footer-icon">
+
+                <FaPhoneAlt/>
+
+            </span>
+
+            <div>
+
+                <h4>
+
+                    Phone
+
+                </h4>
+
+                <p>
+
+                   (+250) 785 445 075
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div className="footer-contact-item">
+
+            <span className="footer-icon">
+
+                <FaEnvelope/>
+
+            </span>
+
+            <div>
+
+                <h4>
+
+                    Email
+
+                </h4>
+
+                <p>
+
+                    recogeltd@gmail.com
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div className="footer-contact-item">
+
+            <span className="footer-icon">
+
+                <FaClock/>
+
+            </span>
+
+            <div>
+
+                <h4>
+
+                    Working Hours
+
+                </h4>
+
+                <p>
+
+                    Monday - Friday
+
+                    <br/>
+
+                    08:00 AM - 05:00 PM
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+{/* =====================================
+            FOOTER BOTTOM
+===================================== */}
+
+<div className="footer-bottom">
+
+    <div className="footer-social">
+
+        <a href="#" aria-label="Facebook">
+
+            <FaFacebookF/>
+
+        </a>
+
+        <a href="#" aria-label="Instagram">
+
+            <FaInstagram/>
+
+        </a>
+
+        <a href="#" aria-label="LinkedIn">
+
+            <FaLinkedinIn/>
+
+        </a>
+
+    </div>
+
+    <p>
+
+        © 2026 RECOGE LTD. All Rights Reserved.
+
+    </p>
+
+    <span>
+
+        Engineering Excellence Across Rwanda
+
+    </span>
+
+</div>
+
+</footer>
 
     );
 

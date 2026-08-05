@@ -1,42 +1,76 @@
 import "../styles/ctaSection.css";
-import { FaFileSignature, FaTools } from "react-icons/fa";
 
+import {
 
+    FaFileSignature,
+    FaTools
 
-function CTASection({ openContact, openServices }) {
+} from "react-icons/fa";
 
-    return (
+function CTASection({
+
+    openContact,
+
+    openServices
+
+}){
+
+    return(
 
         <section className="cta-section">
 
-            <div className="cta-content">
+            <div className="cta-overlay">
+
+                <span className="cta-top">
+
+                    GET IN TOUCH
+
+                </span>
 
                 <h2>
 
-                    Ready to Build Your Next Project?
+                    Ready to Start Your Next Project?
 
                 </h2>
 
                 <p>
 
-                    Whether you're planning a residential, commercial,
-                    or industrial project, we're ready to turn your
-                    ideas into lasting structures built with quality
-                    and precision.
+                    Whether you require geotechnical investigations,
+                    engineering consultancy, construction supervision
+                    or laboratory testing, RECOGE is ready to deliver
+                    reliable solutions tailored to your project.
 
                 </p>
 
                 <div className="cta-buttons">
 
-                    <button className="primary-btn" onClick={openContact}>
-    <FaFileSignature />
-    Request a Quote
-</button>
+                    <button
 
-<button className="secondary-btn" onClick={openServices}>
-    <FaTools />
-    Our Services
-</button>
+                        className="cta-primary"
+
+                        onClick={openContact}
+
+                    >
+
+                        <FaFileSignature/>
+
+                        Get a Quote
+
+                    </button>
+
+                    <button
+
+                        className="cta-secondary"
+
+                        onClick={openServices}
+
+                    >
+
+                        <FaTools/>
+
+                        Our Services
+
+                    </button>
 
                 </div>
 

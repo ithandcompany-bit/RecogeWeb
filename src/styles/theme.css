@@ -11,33 +11,34 @@
 
 :root{
 
-    /* ========= BRAND ========= */
+    /* BRAND */
 
-    --primary:#0D0D0D;
-    --secondary:#C8102E;
-    --accent:#F4B400;
+    --primary:#1C1C1C;
 
-    /* ========= BACKGROUNDS ========= */
+    --secondary:#D4A017;
 
-    --bg:#F7F7F7;
+    --accent:#B85C38;
+
+    /* BACKGROUNDS */
+
+    --bg:#F7F3ED;
+
     --surface:#FFFFFF;
 
-    /* ========= TEXT ========= */
+    --surface-alt:#F3EEE8;
 
-    --heading:#111111;
-    --text:#555555;
-    --muted:#888888;
+    /* TEXT */
 
-    /* ========= BORDERS ========= */
+    --heading:#1C1C1C;
 
-    --border:#E5E5E5;
+    --text:#5F5A56;
 
-    /* ========= SHADOW ========= */
+    --muted:#6E6A66;
 
-    --shadow:
-        0 10px 25px rgba(0,0,0,.08);
+    --white:#FFFFFF;
 
-    --shadow-hover:
-        0 18px 40px rgba(0,0,0,.15);
+    /* BORDERS */
+
+    --border:#E6DDD5;
 
 }

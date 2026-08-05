@@ -1,7 +1,7 @@
 import AboutSection from "./AboutSection";
 import ServicesSection from "./ServicesSection";
 
-import "../styles/aboutServices.css";
+import "../styles/AboutServices.css";
 
 function AboutServicesSection({
 

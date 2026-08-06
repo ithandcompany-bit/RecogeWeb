@@ -1,20 +1,20 @@
-/* =====================================================
+/*=====================================================
                 ABOUT MODAL
-===================================================== */
+=====================================================*/
 
 .about-popup{
 
     width:100%;
 
-    background:#F5F5F5;
+    background:#F8F8F8;
 
-    padding-bottom:60px;
+    padding-bottom:70px;
 
 }
 
-/* =====================================================
+/*=====================================================
                 HERO
-===================================================== */
+=====================================================*/
 
 .about-hero{
 
@@ -22,7 +22,7 @@
 
     width:100%;
 
-    height:380px;
+    height:420px;
 
     overflow:hidden;
 
@@ -36,6 +36,10 @@
 
     object-fit:cover;
 
+    transform:scale(1);
+
+    animation:heroZoom 18s ease-in-out infinite alternate;
+
 }
 
 .about-hero-overlay{
@@ -43,12 +47,6 @@
     position:absolute;
 
     inset:0;
-
-    background:
-    linear-gradient(
-        rgba(13,13,13,.35),
-        rgba(13,13,13,.75)
-    );
 
     display:flex;
 
@@ -62,15 +60,27 @@
 
     padding:40px;
 
+    background:
+
+    linear-gradient(
+
+        rgba(0,0,0,.35),
+
+        rgba(0,0,0,.72)
+
+    );
+
 }
 
 .about-hero-overlay h1{
 
     color:white;
 
-    font-size:3rem;
+    font-size:clamp(2rem,3vw + 1rem,3.3rem);
 
-    margin-bottom:18px;
+    line-height:1.2;
+
+    margin-bottom:20px;
 
     font-weight:700;
 
@@ -78,13 +88,13 @@
 
 .about-hero-overlay p{
 
-    color:#F4F4F4;
+    max-width:820px;
 
-    max-width:750px;
+    color:rgba(255,255,255,.92);
 
-    line-height:1.8;
+    font-size:clamp(1rem,.35vw + .9rem,1.12rem);
 
-    font-size:1.08rem;
+    line-height:1.9;
 
 }
 
@@ -94,50 +104,51 @@
 
     width:120px;
 
-    height:5px;
+    height:4px;
 
-    background:#F4B400;
+    margin-top:28px;
 
-    margin-top:25px;
+    border-radius:30px;
 
-    border-radius:50px;
+    background:var(--accent);
 
 }
 
-/* =====================================================
+/*=====================================================
                 SECTION CARD
-===================================================== */
+=====================================================*/
 
 .about-card{
 
+    margin:28px;
+
+    padding:50px;
+
     background:white;
 
-    margin:35px;
-
-    padding:45px;
-
-    border-radius:20px;
+    border-radius:22px;
 
     box-shadow:
-        0 12px 35px rgba(0,0,0,.08);
+
+        0 18px 45px rgba(0,0,0,.08);
 
     transition:.35s;
 
 }
 
-.about-card:hover .section-title svg{
+.about-card:hover{
 
-    background:#F4B400;
+    transform:translateY(-6px);
 
-    color:#0D0D0D;
+    box-shadow:
 
-    transform:rotate(-8deg) scale(1.08);
+        0 24px 55px rgba(0,0,0,.12);
 
 }
 
-/* =====================================================
-                HEADINGS
-===================================================== */
+/*=====================================================
+                SECTION TITLE
+=====================================================*/
 
 .section-title{
 
@@ -145,39 +156,53 @@
 
     align-items:center;
 
-    gap:15px;
+    gap:18px;
 
 }
 
 .section-title svg{
 
-    width:52px;
+    width:50px;
 
-    height:52px;
+    height:50px;
 
-    padding:14px;
+    padding:15px;
 
-    background:#0D0D0D;
+    border-radius:16px;
 
-    color:#F4B400;
+    background:#FFF8E6;
 
-    border:2px solid #F4B400;
+    color:var(--accent);
 
-    border-radius:14px;
-
-    flex-shrink:0;
+    border:2px solid var(--accent);
 
     transition:.35s;
 
+    flex-shrink:0;
+
 }
 
-.section-title h2{
+.about-card:hover .section-title svg{
 
-    color:#0D0D0D;
+    background:var(--accent);
 
-    font-size:1.7rem;
+    border-color:var(--accent);
+
+    color:white;
+
+    transform:rotate(-8deg);
+
+}
+
+.section-title h3{
+
+    color:var(--accent);
+
+    font-size:clamp(1.45rem,.8vw + 1rem,1.9rem);
 
     font-weight:700;
+
+    line-height:1.3;
 
 }
 
@@ -187,31 +212,77 @@
 
     height:4px;
 
-    background:#F4B400;
+    margin:22px 0 34px;
 
-    border-radius:50px;
+    border-radius:30px;
 
-    margin:20px 0 30px;
+    background:var(--accent);
 
 }
 
-/* =====================================================
+/*=====================================================
                 PARAGRAPH
-===================================================== */
+=====================================================*/
 
 .about-card p{
 
-    color:#5A5A5A;
+    color:var(--text);
+
+    font-size:clamp(.98rem,.2vw + .9rem,1.08rem);
 
     line-height:1.9;
 
-    font-size:1rem;
+}
+
+@keyframes heroZoom{
+
+from{
+
+    transform:scale(1);
 
 }
 
-/* =====================================================
-                VALUES & EXPERTISE
-===================================================== */
+to{
+
+    transform:scale(1.08);
+
+}
+
+}
+
+/*=====================================================
+            MISSION & VISION
+=====================================================*/
+
+.mission-vision-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:28px;
+
+    margin:28px;
+
+}
+
+.mission-vision-grid .about-card{
+
+    margin:0;
+
+    height:100%;
+
+}
+
+.mission-vision-grid p{
+
+    margin-bottom:0;
+
+}
+
+/*=====================================================
+        VALUES & EXPERTISE
+=====================================================*/
 
 .two-column-grid{
 
@@ -219,7 +290,7 @@
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:22px;
+    gap:24px;
 
 }
 
@@ -229,15 +300,17 @@
 
     align-items:center;
 
-    gap:15px;
+    gap:18px;
 
-    background:#FAFAFA;
+    padding:22px 24px;
 
-    padding:20px;
+    background:#FFFFFF;
 
-    border-radius:16px;
+    border-radius:18px;
 
-    border-left:5px solid #F4B400;
+    border-left:5px solid var(--accent);
+
+    box-shadow:0 8px 22px rgba(0,0,0,.05);
 
     transition:.35s;
 
@@ -247,46 +320,61 @@
 
     transform:translateX(8px);
 
-    border-left-color:#C8102E;
+    /* border-left-color:var(--secondary); */
 
-    box-shadow:
-        0 10px 25px rgba(0,0,0,.08);
+    box-shadow:0 16px 35px rgba(0,0,0,.10);
 
 }
 
 .list-icon{
 
-    color:#F4B400;
+    width:38px;
 
-    background:#0D0D0D;
+    height:38px;
 
-    width:28px;
-
-    height:28px;
-
-    padding:6px;
-
-    border-radius:50%;
-
-    border:1px solid #F4B400;
+    padding:10px;
 
     flex-shrink:0;
 
+    /* border-radius:50%;
+
+    background:var(--primary); */
+
+    color:var(--accent);
+
+    /* border:2px solid var(--accent); */
+
+    /* transition:.35s; */
+
 }
+
+/* .list-card:hover .list-icon{
+
+    background:var(--secondary);
+
+    border-color:var(--secondary);
+
+    color:white;
+
+    transform:rotate(-12deg);
+
+} */
 
 .list-card span{
 
-    color:#333;
+    color:var(--heading);
 
-    font-weight:500;
+    font-size:1rem;
 
-    line-height:1.6;
+    font-weight:600;
+
+    line-height:1.7;
 
 }
 
-/* =====================================================
+/*=====================================================
                 ACHIEVEMENTS
-===================================================== */
+=====================================================*/
 
 .achievement-grid{
 
@@ -294,24 +382,23 @@
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:25px;
+    gap:28px;
 
 }
 
 .achievement-card{
 
-    background:white;
+    background:#FFFFFF;
 
-    border-top:5px solid #F4B400;
+    border-radius:20px;
 
-    border-radius:18px;
-
-    padding:35px;
+    padding:38px 30px;
 
     text-align:center;
 
-    box-shadow:
-        0 12px 30px rgba(0,0,0,.08);
+    border-top:5px solid var(--accent);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
 
     transition:.35s;
 
@@ -321,49 +408,67 @@
 
     transform:translateY(-8px);
 
-    border-top-color:#C8102E;
+    border-top-color:var(--secondary);
+
+    box-shadow:0 22px 45px rgba(0,0,0,.14);
 
 }
 
 .achievement-icon{
 
-    width:50px;
+    width:58px;
 
-    height:50px;
+    height:58px;
 
     padding:18px;
 
-    background:#0D0D0D;
-
-    color:#F4B400;
-
-    border:2px solid #F4B400;
+    margin:0 auto 22px;
 
     border-radius:50%;
 
-    margin:0 auto 20px;
+    
+
+    color:var(--accent);
+
+   
 
 }
+
+/* .achievement-card:hover .achievement-icon{
+
+    background:var(--secondary);
+
+    border-color:var(--secondary);
+
+    color:white;
+
+    transform:rotate(-10deg);
+
+} */
 
 .achievement-card p{
 
-    color:#0D0D0D;
+    margin:0;
+
+    color:var(--heading);
+
+    font-size:1rem;
 
     font-weight:600;
 
-    line-height:1.7;
+    line-height:1.8;
 
 }
 
-/* =====================================================
+/*=====================================================
                     TEAM
-===================================================== */
+=====================================================*/
 
 .team-grid{
 
     display:grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
     gap:30px;
 
@@ -373,15 +478,15 @@
 
     background:#FFFFFF;
 
-    border-radius:18px;
+    border-radius:22px;
 
     overflow:hidden;
 
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
 
     transition:.35s;
 
-    border-bottom:4px solid transparent;
+    border-bottom:5px solid transparent;
 
 }
 
@@ -389,9 +494,9 @@
 
     transform:translateY(-8px);
 
-    border-bottom:4px solid #C8102E;
+    border-bottom-color:var(--secondary);
 
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
+    box-shadow:0 22px 50px rgba(0,0,0,.14);
 
 }
 
@@ -405,7 +510,7 @@
 
     width:100%;
 
-    height:260px;
+    height:400px;
 
     object-fit:cover;
 
@@ -421,17 +526,19 @@
 
 .team-content{
 
-    padding:25px;
+    padding:28px;
 
     text-align:center;
 
 }
 
-.team-content h3{
+.team-content h4{
 
-    color:#0D0D0D;
+    color:var(--heading);
 
-    font-size:1.2rem;
+    font-size:1.25rem;
+
+    font-weight:700;
 
     margin-bottom:8px;
 
@@ -441,41 +548,59 @@
 
     display:block;
 
-    color:#C8102E;
+    color:var(--secondary);
+
+    font-size:.95rem;
 
     font-weight:600;
 
-    margin-bottom:12px;
+    margin-bottom:14px;
 
 }
 
 .team-content p{
 
-    color:#666;
+    color:var(--text);
 
     font-size:.95rem;
 
-    line-height:1.7;
+    line-height:1.8;
 
 }
 
-/* =====================================================
+/*=====================================================
                     CTA
-===================================================== */
+=====================================================*/
 
 .about-cta{
 
-    margin:35px;
+    margin:28px;
 
-    background:#0D0D0D;
+    padding:70px 50px;
 
-    border-radius:20px;
+    background:
 
-    padding:60px;
+        linear-gradient(
+
+            rgba(20,26,34,.88),
+
+            rgba(20,26,34,.88)
+
+        ),
+
+        url("../assets/images/ctaImage.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    border-radius:22px;
 
     text-align:center;
 
-    color:#FFFFFF;
+    color:white;
 
     position:relative;
 
@@ -483,47 +608,53 @@
 
 }
 
-.about-cta::before{
+/* .about-cta::before{
 
     content:"";
 
     position:absolute;
 
-    top:0;
-
     left:0;
+
+    top:0;
 
     width:100%;
 
     height:5px;
 
-    background:#F4B400;
+    background:var(--accent);
 
-}
+} */
 
-.about-cta h2{
+.about-cta h3{
 
-    font-size:2rem;
+    color:white;
 
-    margin-bottom:20px;
+    font-size:clamp(1.6rem,1vw + 1rem,2.2rem);
+
+    margin-bottom:22px;
+
+    line-height:1.3;
 
 }
 
 .about-cta p{
 
-    max-width:750px;
+    max-width:760px;
 
-    margin:0 auto 35px;
+    margin:0 auto 40px;
 
-    color:#DDDDDD;
+    color:rgba(255,255,255,.88);
+
+    font-size:clamp(.98rem,.2vw + .9rem,1.08rem);
 
     line-height:1.9;
 
 }
 
-/* =====================================================
+/*=====================================================
                     BUTTONS
-===================================================== */
+=====================================================*/
 
 .about-buttons{
 
@@ -539,19 +670,19 @@
 
 .primary-button{
 
-    background:#C8102E;
+    background:var(--accent);
 
-    color:#FFFFFF;
+    color:white;
 
     border:none;
 
-    padding:16px 34px;
+    padding:16px 36px;
 
-    border-radius:10px;
+    border-radius:14px;
 
     font-size:1rem;
 
-    font-weight:600;
+    font-weight:700;
 
     cursor:pointer;
 
@@ -561,9 +692,13 @@
 
 .primary-button:hover{
 
-    background:#A40D24;
+    background:var(--primary);
+
+    color:var(--secondary);
 
     transform:translateY(-4px);
+
+    border:1px solid var(--secondary);
 
 }
 
@@ -571,17 +706,17 @@
 
     background:transparent;
 
-    color:#FFFFFF;
+    color:white;
 
-    border:2px solid #F4B400;
+    border:2px solid var(--accent);
 
-    padding:16px 34px;
+    padding:16px 36px;
 
-    border-radius:10px;
+    border-radius:14px;
 
     font-size:1rem;
 
-    font-weight:600;
+    font-weight:700;
 
     cursor:pointer;
 
@@ -591,23 +726,28 @@
 
 .secondary-button:hover{
 
-    background:#F4B400;
-
-    color:#0D0D0D;
-
+   border-color: white;
     transform:translateY(-4px);
 
 }
 
-/* =====================================================
+/*=====================================================
                     RESPONSIVE
-===================================================== */
+=====================================================*/
 
-@media(max-width:1100px){
+@media(max-width:992px){
 
-.team-grid{
+.about-hero{
 
-    grid-template-columns:repeat(2,1fr);
+    height:360px;
+
+}
+
+.about-card{
+
+    margin:22px;
+
+    padding:38px;
 
 }
 
@@ -619,7 +759,21 @@
 
 .achievement-grid{
 
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:1fr;
+
+}
+
+.team-image{
+
+    height:280px;
+
+}
+
+.about-cta{
+
+    margin:22px;
+
+    padding:55px 35px;
 
 }
 
@@ -627,59 +781,53 @@
 
 @media(max-width:768px){
 
-.about-card{
-
-    margin:20px;
-
-    padding:30px;
-
-}
-
 .about-hero{
 
     height:300px;
 
 }
 
-.about-hero-overlay h1{
+.about-hero-overlay{
 
-    font-size:2.2rem;
+    padding:24px;
 
 }
 
-.about-hero-overlay p{
+.about-card{
 
-    font-size:.95rem;
+    margin:16px;
+
+    padding:28px 22px;
+
+}
+
+.section-title{
+
+    gap:14px;
+
+}
+
+.section-title svg{
+
+    width:50px;
+
+    height:50px;
+
+    padding:13px;
+
+}
+
+.team-image{
+
+    height:260px;
 
 }
 
 .about-cta{
 
-    margin:20px;
+    margin:16px;
 
-    padding:40px 25px;
-
-}
-
-.about-cta h2{
-
-    font-size:1.7rem;
-
-}
-
-}
-
-@media(max-width:600px){
-
-.team-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.achievement-grid{
-
-    grid-template-columns:1fr;
+    padding:45px 24px;
 
 }
 
@@ -697,16 +845,6 @@
 
 }
 
-.section-title{
-
-    flex-direction:column;
-
-    align-items:flex-start;
-
-    gap:10px;
-
-}
-
 }
 
 @media(max-width:480px){
@@ -717,49 +855,33 @@
 
 }
 
-.about-hero-overlay{
-
-    padding:20px;
-
-}
-
-.about-hero-overlay h1{
-
-    font-size:1.8rem;
-
-}
-
 .about-card{
 
-    margin:15px;
+    margin:12px;
 
-    padding:25px;
-
-}
-
-.about-cta{
-
-    margin:15px;
-
-    border-radius:15px;
+    padding:22px 18px;
 
 }
 
-.about-cta h2{
+.section-title{
 
-    font-size:1.5rem;
-
-}
-
-.about-cta p{
-
-    font-size:.95rem;
+    align-items:flex-start;
 
 }
 
 .team-image{
 
-    height:220px;
+    height:240px;
+
+}
+
+.about-cta{
+
+    margin:12px;
+
+    padding:35px 18px;
+
+    border-radius:18px;
 
 }
 

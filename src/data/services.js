@@ -17,8 +17,9 @@ export const services = [
   {
     id: 1,
     title: "Geotechnical & Site Investigation",
+     group: "Geotechnical & Laboratory",
     icon: FaMountain,
-    image: "/images/S1.png",
+    image: "/src/assets/images/services/ser1.jpeg",
     description:
       "Comprehensive geotechnical investigations including borehole drilling, soil exploration, in-situ testing, laboratory analysis, and engineering recommendations for safe foundation design."
   },
@@ -26,6 +27,7 @@ export const services = [
   {
     id: 2,
     title: "Material Testing & Laboratory Services",
+     group: "Geotechnical & Laboratory",
     icon: FaFlask,
     image: "/images/serImages/labo.png",
     description:
@@ -35,8 +37,10 @@ export const services = [
   {
     id: 3,
     title: "Geological Study",
+
+     group: "Geotechnical & Laboratory",
     icon: FaGlobe,
-    image: "/images/S3.png",
+   image: "/src/assets/images/services/geological.jpeg",
     description:
       "Detailed geological assessments that evaluate ground conditions, rock formations, and geological risks for infrastructure and construction projects."
   },
@@ -44,8 +48,9 @@ export const services = [
   {
     id: 4,
     title: "Hydrological Study",
+     group: "Geotechnical & Laboratory",
     icon: FaWater,
-    image: "/images/serImages/image04.png",
+    image: "/src/assets/images/services/Hydrological.png",
     description:
       "Hydrological investigations, flood assessments, watershed analysis, and water resource studies supporting sustainable infrastructure development."
   },
@@ -53,6 +58,7 @@ export const services = [
   {
     id: 5,
     title: "Civil Engineering & Construction",
+     group: "Engineering & Design",
     icon: FaHardHat,
     image: "/images/S5.png",
     description:
@@ -62,6 +68,7 @@ export const services = [
   {
     id: 6,
     title: "Architectural & Structural Design",
+     group: "Engineering & Design",
     icon: FaDraftingCompass,
     image: "/images/S6.png",
     description:
@@ -71,8 +78,9 @@ export const services = [
   {
     id: 7,
     title: "Environmental Studies",
+     group: "Surveying & Environment",
     icon: FaLeaf,
-    image: "/images/S7.png",
+    image: "/src/assets/images/services/Hydrological.png",
     description:
       "Environmental assessments and impact studies that ensure projects comply with environmental regulations and sustainable development practices."
   },
@@ -80,8 +88,11 @@ export const services = [
   {
     id: 8,
     title: "Land Surveying & Mapping",
+
+    group: "Surveying & Environment",
+
     icon: FaMapMarkedAlt,
-   image: "/images/S8.png",
+   image: "/src/assets/images/services/land surveying.jpeg",
     description:
       "Accurate topographical surveys, boundary surveys, engineering surveys, GIS mapping, and land documentation services."
   },
@@ -89,8 +100,9 @@ export const services = [
   {
     id: 9,
     title: "Construction Project Management",
+      group: "Engineering & Design",
     icon: FaTasks,
-    image: "/images/serImages/image09.png",
+    image: "/src/assets/images/services/project management.jpg",
     description:
       "Complete project planning, supervision, scheduling, quality control, contract administration, and successful project delivery."
   },
@@ -98,8 +110,9 @@ export const services = [
   {
     id: 10,
     title: "Drainage & Water Supply Infrastructure",
+      title: "Environmental Studies",
     icon: FaTint,
-    image: "/images/serImages/image10.png",
+    image: "/src/assets/images/services/watersupply.jpeg",
     description:
       "Design and implementation of drainage systems, water supply networks, hydraulic structures, and related civil infrastructure."
   },
@@ -108,7 +121,8 @@ export const services = [
     id: 11,
     title: "Property Valuation",
     icon: FaHome,
-    image: "/images/serImages/image11.png",
+    group: "Property & Support",
+    image: "/src/assets/images/services/propertyvalue.jpeg",
     description:
       "Professional valuation services for residential, commercial, industrial, and investment properties using recognized valuation standards."
   },
@@ -116,8 +130,9 @@ export const services = [
   {
     id: 12,
     title: "General Supply",
+     group: "Property & Support",
     icon: FaTruck,
-    image: "/images/serImages/image12.png",
+    image: "/src/assets/images/services/general supply.jpeg",
     description:
       "Reliable supply of construction materials, engineering equipment, technical products, and project support resources."
   },
@@ -125,8 +140,9 @@ export const services = [
   {
     id: 13,
     title: "Structure Audit",
+    group: "Engineering & Design",
     icon: FaTruck,
-    image: "/images/serImages/image13.png",
+    image: "/images/S1.png",
     description:
       "Reliable supply of construction materials, engineering equipment, technical products, and project support resources."
   }

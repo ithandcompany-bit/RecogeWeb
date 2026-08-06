@@ -7,10 +7,10 @@ const aboutData = {
     "RECOGE Ltd is a Kigali-based General Building Construction Company with over 12 years of experience in the building and civil engineering industry. We specialize in professional construction services, design-build solutions, and efficient project management, delivering residential, commercial, industrial, refurbishment, and civil engineering projects across Rwanda. Our commitment to innovation, quality, and client satisfaction has made us a trusted construction partner for both public and private sector clients.",
 
   mission:
-    "To provide quality construction and technical services while building long-term relationships based on quality assurance, service delivery, professionalism, and safety.",
+    "We are dedicated to providing quality construction and technical services to our clients. We strive to implement and maintain long-term relationships based on quality assurance, service delivery and safety.",
 
   vision:
-    "To be the contractor of choice by pursuing excellence through dedication, experience, innovation, and highly motivated professionals while creating exceptional value for our clients.",
+    "We are a family-owned company committed to being the contractor of choice, pursuing excellence through dedication, experience and highly motivated employees. We aspire to be a company that our clients want to work with, and our employees are proud to work for. A company ready to embrace new opportunities and deliver exceptional value.",
 
   values: [
     "Professionalism",
@@ -24,50 +24,100 @@ const aboutData = {
   ],
 
   expertise: [
-    "General Building Construction",
-    "Civil Engineering",
-    "Design & Build",
-    "Project Management",
+    "Geothechnical Investigation",
+    "Materials Testing & Quality Control",
+    "Archtectural & Structural Design",
+    "Construction Services",
     "Technical Consultancy",
     "Infrastructure Development"
   ],
 
   achievements: [
     "12+ Years of Industry Experience",
-    "Successfully Delivered Landmark Projects Across Rwanda",
-    "Trusted by Government, Private Developers and International Consultants"
+    "100+ projects",
+    "Trusted by Government, Private Developers and International Consultants",
+    "98% clients' satisfaction",
+    "Strong & Dedicated Team"
   ],
 
   team: [
     {
-      id: 1,
-      image: "/images/image1.png",
-      name: "Eng. Emmanuel Nshuti",
-      role: "Chief Executive Officer",
-      qualification: "M.Sc. Civil Engineering"
+        id: 1,
+        name: "Eng.NKUNDABAGENZI Jeremie",
+        role: "Managing Director",
+        image: "/src/assets/images/team/Jeremie.png"
     },
+
     {
-      id: 2,
-      image: "/images/image2.png",
-      name: "Claudine Uwase",
-      role: "Marketing Manager",
-      qualification: "Business Administration"
+        id: 2,
+        name: "Eng.KUBWIMANA Jean Claude",
+        role: "Laboratory and Quality Manager",
+        image: ""
     },
+
     {
-      id: 3,
-      image: "/images/image3.png",
-      name: "Alexis Mugisha",
-      role: "Quality Assurance Manager",
-      qualification: "Construction Management"
+        id: 3,
+        name: "Eng.KAYINAMURA Callixte ",
+        role: "Laboratory Technicians",
+        image: "/src/assets/images/team/Callixte.png"
     },
+
     {
-      id: 4,
-      image: "/images/image4.png",
-      name: "Jean Bosco Habimana",
-      role: "Site Manager",
-      qualification: "Building & Civil Engineering"
+        id: 4,
+        name: "Eng.NSHIMIYIMANA Fred",
+        role: "Laboratory Technicians",
+        image: "/src/assets/images/team/Fred.png"
+    },
+
+     {
+        id: 5,
+        name: "Eng.DUFATANYE Emmanuel ",
+        role: "Maintenance Engineer	",
+        image: "/src/assets/images/team/Dufatanye.jpeg"
+    },
+
+     {
+        id: 6,
+        name: "MUGENI Marie Claire",
+        role: "Customer Service Receptionist",
+        image: ""
+    },
+
+     {
+        id: 7,
+        name: "DUSABE Esther",
+        role: "IT Support Technician",
+        image: ""
+    },
+
+     {
+        id: 8,
+        name: "Eng.NIYOMUSHUMBA François Xavier",
+        role: "Construction Site Engineer",
+        image: "/src/assets/images/team/Francois.png"
+    },
+
+     {
+        id: 9,
+        name: "Arch.NSABIMANA Elie",
+        role: "Architect",
+        image: "/src/assets/images/team/Elie.png"
+    },
+
+     {
+        id: 10,
+        name: "Eng.MUGENGA Jean Aime",
+        role: "Structure Engineer",
+        image: "/src/assets/images/team/Mugenga.jpeg"
+    },
+
+     {
+        id: 11,
+        name: "MASENGESHO Hilaire",
+        role: "Legal Advisor",
+        image: "/images/team-4.jpg"
     }
-  ]
+]
 };
 
 export default aboutData;

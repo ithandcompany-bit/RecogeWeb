@@ -33,7 +33,7 @@ const slides = [
 
         image: hero1,
 
-        title: "Site & Geotechnical Investigations",
+        title: "Geotechnical Investigations",
 
         subtitle: "Reliable ground assessment",
 
@@ -45,7 +45,7 @@ const slides = [
 
         image: hero2,
 
-        title: "Architecctural & Structural Design ",
+        title: "Architectural & Structural Design ",
 
         subtitle: "Innovative technical solutions",
 
@@ -185,21 +185,22 @@ function Hero({
 
                 <span className="hero-top">
 
-                    ENGINEERING • CONSULTANCY • CONSTRUCTION
+                    ENGINEERING • CONSULTANCY • ARCHITECTURE
 
                 </span>
 
                 <h1>
 
-                    Engineering
+                   RECOGE Ltd – Providing Trusted
 
                     <span>
 
-                        Tomorrow's Infrastructure
+                        Geotechnical Engineering and Construction Materials Testing
+                        
 
                     </span>
 
-                    for Rwanda
+                     Solutions.
 
                 </h1>
 

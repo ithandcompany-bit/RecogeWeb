@@ -73,11 +73,15 @@ function Modal({ title, children, close }) {
 
                 </header>
 
-                <div className="modal-content">
+               <div className="modal-content">
 
-                    {children}
+    <div className="modal-body">
 
-                </div>
+        {children}
+
+    </div>
+
+</div>
 
             </div>
 
@@ -88,3 +92,4 @@ function Modal({ title, children, close }) {
 }
 
 export default Modal;
+

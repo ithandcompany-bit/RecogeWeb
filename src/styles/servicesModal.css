@@ -1,104 +1,246 @@
-/* =====================================================
-                    SERVICES MODAL
-===================================================== */
+/*=====================================================
+                SERVICES MODAL
+=====================================================*/
 
 .services-popup{
 
-    background:#F5F5F5;
+    width:100%;
 
-    padding:40px;
+    background:#F8F8F8;
 
-}
-
-/* =====================================================
-                    HEADER
-===================================================== */
-
-.services-popup-header{
-
-    text-align:center;
-
-    max-width:900px;
-
-    margin:0 auto 50px;
+    padding-bottom:70px;
 
 }
 
-.services-popup-header h1{
+/*=====================================================
+                    HERO
+=====================================================*/
 
-    color:#0D0D0D;
+.services-hero{
 
-    font-size:2.6rem;
+    position:relative;
 
-    font-weight:700;
+    width:100%;
 
-    margin-bottom:20px;
-
-}
-
-.services-popup-header p{
-
-    color:#666;
-
-    font-size:1.08rem;
-
-    line-height:1.9;
-
-}
-
-.services-popup-header::after{
-
-    content:"";
-
-    display:block;
-
-    width:120px;
-
-    height:4px;
-
-    background:#F4B400;
-
-    border-radius:50px;
-
-    margin:30px auto 0;
-
-}
-
-/* =====================================================
-                    GRID
-===================================================== */
-
-.services-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:35px;
-
-}
-
-/* =====================================================
-                    CARD
-===================================================== */
-
-.service-card{
-
-    background:#FFFFFF;
-
-    border-radius:20px;
+    height:420px;
 
     overflow:hidden;
 
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
 
-    transition:.35s;
+.services-hero-image{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    animation:heroZoom 18s ease-in-out infinite alternate;
+
+}
+
+.services-hero-overlay{
+
+    position:absolute;
+
+    inset:0;
 
     display:flex;
 
     flex-direction:column;
 
-    border-top:5px solid #F4B400;
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+    background:
+
+        linear-gradient(
+
+            rgba(0,0,0,.35),
+
+            rgba(0,0,0,.72)
+
+        );
+
+}
+
+.services-hero-overlay h2{
+
+    color: white;
+
+    font-size:clamp(2rem,3vw + 1rem,2.8rem);
+
+    margin-bottom:20px;
+
+    line-height:1.2;
+
+}
+
+.services-hero-overlay p{
+
+    max-width:850px;
+
+    color:rgba(255,255,255,.92);
+
+    font-size:clamp(1rem,.3vw + .9rem,1.1rem);
+
+    line-height:1.9;
+
+}
+
+.services-hero-overlay::after{
+
+    content:"";
+
+    width:120px;
+
+    height:4px;
+
+    margin-top:28px;
+
+    border-radius:30px;
+
+    background:var(--accent);
+
+}
+
+/*=====================================================
+                INTRODUCTION
+=====================================================*/
+
+.services-introduction{
+
+    text-align:center;
+
+    margin:50px auto;
+
+    max-width:850px;
+
+    padding:0 20px;
+
+}
+
+.services-introduction h2{
+
+    color:var(--accent);
+
+    font-size:clamp(1.9rem,1vw + 1.2rem,2.5rem);
+
+    margin-bottom:15px;
+
+}
+
+.services-introduction h3{
+
+    color:var(--secondary);
+
+    font-size:clamp(1.15rem,.5vw + 1rem,1.45rem);
+
+    font-weight:600;
+
+    line-height:1.7;
+
+}
+
+/*=====================================================
+                SERVICE GROUPS
+=====================================================*/
+
+.service-group{
+
+    margin:50px 28px;
+
+}
+
+.service-group-header{
+
+    margin-bottom:35px;
+
+}
+
+.service-group-header h3{
+
+    color:var(--accent);
+
+    font-size:clamp(1.45rem,.7vw + 1rem,1.9rem);
+
+    margin-bottom:12px;
+
+    position:relative;
+
+    display:inline-block;
+
+}
+
+.service-group-header h3::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-10px;
+
+    width:70px;
+
+    height:4px;
+
+    border-radius:20px;
+
+    background:var(--accent);
+
+}
+
+.service-group-header p{
+
+    margin-top:25px;
+
+    max-width:750px;
+
+    color:var(--text);
+
+    line-height:1.9;
+
+}
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+}
+
+/*=====================================================
+                    SERVICE CARD
+=====================================================*/
+
+.service-card{
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    border-top:5px solid var(--accent);
 
 }
 
@@ -106,15 +248,15 @@
 
     transform:translateY(-8px);
 
-    box-shadow:0 20px 45px rgba(0,0,0,.16);
+    border-top-color:var(--secondary);
 
-    border-top-color:#C8102E;
+    box-shadow:0 22px 50px rgba(0,0,0,.14);
 
 }
 
-/* =====================================================
+/*=====================================================
                     IMAGE
-===================================================== */
+=====================================================*/
 
 .service-image{
 
@@ -134,13 +276,11 @@
 
 }
 
-/* =====================================================
+/*=====================================================
                     CONTENT
-===================================================== */
+=====================================================*/
 
 .service-content{
-
-    padding:28px;
 
     display:flex;
 
@@ -148,47 +288,51 @@
 
     flex:1;
 
+    padding:30px;
+
 }
 
-/* =====================================================
-                    TITLE
-===================================================== */
+/*=====================================================
+                SERVICE HEADING
+=====================================================*/
 
 .service-heading{
 
     display:flex;
 
-    align-items:flex-start;
+    align-items:center;
 
     gap:18px;
 
-    margin-bottom:18px;
+    margin-bottom:20px;
 
 }
 
-.service-heading h2{
+.service-heading h4{
 
-    color:#0D0D0D;
+    color:var(--accent);
 
-    font-size:1.25rem;
+    font-size:clamp(1.15rem,.4vw + 1rem,1.35rem);
 
     font-weight:700;
 
     line-height:1.4;
 
+    margin:0;
+
 }
 
-/* =====================================================
+/*=====================================================
                     ICON
-===================================================== */
+=====================================================*/
 
 .service-icon{
 
-    width:56px;
+    width:58px;
 
-    height:56px;
+    height:58px;
 
-    min-width:56px;
+    min-width:58px;
 
     display:flex;
 
@@ -196,45 +340,127 @@
 
     align-items:center;
 
-    background:#0D0D0D;
+    border-radius:16px;
 
-    color:#F4B400;
+    /* background:var(--primary); */
 
-    border:2px solid #F4B400;
+    color:var(--accent);
 
-    border-radius:14px;
+    /* border:2px solid var(--accent); */
 
-    font-size:1.3rem;
+    font-size:1.35rem;
 
     transition:.35s;
 
 }
 
-.service-card:hover .service-icon{
+/* .service-card:hover .service-icon{
 
-    background:#F4B400;
+    background:var(--secondary);
 
-    color:#0D0D0D;
+    border-color:var(--secondary);
 
-}
+    color:white;
 
-/* =====================================================
-                    DESCRIPTION
-===================================================== */
+    transform:rotate(-8deg);
+
+} */
+
+/*=====================================================
+                DESCRIPTION
+=====================================================*/
 
 .service-content p{
 
-    color:#666;
+    color:var(--text);
 
-    line-height:1.8;
+    font-size:1rem;
 
-    font-size:.97rem;
+    line-height:1.85;
+
+    margin:0;
+
+    flex:1;
 
 }
 
-/* =====================================================
-                    FOOTER
-===================================================== */
+/*=====================================================
+                    CTA
+=====================================================*/
+
+.services-cta{
+
+    margin:40px 28px 0;
+
+    padding:70px 40px;
+
+     background:
+
+        linear-gradient(
+
+            rgba(20,26,34,.88),
+
+            rgba(20,26,34,.88)
+
+        ),
+
+        url("../assets/images/ctaImage.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.services-cta::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:var(--accent);
+
+}
+
+.services-cta h3{
+
+    color:var(--accent);
+
+    font-size:clamp(1.6rem,1vw + 1rem,2.2rem);
+
+    margin-bottom:20px;
+
+}
+
+.services-cta p{
+
+    max-width:750px;
+
+    margin:0 auto 40px;
+
+    color:rgba(255,255,255,.88);
+
+    line-height:1.9;
+
+}
 
 .services-footer{
 
@@ -242,54 +468,31 @@
 
     justify-content:center;
 
-    gap:25px;
+    gap:20px;
 
-    margin-top:50px;
+    flex-wrap:wrap;
 
 }
 
-/* =====================================================
+/*=====================================================
                     BUTTONS
-===================================================== */
-
-.quote-button,
-.contact-button{
-
-    width:250px;
-
-    height:52px;
-
-    border:1px solid #0D0D0D;
-
-    border-radius:10px;
-
-    color:white;
-
-    font-size:1rem;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-/* Primary Button */
+=====================================================*/
 
 .quote-button{
 
-      background:#C8102E;
+    background:var(--accent);
 
-    color:#FFFFFF;
+    color:white;
 
     border:none;
 
-    padding:16px 34px;
+    padding:16px 38px;
 
-    border-radius:10px;
+    border-radius:14px;
 
     font-size:1rem;
 
-    font-weight:600;
+    font-weight:700;
 
     cursor:pointer;
 
@@ -299,55 +502,41 @@
 
 .quote-button:hover{
 
-    background:#A40D24;
+    background:var(--primary);
+
+    
+
+    color: var(--secondary);
+
+    border: 1px solid var(--secondary);
 
     transform:translateY(-4px);
 
 }
 
-/* Secondary Button */
+/*=====================================================
+                RESPONSIVE
+=====================================================*/
 
-.contact-button{
+@media(max-width:992px){
 
-    background:transparent;
+.services-hero{
 
-    color:#FFFFFF;
-
-    border:2px solid #F4B400;
-
-    padding:16px 34px;
-
-    border-radius:10px;
-
-    font-size:1rem;
-
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:.35s;
+    height:360px;
 
 }
 
-.contact-button:hover{
+.service-group{
 
-  background:#F4B400;
-
-    color:#0D0D0D;
-
-    transform:translateY(-4px);
+    margin:35px 22px;
 
 }
 
-/* =====================================================
-                    RESPONSIVE
-===================================================== */
+.services-cta{
 
-@media(max-width:1100px){
+    margin:35px 22px 0;
 
-.services-grid{
-
-    grid-template-columns:repeat(2,1fr);
+    padding:55px 30px;
 
 }
 
@@ -355,35 +544,41 @@
 
 @media(max-width:768px){
 
+.services-hero{
+
+    height:300px;
+
+}
+
+.services-hero-overlay{
+
+    padding:24px;
+
+}
+
 .services-popup{
 
-    padding:25px;
+    padding-bottom:40px;
 
 }
 
-.services-popup-header h1{
+.service-group{
 
-    font-size:2rem;
-
-}
-
-.services-grid{
-
-    grid-template-columns:1fr;
+    margin:28px 16px;
 
 }
 
-.service-image{
+.services-cta{
 
-    height:240px;
+    margin:28px 16px 0;
+
+    padding:45px 24px;
 
 }
 
 .services-footer{
 
     flex-direction:column;
-
-    align-items:center;
 
 }
 
@@ -393,29 +588,29 @@
 
     width:100%;
 
-    max-width:350px;
-
 }
 
 }
 
 @media(max-width:480px){
 
-.services-popup{
+.services-hero{
 
-    padding:18px;
-
-}
-
-.services-popup-header h1{
-
-    font-size:1.6rem;
+    height:240px;
 
 }
 
-.services-popup-header p{
+.service-group{
 
-    font-size:.95rem;
+    margin:22px 12px;
+
+}
+
+.services-cta{
+
+    margin:22px 12px 0;
+
+    padding:35px 18px;
 
 }
 
@@ -431,20 +626,96 @@
 
     align-items:flex-start;
 
-    gap:14px;
+}
 
 }
 
-.service-heading h2{
+.group-title{
 
-    font-size:1.1rem;
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:22px;
+
+}
+
+.group-icon{
+
+    width:70px;
+
+    height:70px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background: #FFF8E6;
+
+    color:var(--accent);
+
+    /* border:2px solid var(--accent); */
+
+    border-radius:18px;
+
+    font-size:1.8rem;
+
+    /* transition:.35s; */
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
 
 }
 
-.service-image{
+.service-group:hover .group-icon{
 
-    height:210px;
+    background:var(--accent);
+
+    color:white;
+
+    border-color:var(--secondary);
+
+    /* transform:rotate(-8deg); */
 
 }
+
+.group-title h3{
+
+    color:var(--accent);
+
+    font-size:clamp(1.5rem,.7vw + 1rem,2rem);
+
+    margin-bottom:10px;
+
+}
+
+.group-title p{
+
+    color:var(--text);
+
+    line-height:1.8;
+
+    max-width:700px;
+
+}
+
+.group-title{
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.group-icon{
+
+    width:60px;
+
+    height:60px;
+
+    font-size:1.5rem;
 
 }

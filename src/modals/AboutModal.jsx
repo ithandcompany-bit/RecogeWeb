@@ -6,330 +6,461 @@ import {
     FaCheckCircle,
     FaAward,
     FaUsers,
-    FaArrowRight
+    FaArrowRight,
+    
+    FaBullseye,
+    FaEye
 } from "react-icons/fa";
 
 import "../styles/AboutModal.css";
 
+
+
 function AboutModal({
+
     close,
     openContact,
     scrollToProjects
-}) {
 
-    return (
+}){
 
-        <Modal
-            title="About Recoge Construction"
-            close={close}
+    return(
+
+<Modal
+
+    title="About RECOGE LTD"
+
+    close={close}
+
+>
+
+<div className="about-popup">
+
+{/* ===========================================
+                HERO
+=========================================== */}
+
+<section className="about-hero">
+
+    <img
+
+        src={aboutData.heroImage}
+
+        alt={aboutData.title}
+
+        className="about-hero-image"
+
+    />
+
+    <div className="about-hero-overlay">
+
+        <h1>
+
+            {aboutData.title}
+
+        </h1>
+
+        <p>
+
+            Building Rwanda's Future Through
+            Engineering Excellence,
+            Innovation and Quality Construction.
+
+        </p>
+
+    </div>
+
+</section>
+
+{/* ===========================================
+            COMPANY OVERVIEW
+=========================================== */}
+
+<section className="about-card">
+
+    <div className="section-title">
+
+        <FaBuilding/>
+
+        <h3>
+
+            Company Overview
+
+        </h3>
+
+    </div>
+
+    <div className="section-divider"></div>
+
+    <p>
+
+        {aboutData.overview}
+
+    </p>
+
+</section>
+
+{/* ===========================================
+            MISSION & VISION
+=========================================== */}
+
+<section className="mission-vision-grid">
+
+    <div className="about-card">
+
+        <div className="section-title">
+
+            <FaBullseye />
+
+            <h3>
+
+                Our Mission
+
+            </h3>
+
+        </div>
+
+        <div className="section-divider"></div>
+
+        <p>
+{aboutData.mission}
+
+        </p>
+
+    </div>
+
+    <div className="about-card">
+
+        <div className="section-title">
+
+            <FaEye />
+
+            <h3>
+
+                Our Vision
+
+            </h3>
+
+        </div>
+
+        <div className="section-divider"></div>
+
+        <p>
+
+           {aboutData.vision}
+
+        </p>
+
+    </div>
+
+</section>
+
+{/* ===========================================
+                CORE VALUES
+=========================================== */}
+
+<section className="about-card">
+
+    <div className="section-title">
+
+        <FaCheckCircle/>
+
+        <h3>
+
+            Core Values
+
+        </h3>
+
+    </div>
+
+    <div className="section-divider"></div>
+
+    <div className="two-column-grid">
+
+        {
+    aboutData.values.map(value => (
+
+        <div
+            className="list-card"
+            key={value}
         >
 
-            <div className="about-popup">
+            <FaCheckCircle
+                className="list-icon"
+            />
 
-                {/* ================= HERO ================= */}
+            <span>
 
-                <section className="about-hero">
+                {value}
 
-                    <img
-                        src={aboutData.heroImage}
-                        alt={aboutData.title}
-                        className="about-hero-image"
+            </span>
+
+        </div>
+
+    ))
+}
+
+    </div>
+
+</section>
+
+{/* ===========================================
+            AREAS OF EXPERTISE
+=========================================== */}
+
+<section className="about-card">
+
+    <div className="section-title">
+
+        <FaBuilding />
+
+        <h3>
+
+            Areas of Expertise
+
+        </h3>
+
+    </div>
+
+    <div className="section-divider"></div>
+
+    <div className="two-column-grid">
+
+        {
+
+            aboutData.expertise.map(item => (
+
+                <div
+                    className="list-card"
+                    key={item}
+                >
+
+                    <FaArrowRight
+                        className="list-icon"
                     />
 
-                    <div className="about-hero-overlay">
+                    <span>
 
-                        <h1>{aboutData.title}</h1>
+                        {item}
+
+                    </span>
+
+                </div>
+
+            ))
+
+        }
+
+    </div>
+
+</section>
+
+{/* ===========================================
+                ACHIEVEMENTS
+=========================================== */}
+
+<section className="about-card">
+
+    <div className="section-title">
+
+        <FaAward />
+
+        <h3>
+
+            Achievements
+
+        </h3>
+
+    </div>
+
+    <div className="section-divider"></div>
+
+    <div className="achievement-grid">
+
+        {
+
+            aboutData.achievements.map(
+
+                (item, index) => (
+
+                    <div
+                        className="achievement-card"
+                        key={index}
+                    >
+
+                        <FaAward
+                            className="achievement-icon"
+                        />
 
                         <p>
 
-                            Building Rwanda's Future Through
-                            Engineering Excellence,
-                            Innovation and Quality Construction.
+                            {item}
 
                         </p>
 
                     </div>
 
-                </section>
+                )
 
-                {/* ================= COMPANY OVERVIEW ================= */}
+            )
 
-                <section className="about-card">
+        }
 
-                    <div className="section-title">
+    </div>
 
-                        <FaBuilding />
+</section>
 
-                        <h2>Company Overview</h2>
+{/* ===========================================
+                TEAM
+=========================================== */}
 
-                    </div>
+<section className="about-card">
 
-                    <div className="section-divider"></div>
+    <div className="section-title">
 
-                    <p>
+        <FaUsers />
 
-                        {aboutData.overview}
+        <h3>
 
-                    </p>
+            Meet Our Team
 
-                </section>
+        </h3>
 
-                {/* ================= VALUES ================= */}
+    </div>
 
-                <section className="about-card">
+    <div className="section-divider"></div>
 
-                    <div className="section-title">
+    <div className="team-grid">
 
-                        <FaCheckCircle />
+        {
 
-                        <h2>Core Values</h2>
+            aboutData.team.map(member => (
 
-                    </div>
+                <div
+                    className="team-card"
+                    key={member.id}
+                >
 
-                    <div className="section-divider"></div>
+                    <div className="team-image-wrapper">
 
-                    <div className="two-column-grid">
+                        <img
 
-                        {
-                            aboutData.values.map(value => (
+                            src={member.image}
 
-                                <div
-                                    className="list-card"
-                                    key={value}
-                                >
+                            alt={member.name}
 
-                                    <FaCheckCircle
-                                        className="list-icon"
-                                    />
+                            className="team-image"
 
-                                    <span>{value}</span>
-
-                                </div>
-
-                            ))
-                        }
+                        />
 
                     </div>
 
-                </section>
+                    <div className="team-content">
 
-                {/* ================= EXPERTISE ================= */}
+                        <h4>
 
-                <section className="about-card">
+                            {member.name}
 
-                    <div className="section-title">
+                        </h4>
 
-                        <FaBuilding />
+                        <span>
 
-                        <h2>Areas of Expertise</h2>
+                            {member.role}
 
-                    </div>
+                        </span>
 
-                    <div className="section-divider"></div>
+                        <p>
 
-                    <div className="two-column-grid">
+                            {member.qualification}
 
-                        {
-                            aboutData.expertise.map(item => (
-
-                                <div
-                                    className="list-card"
-                                    key={item}
-                                >
-
-                                    <FaArrowRight
-                                        className="list-icon"
-                                    />
-
-                                    <span>{item}</span>
-
-                                </div>
-
-                            ))
-                        }
+                        </p>
 
                     </div>
 
-                </section>
+                </div>
 
-                {/* ================= ACHIEVEMENTS ================= */}
+            ))
 
-                <section className="about-card">
+        }
 
-                    <div className="section-title">
+    </div>
 
-                        <FaAward />
+</section>
 
-                        <h2>Achievements</h2>
+{/* ===========================================
+                    CTA
+=========================================== */}
 
-                    </div>
+<section className="about-cta">
 
-                    <div className="section-divider"></div>
+    <h3>
 
-                    <div className="achievement-grid">
+        Let's Build Something Exceptional Together
 
-                        {
-                            aboutData.achievements.map(
-                                (item, index) => (
+    </h3>
 
-                                    <div
-                                        className="achievement-card"
-                                        key={index}
-                                    >
+    <p>
 
-                                        <FaAward className="achievement-icon"/>
+        Whether you're planning an engineering study,
+        infrastructure project, commercial building or
+        residential development, our experienced team
+        is ready to transform your vision into reality.
 
-                                        <p>{item}</p>
+    </p>
 
-                                    </div>
+    <div className="about-buttons">
 
-                                )
-                            )
-                        }
+        <button
 
-                    </div>
+            className="primary-button"
 
-                </section>
+            onClick={() => {
 
-                                {/* ================= TEAM ================= */}
+                close();
 
-                <section className="about-card">
+                setTimeout(() => {
 
-                    <div className="section-title">
+                    scrollToProjects();
 
-                        <FaUsers />
+                },250);
 
-                        <h2>Meet Our Team</h2>
+            }}
 
-                    </div>
+        >
 
-                    <div className="section-divider"></div>
+            Explore Our Work
 
-                    <div className="team-grid">
+        </button>
 
-                        {
+        <button
 
-                            aboutData.team.map(member => (
+            className="secondary-button"
 
-                                <div
-                                    className="team-card"
-                                    key={member.id}
-                                >
+            onClick={() => {
 
-                                    <div className="team-image-wrapper">
+                close();
 
-                                        <img
-                                            src={member.image}
-                                            alt={member.name}
-                                            className="team-image"
-                                        />
+                setTimeout(() => {
 
-                                    </div>
+                    openContact();
 
-                                    <div className="team-content">
+                },250);
 
-                                        <h3>
+            }}
 
-                                            {member.name}
+        >
 
-                                        </h3>
+            Contact Us
 
-                                        <span>
+        </button>
 
-                                            {member.role}
+    </div>
 
-                                        </span>
+</section>
 
-                                        <p>
+</div>
 
-                                            {member.qualification}
-
-                                        </p>
-
-                                    </div>
-
-                                </div>
-
-                            ))
-
-                        }
-
-                    </div>
-
-                </section>
-
-                {/* ================= CTA ================= */}
-
-                <section className="about-cta">
-
-                    <h2>
-
-                        Let's Build Something Exceptional Together
-
-                    </h2>
-
-                    <p>
-
-                        Whether you're planning an engineering study,
-                        infrastructure project, commercial building or
-                        residential development, our experienced team
-                        is ready to transform your vision into reality.
-
-                    </p>
-
-                    <div className="about-buttons">
-
-                        <button
-
-                            className="primary-button"
-
-                            onClick={() => {
-
-                                close();
-
-                                setTimeout(() => {
-
-                                    scrollToProjects();
-
-                                },250);
-
-                            }}
-
-                        >
-
-                            Explore Our Work
-
-                        </button>
-
-                        <button
-
-                            className="secondary-button"
-
-                            onClick={() => {
-
-                                close();
-
-                                setTimeout(() => {
-
-                                    openContact();
-
-                                },250);
-
-                            }}
-
-                        >
-
-                            Contact Us
-
-                        </button>
-
-                    </div>
-
-                </section>
-
-            </div>
-
-        </Modal>
+</Modal>
 
     );
 

@@ -1,41 +1,208 @@
 import Modal from "../components/Modal";
 import services from "../data/services";
+import aboutData from "../data/aboutData";
+
+import serviceGroups from "../data/serviceGroups";
 
 import "../styles/servicesModal.css";
+import { FaArrowRight } from "react-icons/fa6";
+
 
 function ServicesModal({
 
     close,
     openContact
 
-}) {
+}){
 
-    return (
+    const groupedServices = {
 
-        <Modal
-            close={close}
-            title="Our Professional Services"
-        >
+        "Geotechnical & Laboratory":
+            services.filter(
+                service =>
+                    service.group === "Geotechnical & Laboratory"
+            ),
 
-            <div className="services-popup">
+        "Engineering & Design":
+            services.filter(
+                service =>
+                    service.group === "Engineering & Design"
+            ),
 
-                <div className="services-popup-header">
+        "Surveying & Environment":
+            services.filter(
+                service =>
+                    service.group === "Surveying & Environment"
+            ),
 
-                    <h1>
+        "Property & Support":
+            services.filter(
+                service =>
+                    service.group === "Property & Support"
+            )
 
-                        Engineering Excellence Across Every Discipline
+    };
 
-                    </h1>
+    return(
 
-                    <p>
+<Modal
 
-                        RECOGE delivers comprehensive engineering,
-                        geotechnical, construction and consultancy
-                        solutions that meet international standards
-                        while responding to Rwanda's infrastructure
-                        development needs.
+    title="Our Services"
 
-                    </p>
+    close={close}
+
+>
+
+<div className="services-popup">
+
+{/*=========================================
+                HERO
+=========================================*/}
+
+<section className="services-hero">
+
+    <img
+
+       src={aboutData.heroImage}
+
+        alt="Engineering Services"
+
+        className="services-hero-image"
+
+    />
+
+    <div className="services-hero-overlay">
+
+        <h2>
+
+            Professional Engineering Services
+
+        </h2>
+
+        <p>
+
+            Delivering innovative engineering,
+            geotechnical, laboratory,
+            construction and consultancy
+            solutions that build stronger,
+            safer and more sustainable
+            infrastructure.
+
+        </p>
+
+    </div>
+
+</section>
+
+{/*=========================================
+            INTRODUCTION
+=========================================*/}
+
+<section className="services-introduction">
+
+    <h2>
+
+        Our Services
+
+    </h2>
+
+    <h3>
+
+        Professional Engineering Solutions
+        Tailored to Every Project
+
+    </h3>
+
+</section>
+
+{/*=========================================
+            SERVICE GROUPS
+=========================================*/}
+
+{
+
+    serviceGroups.map(group => {
+
+        const GroupIcon = group.icon;
+
+        const groupServices = services.filter(
+
+            service => service.group === group.title
+
+        );
+
+        return(
+
+            <section
+                key={group.id}
+                className="service-group"
+            >
+
+                <div className="service-group-header">
+
+                    <div className="group-title">
+
+                        <div className="group-icon">
+
+                            <GroupIcon/>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+
+                                {group.title}
+
+                            </h3>
+
+                            <p>
+
+                                {
+
+                                    group.title === "Geotechnical & Laboratory"
+
+                                    &&
+
+                                    "Comprehensive ground investigations, laboratory testing and geotechnical engineering services for safe and sustainable construction."
+
+                                }
+
+                                {
+
+                                    group.title === "Engineering & Design"
+
+                                    &&
+
+                                    "Professional engineering, structural design and project management services that transform ideas into successful developments."
+
+                                }
+
+                                {
+
+                                    group.title === "Surveying & Environment"
+
+                                    &&
+
+                                    "Accurate surveying and environmental consultancy supporting planning, compliance and sustainable infrastructure."
+
+                                }
+
+                                {
+
+                                    group.title === "Property & Support"
+
+                                    &&
+
+                                    "Property valuation, procurement support and complementary engineering services tailored to every project."
+
+                                }
+
+                            </p>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -43,15 +210,18 @@ function ServicesModal({
 
                     {
 
-                        services.map(service => {
+                        groupServices.map(service => {
 
                             const Icon = service.icon;
 
-                            return (
+                            return(
 
-                                <div
+                                <article
+
                                     key={service.id}
+
                                     className="service-card"
+
                                 >
 
                                     <img
@@ -70,15 +240,15 @@ function ServicesModal({
 
                                             <div className="service-icon">
 
-                                                <Icon />
+                                                <FaArrowRight />
 
                                             </div>
 
-                                            <h2>
+                                            <h4>
 
                                                 {service.title}
 
-                                            </h2>
+                                            </h4>
 
                                         </div>
 
@@ -90,7 +260,7 @@ function ServicesModal({
 
                                     </div>
 
-                                </div>
+                                </article>
 
                             );
 
@@ -100,35 +270,51 @@ function ServicesModal({
 
                 </div>
 
-                <div className="services-footer">
+            </section>
 
-                    <button
+        );
 
-                        className="quote-button"
+    })
 
-                    >
+}
 
-                        Request a Quote
+<section className="services-cta">
 
-                    </button>
+    <h3>
 
-                    <button
+        Ready to Start Your Project?
 
-                        className="contact-button"
+    </h3>
 
-                        onClick={openContact}
+    <p>
 
-                    >
+        Let our experienced professionals
+        provide the engineering solutions
+        your next project deserves.
 
-                        Contact Us
+    </p>
 
-                    </button>
+    <div className="services-footer">
 
-                </div>
+        <button
 
-            </div>
+            className="quote-button"
 
-        </Modal>
+        >
+
+            Request a Quote
+
+        </button>
+
+        
+
+    </div>
+
+</section>
+
+</div>
+
+</Modal>
 
     );
 

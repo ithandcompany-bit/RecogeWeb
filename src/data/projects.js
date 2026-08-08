@@ -5,17 +5,17 @@ export const projects = [
 
     title:"Renovation of Amahoro National Stadium",
 
-    service:"Material Testing",
+    service:"Construction Material Testing",
 
     sector:"Sports Infrastructure",
 
-    location:"",
+    location:"Kigali",
 
-    client:"",
+    client:"REAL CONTRACTORS",
 
     status:"Completed",
 
-    year:"2022",
+    year:"----",
 
     image:"/images/p1.png",
 
@@ -38,17 +38,17 @@ export const projects = [
 
     title:"Construction of Ruliba Clay Plant B",
 
-    service:"Material Testing",
+    service:"Construction Material Testing",
 
     sector:"Industrial",
 
     location:"",
 
-    client:"",
+    client:"REAL CONTRACTORS",
 
-    status:"Ongoing",
+    status:"----",
 
-    year:"",
+    year:"----",
 
     image:"/images/projects/office-card.jpg",
 
@@ -75,13 +75,13 @@ export const projects = [
 
     sector:"Institutional",
 
-    location:"",
+    location:"Musanze",
 
-    client:"",
+    client:"ORGANISATION RELIGIEUSE DES TEMOINS DE JEHOVAH",
 
     status:"Completed",
 
-    year:"2024",
+    year:"----",
 
     image:"/images/p3.png",
 
@@ -95,15 +95,15 @@ export const projects = [
         "Engineering support and rehabilitation works for Kingdom Halls to improve structural integrity and extend the service life of the buildings.",
 
     scope:[
-        "Structural Assessment",
-        "Building Rehabilitation"
+        
+        "Building Rehabilitation",
     ]
 },
 
 {
     id:4,
 
-    title:"Proposed Kagarama Housing",
+    title:"Geotechnical for proposed Kagarama Housing",
 
     service:"Geotechnical Investigation",
 
@@ -111,11 +111,11 @@ export const projects = [
 
     location:"Kagarama",
 
-    client:"",
+    client:"MAKUZA BUSINESS GROUP Ltd",
 
     status:"Ongoing",
 
-    year:"2025",
+    year:"----",
 
     image:"/images/projects/resort-card.jpg",
 
@@ -129,9 +129,7 @@ export const projects = [
         "Comprehensive geotechnical investigation carried out to determine soil conditions and provide engineering recommendations for foundation design.",
 
     scope:[
-        "Site Investigation",
-        "Soil Testing",
-        "Foundation Recommendation"
+        "Geotechnical study"
     ]
 },
 
@@ -146,11 +144,11 @@ export const projects = [
 
     location:"Nyamata",
 
-    client:"ADEPR",
+    client:"ADEPR NYAMATA HOSPITAL",
 
     status:"Ongoing",
 
-    year:"",
+    year:"----",
 
     image:"/images/projects/mall-card.jpg",
 
@@ -158,14 +156,14 @@ export const projects = [
         "/images/projects/mall-card.jpg"
     ],
 
-    summary:"Geotechnical study.",
+    summary:"Geotechnical investigations.",
 
     overview:
         "Geotechnical investigations conducted for the construction of extension buildings at ADEPR Nyamata Hospital.",
 
     scope:[
         "Site Investigation",
-        "Soil Testing"
+        
     ]
 },
 
@@ -178,13 +176,13 @@ export const projects = [
 
     sector:"Agriculture",
 
-    location:"",
+    location:"----",
 
-    client:"",
+    client:"RWANDA GRAINS AND CEREALS CORPORATIONS (RGCC Ltd)",
 
     status:"Completed",
 
-    year:"2024",
+    year:"----",
 
     image:"/images/projects/health-card.jpg",
 
@@ -198,7 +196,7 @@ export const projects = [
         "Geotechnical investigations supporting the construction of post-harvest handling and grain storage facilities.",
 
     scope:[
-        "Geotechnical Investigation",
+        
         "Engineering Recommendations"
     ]
 },
@@ -208,17 +206,17 @@ export const projects = [
 
     title:"Rwangingo–Karangazi Irrigation Scheme",
 
-    service:"Engineering Consultancy",
+    service:"Geotechnical",
 
     sector:"Water Infrastructure",
 
-    location:"",
+    location:"----",
 
-    client:"",
+    client:"CIMA INTERNATIONAL",
 
-    status:"Ongoing",
+    status:"----",
 
-    year:"2025",
+    year:"----",
 
     image:"/images/projects/school-card.jpg",
 
@@ -232,9 +230,7 @@ export const projects = [
         "Review and update of the feasibility study and detailed engineering design for rehabilitation and upgrading of the 937-hectare irrigation scheme.",
 
     scope:[
-        "Feasibility Study",
-        "Engineering Design",
-        "Project Review"
+        "Geotechnical investigations"
     ]
 },
 
@@ -247,13 +243,13 @@ export const projects = [
 
     sector:"Water Infrastructure",
 
-    location:"",
+    location:"----",
 
-    client:"",
+    client:"CROSS LAND CONSTRUCTION GROUP LTD",
 
     status:"Completed",
 
-    year:"2026",
+    year:"----",
 
     image:"/images/projects/warehouse-card.jpg",
 
@@ -277,17 +273,17 @@ export const projects = [
 
     title:"Construction of Kivugiza Bridge",
 
-    service:"Geotechnical Investigation",
+    service:"Geotechnical Investigation and material testing",
 
     sector:"Bridge Infrastructure",
 
-    location:"",
+    location:"----",
 
-    client:"",
+    client:"CROSS LAND CONSTRUCTION GROUP LTD",
 
     status:"Completed",
 
-    year:"2025",
+    year:"----",
 
     image:"/images/p9.png",
 
@@ -303,7 +299,7 @@ export const projects = [
     scope:[
         "Site Investigation",
         "Material Testing",
-        "Foundation Assessment"
+        
     ]
 },
 
@@ -318,11 +314,11 @@ export const projects = [
 
     location:"Muringa",
 
-    client:"",
+    client:"JV CROSS LAND CONSTRUCTION GROUP LTD AND NEW EARTH CONSTRUCTION COMPANY LTD",
 
     status:"Ongoing",
 
-    year:"2026",
+    year:"----",
 
     image:"/images/projects/mixed-card.jpg",
 
@@ -337,7 +333,7 @@ export const projects = [
 
     scope:[
         "Site Investigation",
-        "Engineering Recommendations"
+        
     ]
 },
 
@@ -350,13 +346,13 @@ export const projects = [
 
     sector:"Road Infrastructure",
 
-    location:"",
+    location:"----",
 
-    client:"",
+    client:"JV T AND M CONSTRUCTION LTD AND R.D.C.C. LTD",
 
-    status:"Ongoing",
+    status:"----",
 
-    year:"2026",
+    year:"----",
 
     image:"/images/projects/mixed-card.jpg",
 
@@ -370,7 +366,7 @@ export const projects = [
         "Geotechnical investigations carried out for the feasibility study of the Rwimbogo–Munini–Gikobwa road project.",
 
     scope:[
-        "Feasibility Study",
+        
         "Geotechnical Investigation"
     ]
 },
@@ -384,13 +380,13 @@ export const projects = [
 
     sector:"Agriculture",
 
-    location:"",
+    location:"----",
 
-    client:"",
+    client:"MUBUGA BIO-COFFEE",
 
-    status:"Ongoing",
+    status:"----",
 
-    year:"2026",
+    year:"----",
 
     image:"/images/projects/mixed-card.jpg",
 
@@ -405,7 +401,7 @@ export const projects = [
 
     scope:[
         "Site Investigation",
-        "Foundation Recommendation"
+        
     ]
 },
 
@@ -420,11 +416,11 @@ export const projects = [
 
     location:"Rugunga",
 
-    client:"",
+    client:"SPORT GENIX INTERNATIONAL Ltd",
 
-    status:"Ongoing",
+    status:"----",
 
-    year:"2026",
+    year:"----",
 
     image:"/images/projects/mixed-card.jpg",
 
@@ -439,7 +435,7 @@ export const projects = [
 
     scope:[
         "Site Investigation",
-        "Soil Testing"
+        
     ]
 },
 
@@ -448,17 +444,17 @@ export const projects = [
 
     title:"Gitwe SDA College Extension",
 
-    service:"Geotechnical Investigation",
+    service:"Geotechnical Investigation and Material Testing",
 
     sector:"Education",
 
     location:"Gitwe",
 
-    client:"",
+    client:"BETEX Ltd",
 
     status:"Completed",
 
-    year:"2026",
+    year:"----",
 
     image:"/images/projects/mixed-card.jpg",
 
@@ -474,7 +470,7 @@ export const projects = [
     scope:[
         "Site Investigation",
         "Material Testing",
-        "Engineering Recommendations"
+        
     ]
 },
 
@@ -487,13 +483,13 @@ export const projects = [
 
     sector:"Residential",
 
-    location:"",
+    location:"----",
 
-    client:"Private Client",
+    client:"MWIREBUA FRANKLIN MWITI",
 
-    status:"Ongoing",
+    status:"----",
 
-    year:"2026",
+    year:"----",
 
     image:"/images/projects/mixed-card.jpg",
 
@@ -507,9 +503,8 @@ export const projects = [
         "Comprehensive geotechnical investigations providing engineering recommendations for safe residential building construction.",
 
     scope:[
-        "Site Investigation",
-        "Soil Testing",
-        "Foundation Recommendation"
+        "Geotechnical Investigation",
+        
     ]
 }
 

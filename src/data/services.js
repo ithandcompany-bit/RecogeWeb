@@ -10,8 +10,25 @@ import {
   FaTasks,
   FaTint,
   FaHome,
-  FaTruck
+  FaTruck,
+  FaClipboardCheck
 } from "react-icons/fa";
+
+import geotech from "../assets/images/services/ser1.jpeg";
+import labo from "/images/serImages/labo.png";
+import geo from "../assets/images/services/geological.jpeg";
+import hydro from "../assets/images/services/Hydrological.png";
+import civil from "../assets/images/services/const3.jpeg";
+import arch from "/images/S6.png";
+import env from "../assets/images/services/Hydrological.png";
+import land from "../assets/images/services/land surveying.jpeg";
+import constr from "../assets/images/services/project management.png";
+import drain from "../assets/images/services/watersupply.jpeg";
+import value from "../assets/images/services/propertyvalue.jpeg";
+import general from "../assets/images/services/general supply.jpeg";
+import struct from "/images/S1.png";
+
+
 
 export const services = [
   {
@@ -19,7 +36,7 @@ export const services = [
     title: "Geotechnical & Site Investigation",
      group: "Geotechnical & Laboratory",
     icon: FaMountain,
-    image: "/src/assets/images/services/ser1.jpeg",
+    image: geotech,
     description:
       "Comprehensive geotechnical investigations including borehole drilling, soil exploration, in-situ testing, laboratory analysis, and engineering recommendations for safe foundation design."
   },
@@ -29,7 +46,7 @@ export const services = [
     title: "Material Testing & Laboratory Services",
      group: "Geotechnical & Laboratory",
     icon: FaFlask,
-    image: "/images/serImages/labo.png",
+    image: labo,
     description:
       "Professional laboratory testing of concrete, soil, aggregates, asphalt, steel, and other construction materials to ensure compliance with engineering standards."
   },
@@ -40,7 +57,7 @@ export const services = [
 
      group: "Geotechnical & Laboratory",
     icon: FaGlobe,
-   image: "/src/assets/images/services/geological.jpeg",
+   image: geo,
     description:
       "Detailed geological assessments that evaluate ground conditions, rock formations, and geological risks for infrastructure and construction projects."
   },
@@ -50,7 +67,7 @@ export const services = [
     title: "Hydrological Study",
      group: "Geotechnical & Laboratory",
     icon: FaWater,
-    image: "/src/assets/images/services/Hydrological.png",
+    image: hydro,
     description:
       "Hydrological investigations, flood assessments, watershed analysis, and water resource studies supporting sustainable infrastructure development."
   },
@@ -60,7 +77,7 @@ export const services = [
     title: "Civil Engineering & Construction",
      group: "Engineering & Design",
     icon: FaHardHat,
-    image: "/images/S5.png",
+    image: civil,
     description:
       "Professional construction services for residential, commercial, industrial, and public infrastructure projects delivered with quality and safety."
   },
@@ -70,7 +87,7 @@ export const services = [
     title: "Architectural & Structural Design",
      group: "Engineering & Design",
     icon: FaDraftingCompass,
-    image: "/images/S6.png",
+    image: arch,
     description:
       "Innovative architectural planning and structural engineering design that combines functionality, aesthetics, durability, and compliance."
   },
@@ -80,7 +97,7 @@ export const services = [
     title: "Environmental Studies",
      group: "Surveying & Environment",
     icon: FaLeaf,
-    image: "/src/assets/images/services/Hydrological.png",
+    image: env,
     description:
       "Environmental assessments and impact studies that ensure projects comply with environmental regulations and sustainable development practices."
   },
@@ -92,7 +109,7 @@ export const services = [
     group: "Surveying & Environment",
 
     icon: FaMapMarkedAlt,
-   image: "/src/assets/images/services/land surveying.jpeg",
+   image: land,
     description:
       "Accurate topographical surveys, boundary surveys, engineering surveys, GIS mapping, and land documentation services."
   },
@@ -102,7 +119,7 @@ export const services = [
     title: "Construction Project Management",
       group: "Engineering & Design",
     icon: FaTasks,
-    image: "/src/assets/images/services/project management.jpg",
+    image: constr,
     description:
       "Complete project planning, supervision, scheduling, quality control, contract administration, and successful project delivery."
   },
@@ -112,7 +129,7 @@ export const services = [
     title: "Drainage & Water Supply Infrastructure",
       title: "Environmental Studies",
     icon: FaTint,
-    image: "/src/assets/images/services/watersupply.jpeg",
+    image: drain,
     description:
       "Design and implementation of drainage systems, water supply networks, hydraulic structures, and related civil infrastructure."
   },
@@ -122,7 +139,7 @@ export const services = [
     title: "Property Valuation",
     icon: FaHome,
     group: "Property & Support",
-    image: "/src/assets/images/services/propertyvalue.jpeg",
+    image: value,
     description:
       "Professional valuation services for residential, commercial, industrial, and investment properties using recognized valuation standards."
   },
@@ -132,7 +149,7 @@ export const services = [
     title: "General Supply",
      group: "Property & Support",
     icon: FaTruck,
-    image: "/src/assets/images/services/general supply.jpeg",
+    image: general,
     description:
       "Reliable supply of construction materials, engineering equipment, technical products, and project support resources."
   },
@@ -141,11 +158,10 @@ export const services = [
     id: 13,
     title: "Structure Audit",
     group: "Engineering & Design",
-    icon: FaTruck,
-    image: "/images/S1.png",
+    icon:FaClipboardCheck,
+    image: struct,
     description:
-      "Reliable supply of construction materials, engineering equipment, technical products, and project support resources."
-  }
+"We conduct comprehensive structural assessments to evaluate the safety, stability, and overall condition of existing buildings and infrastructure. Our audits identify structural deficiencies, assess compliance with engineering standards, and provide practical recommendations for maintenance, strengthening, rehabilitation, or future development."  }
 ];
 
 export default services;

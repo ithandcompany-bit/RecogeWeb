@@ -254,6 +254,15 @@
 
 }
 
+.active-service{
+
+    border-top-color:var(--secondary);
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.18);
+
+}
 /*=====================================================
                     IMAGE
 =====================================================*/

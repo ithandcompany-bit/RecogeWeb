@@ -575,6 +575,8 @@
 
 }
 
+
+
 .navbar-logo-container{
 
     width:54px;
@@ -632,6 +634,13 @@
 
 }
 
+
+@media (max-width:530px){
+
+    .hero-slide{
+    background-position:75% 50%;
+}
+}
 
 
 /* ===========================================================
@@ -718,13 +727,13 @@
 
 .navbar.scrolled .active-link{
 
-    color:var(--secondary) !important;
+    color:var(--accent) !important;
 
 }
 
 .navbar.scrolled .active-link .nav-icon{
 
-    color:var(--secondary);
+    color:var(--accent);
 
 }
 

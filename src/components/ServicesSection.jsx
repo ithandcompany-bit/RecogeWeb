@@ -1,6 +1,4 @@
-import { FaArrowRight } from "react-icons/fa6";
-
-import serviceGroups from "../data/serviceGroups";
+import services from "../data/services";
 
 function ServicesSection({
 
@@ -20,59 +18,38 @@ function ServicesSection({
 
             <div className="section-line"></div>
 
-            <div className="service-groups">
+            <ul className="services-list">
 
                 {
 
-                    serviceGroups.map((group)=>{
+                    services.map(service => {
 
-                        const Icon = group.icon;
+                        const Icon = service.icon;
 
                         return(
 
-                            <div
+                            <li
+                            onClick={() => openServices(service)}
 
-                                key={group.id}
+                                key={service.id}
 
-                                className="service-group"
+                                className="service-item"
 
                             >
 
-                                <div className="group-header">
+                                <div className="service-item-icon">
 
-                                    <div className="group-icon">
-
-                                        <Icon/>
-
-                                    </div>
-
-                                    <h3>
-
-                                        {group.title}
-
-                                    </h3>
+                                    <Icon/>
 
                                 </div>
 
-                                <ul>
+                                <span>
 
-                                    {
+                                    {service.title}
 
-                                        group.services.map((service,index)=>(
+                                </span>
 
-                                            <li key={index}>
-
-                                                • {service}
-
-                                            </li>
-
-                                        ))
-
-                                    }
-
-                                </ul>
-
-                            </div>
+                            </li>
 
                         );
 
@@ -80,7 +57,7 @@ function ServicesSection({
 
                 }
 
-            </div>
+            </ul>
 
             <button
 
@@ -89,8 +66,6 @@ function ServicesSection({
             >
 
                 Explore Services →
-
-                
 
             </button>
 

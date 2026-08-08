@@ -1,3 +1,11 @@
+import Jeremie from "../assets/images/team/Jeremie.png";
+import Callixte from "../assets/images/team/Callixte.png";
+import Fred from "../assets/images/team/Fred.png";
+import Dufatane from "../assets/images/team/Dufatanye.jpeg";
+import Francois from "../assets/images/team/Francois.png";
+import Elie from "../assets/images/team/Elie.png";
+import Mugenga from "../assets/images/team/Mugenga.jpeg"
+
 const aboutData = {
   title: "About RECOGE Ltd",
 
@@ -45,7 +53,7 @@ const aboutData = {
         id: 1,
         name: "Eng.NKUNDABAGENZI Jeremie",
         role: "Managing Director",
-        image: "/src/assets/images/team/Jeremie.png"
+        image: Jeremie
     },
 
     {
@@ -59,21 +67,21 @@ const aboutData = {
         id: 3,
         name: "Eng.KAYINAMURA Callixte ",
         role: "Laboratory Technicians",
-        image: "/src/assets/images/team/Callixte.png"
+        image: Callixte
     },
 
     {
         id: 4,
         name: "Eng.NSHIMIYIMANA Fred",
         role: "Laboratory Technicians",
-        image: "/src/assets/images/team/Fred.png"
+        image: Fred
     },
 
      {
         id: 5,
         name: "Eng.DUFATANYE Emmanuel ",
         role: "Maintenance Engineer	",
-        image: "/src/assets/images/team/Dufatanye.jpeg"
+        image: Dufatane
     },
 
      {
@@ -94,28 +102,28 @@ const aboutData = {
         id: 8,
         name: "Eng.NIYOMUSHUMBA François Xavier",
         role: "Construction Site Engineer",
-        image: "/src/assets/images/team/Francois.png"
+        image: Francois
     },
 
      {
         id: 9,
         name: "Arch.NSABIMANA Elie",
         role: "Architect",
-        image: "/src/assets/images/team/Elie.png"
+        image: Elie
     },
 
      {
         id: 10,
         name: "Eng.MUGENGA Jean Aime",
         role: "Structure Engineer",
-        image: "/src/assets/images/team/Mugenga.jpeg"
+        image: Mugenga
     },
 
      {
         id: 11,
         name: "MASENGESHO Hilaire",
         role: "Legal Advisor",
-        image: "/images/team-4.jpg"
+        image: " "
     }
 ]
 };

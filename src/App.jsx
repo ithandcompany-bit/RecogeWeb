@@ -24,6 +24,8 @@ function App() {
 
     const [showContact, setShowContact] = useState(false);
 
+    const [selectedService, setSelectedService] = useState(null);
+
     /* ===========================================
                 OPEN FUNCTIONS
     =========================================== */
@@ -34,11 +36,13 @@ function App() {
 
     }
 
-    function openServices() {
+    function openServices(service = null){
 
-        setShowServices(true);
+    setSelectedService(service);
 
-    }
+    setShowServices(true);
+
+}
 
     function openContact() {
 
@@ -184,11 +188,19 @@ function App() {
 
                     <ServicesModal
 
-                        close={closeServices}
+    close={() => {
 
-                        openContact={openContact}
+        setShowServices(false);
 
-                    />
+        setSelectedService(null);
+
+    }}
+
+    openContact={openContact}
+
+    selectedService={selectedService}
+
+/>
 
                 )
 

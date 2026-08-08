@@ -317,7 +317,7 @@ function Navbar({
 
                     <a
 
-                       
+                       href="#projects"
 
                         onClick={closeMenu}
 

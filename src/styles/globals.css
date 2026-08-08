@@ -396,3 +396,272 @@ section{
     font-weight:700;
 
 }
+
+/* =====================================================
+                WHATSAPP FLOATING BUTTON
+===================================================== */
+
+.whatsapp-button{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:58px;
+
+    height:58px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:var(--accent);
+
+    color:#FFFFFF;
+
+    border:2px solid var(--accent);
+
+    border-radius:50%;
+
+    text-decoration:none;
+
+    font-size:1.8rem;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+    z-index:9998;
+
+    transition:.35s;
+
+}
+
+.whatsapp-button:hover{
+
+    background:var(--primary);
+
+    color:#FFFFFF;
+
+    border-color:var(--secondary);
+
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.3);
+
+}
+
+
+/* =====================================================
+                    MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+    .whatsapp-button{
+
+        width:52px;
+
+        height:52px;
+
+        right:18px;
+
+        bottom:18px;
+
+        font-size:1.6rem;
+
+    }
+
+}
+
+/* =====================================================
+            WHATSAPP FLOATING BUTTON
+===================================================== */
+
+.whatsapp-button{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:58px;
+
+    height:58px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:var(--accent);
+
+    color:#FFFFFF;
+
+    border:2px solid var(--accent);
+
+    border-radius:50%;
+
+    text-decoration:none;
+
+    font-size:1.8rem;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+    z-index:9998;
+
+    transition:.35s;
+
+}
+
+
+/* =====================================================
+                    TOOLTIP
+===================================================== */
+
+.whatsapp-button::before{
+
+    content:"Chat with us";
+
+    position:absolute;
+
+    right:72px;
+
+    top:50%;
+
+    transform:translateY(-50%) translateX(8px);
+
+    background:var(--primary);
+
+    color: var(--secondary);
+
+    padding:9px 14px;
+
+    border-radius:8px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    white-space:nowrap;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+    transition:.3s ease;
+
+}
+
+
+/* Tooltip arrow */
+
+.whatsapp-button::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:64px;
+
+    top:50%;
+
+    transform:translateY(-50%) translateX(8px);
+
+    border-width:6px;
+
+    border-style:solid;
+
+    border-color:transparent transparent transparent var(--secondary);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s ease;
+
+}
+
+
+/* =====================================================
+                    HOVER
+===================================================== */
+
+.whatsapp-button:hover{
+
+    background:var(--primary);
+
+    color: var(--secondary);
+
+    border-color:var(--secondary);
+
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.3);
+
+}
+
+.whatsapp-button:hover::before{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(-50%) translateX(0);
+
+}
+
+.whatsapp-button:hover::after{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(-50%) translateX(0);
+
+}
+
+
+/* =====================================================
+                    MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+    .whatsapp-button{
+
+        width:52px;
+
+        height:52px;
+
+        right:18px;
+
+        bottom:18px;
+
+        font-size:1.6rem;
+
+    }
+
+    .whatsapp-button::before{
+
+        right:64px;
+
+        font-size:.8rem;
+
+        padding:8px 12px;
+
+    }
+
+    .whatsapp-button::after{
+
+        right:56px;
+
+    }
+
+}

@@ -7,6 +7,7 @@ import ProjectsSection from "./components/ProjectsSection";
 import Testimonials from "./components/Testimonials";
 import CtaSection from "./components/CtaSection";
 import Footer from "./components/Footer";
+import { FaWhatsapp } from "react-icons/fa";
 
 import AboutModal from "./modals/AboutModal";
 import ServicesModal from "./modals/ServicesModal";
@@ -235,6 +236,17 @@ function App() {
                 scrollToProjects={scrollToProjects}
 
             />
+
+            <a
+    href="https://wa.me/250783159615"
+    className="whatsapp-button"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contact RECOGE on WhatsApp"
+    title="Chat with us"
+>
+    <FaWhatsapp />
+</a>
 
         </>
 

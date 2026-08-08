@@ -591,3 +591,23 @@
 }
 
 }
+
+.contact-info a{
+
+    display:block;
+
+    color:var(--text);
+
+    text-decoration:none;
+
+    line-height:1.7;
+
+    transition:.3s;
+
+}
+
+.contact-info a:hover{
+
+    color:var(--accent);
+
+}

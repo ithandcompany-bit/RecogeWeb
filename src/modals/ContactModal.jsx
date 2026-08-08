@@ -99,57 +99,69 @@ function ContactModal({
 
 <div className="contact-left">
 
-    <div className="contact-card">
+   <div className="contact-card">
 
-        <div className="contact-icon">
+    <div className="contact-icon">
 
-            <FaPhoneAlt/>
-
-        </div>
-
-        <div className="contact-info">
-
-            <h4>
-
-                Phone Numbers
-
-            </h4>
-
-            <p>(+250) 790 288 833</p>
-
-            <p>(+250) 785 445 075</p>
-
-            <p>(+250) 788 263 543</p>
-
-        </div>
+        <FaPhoneAlt/>
 
     </div>
 
-    <div className="contact-card">
+    <div className="contact-info">
 
-        <div className="contact-icon">
+        <h4>
 
-            <FaEnvelope/>
+            Phone Numbers
 
-        </div>
+        </h4>
 
-        <div className="contact-info">
+        <a href="tel:+250790288833">
 
-            <h4>
+            (+250) 790 288 833
 
-                Email Address
+        </a>
 
-            </h4>
+        <a href="tel:+250785445075">
 
-            <p>
+            (+250) 785 445 075
 
-                recogeltd@gmail.com
+        </a>
 
-            </p>
+        <a href="tel:+250788263543">
 
-        </div>
+            (+250) 788 263 543
+
+        </a>
 
     </div>
+
+</div>
+
+    <div className="contact-card">
+
+    <div className="contact-icon">
+
+        <FaEnvelope/>
+
+    </div>
+
+    <div className="contact-info">
+
+        <h4>
+
+            Email Address
+
+        </h4>
+
+        <a href="mailto:recogeltd@gmail.com">
+
+            recogeltd@gmail.com
+
+        </a>
+
+    </div>
+
+</div>
 
     <div className="contact-card">
 
@@ -169,15 +181,24 @@ function ContactModal({
 
             <p>
 
-                KN 5 Road
+        
+                Kigali, Rwanda
 
-                <br/>
+                <br />
 
                 Kicukiro Centre
 
+                <br />
+
+                Gatenga Sector
+
+                <br />
+
+                KK 649 St
+
                 <br/>
 
-                Kigali, Rwanda
+                Gate No:24
 
             </p>
 
@@ -227,19 +248,15 @@ function ContactModal({
 
         </h4>
 
-        <iframe
-
-            className="contact-map"
+        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3987.43525674517!2d30.10075599999999!3d-1.980389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMcKwNTgnNDkuNCJTIDMwwrAwNicwMi43IkU!5e0!3m2!1sen!2srw!4v1786161721861!5m2!1sen!2srw"   className="contact-map"
 
             title="RECOGE Location"
 
             loading="lazy"
 
-            allowFullScreen
+            allowFullScreen/>
 
-            src="https://www.google.com/maps?q=KN+5+Rd,+Kicukiro+Center,+Kigali,+Rwanda&output=embed"
-
-        />
+    
 
     </div>
 

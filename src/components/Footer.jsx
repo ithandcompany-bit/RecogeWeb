@@ -226,7 +226,7 @@ Geotechnical Studies & Material Testing
 
                 <FaChevronRight className="footer-arrow"/>
 
-                Surveying
+                Land Surveying
 
             </button>
 
@@ -268,7 +268,8 @@ Geotechnical Studies & Material Testing
 
                 <p>
 
-                    Kigali, Rwanda, KN5 Rd
+                    <a href="https://maps.app.goo.gl/r4EAv3EVis2J5nCB9" target="_blank">Kigali, Rwanda, KK 649 St, Gate No 24</a>
+
 
                 </p>
 
@@ -276,57 +277,57 @@ Geotechnical Studies & Material Testing
 
         </div>
 
-        <div className="footer-contact-item">
+       <div className="footer-contact-item">
 
-            <span className="footer-icon">
+    <span className="footer-icon">
 
-                <FaPhoneAlt/>
+        <FaPhoneAlt/>
 
-            </span>
+    </span>
 
-            <div>
+    <div>
 
-                <h4>
+        <h4>
 
-                    Phone
+            Phone
 
-                </h4>
+        </h4>
 
-                <p>
+        <a href="tel:+250785445075">
 
-                   (+250) 785 445 075
+            (+250) 785 445 075
 
-                </p>
+        </a>
 
-            </div>
+    </div>
 
-        </div>
+</div>
 
-        <div className="footer-contact-item">
+       <div className="footer-contact-item">
 
-            <span className="footer-icon">
+    <span className="footer-icon">
 
-                <FaEnvelope/>
+        <FaEnvelope/>
 
-            </span>
+    </span>
 
-            <div>
+    <div>
 
-                <h4>
+        <h4>
 
-                    Email
+            Email
 
-                </h4>
+        </h4>
 
-                <p>
+        <a href="mailto:recogeltd@gmail.com">
 
-                    recogeltd@gmail.com
+            recogeltd@gmail.com
 
-                </p>
+        </a>
 
-            </div>
+    </div>
 
-        </div>
+</div>
 
         <div className="footer-contact-item">
 

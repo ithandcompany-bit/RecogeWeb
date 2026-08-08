@@ -134,7 +134,7 @@
 
 .project-popup-content h2{
 
-    color:var(--primary);
+    color:var(--accent);
 
     font-size:clamp(2rem,4vw,2.8rem);
 
@@ -213,7 +213,7 @@
 .project-scope h3,
 .project-information h3{
 
-    color:var(--primary);
+    color:var(--accent);
 
     font-size:1.35rem;
 

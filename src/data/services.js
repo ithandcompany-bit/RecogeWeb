@@ -27,6 +27,7 @@ import drain from "../assets/images/services/watersupply.jpeg";
 import value from "../assets/images/services/propertyvalue.jpeg";
 import general from "../assets/images/services/general supply.jpeg";
 import struct from "/images/S1.png";
+import General from "/images/General.png"
 
 
 
@@ -149,7 +150,7 @@ export const services = [
     title: "General Supply",
      group: "Property & Support",
     icon: FaTruck,
-    image: general,
+    image: General,
     description:
       "Reliable supply of construction materials, engineering equipment, technical products, and project support resources."
   },

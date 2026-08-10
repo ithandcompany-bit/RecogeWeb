@@ -46,7 +46,7 @@ function ProjectModal({
 
                     />
 
-                    <span
+                    {/* <span
 
                         className={`project-status ${status.toLowerCase().replace(" ","-")}`}
 
@@ -54,7 +54,7 @@ function ProjectModal({
 
                         {status}
 
-                    </span>
+                    </span> */}
 
                 </div>
 

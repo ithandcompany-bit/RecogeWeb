@@ -1,3 +1,6 @@
+import MoD from "../assets/images/services/MoD.jpeg"
+
+
 export const projects = [
 
 {
@@ -36,6 +39,39 @@ export const projects = [
 {
     id:2,
 
+    title:"Construction works of Expansion of  Rwanda Military Teaching Hospital (Muhabura block 1)",
+
+    service:"Construction Material Testing",
+
+    sector:"Health Infrastructures",
+
+    location:"Kigali",
+
+    client:"Engineering command",
+
+    status:"Ongoing",
+
+    year:"2026",
+
+    image:MoD,
+
+    gallery:[
+        MoD
+    ],
+
+    summary:"Construction material testing.",
+
+    overview:
+        "Construction material testing services carried our during extension of Rwanda military teaching hospital to ensure quality, durability and compliance with engineering standards.",
+
+    scope:[
+        "Construction Material Testing"
+    ]
+},
+
+{
+    id:3,
+
     title:"Construction of Ruliba Clay Plant B",
 
     service:"Construction Material Testing",
@@ -67,7 +103,7 @@ export const projects = [
 },
 
 {
-    id:3,
+    id:4,
 
     title:"Rehabilitation of Kingdom Halls",
 
@@ -101,7 +137,7 @@ export const projects = [
 },
 
 {
-    id:4,
+    id:5,
 
     title:"Geotechnical for proposed Kagarama Housing",
 
@@ -134,7 +170,7 @@ export const projects = [
 },
 
 {
-    id:5,
+    id:6,
 
     title:"ADEPR Nyamata Hospital Extension",
 
@@ -168,7 +204,7 @@ export const projects = [
 },
 
 {
-    id:6,
+    id:7,
 
     title:"Post-Harvest Storage Facilities",
 
@@ -202,7 +238,7 @@ export const projects = [
 },
 
 {
-    id:7,
+    id:8,
 
     title:"Rwangingo–Karangazi Irrigation Scheme",
 
@@ -235,7 +271,7 @@ export const projects = [
 },
 
 {
-    id:8,
+    id:9,
 
     title:"Rehabilitation of Cyarubare Dam",
 
@@ -269,7 +305,7 @@ export const projects = [
 },
 
 {
-    id:9,
+    id:10,
 
     title:"Construction of Kivugiza Bridge",
 
@@ -304,7 +340,7 @@ export const projects = [
 },
 
 {
-    id:10,
+    id:11,
 
     title:"Muringa Water Supply Rehabilitation",
 
@@ -338,7 +374,7 @@ export const projects = [
 },
 
 {
-    id:11,
+    id:12,
 
     title:"Rwimbogo–Munini–Gikobwa Road",
 
@@ -372,7 +408,7 @@ export const projects = [
 },
 
 {
-    id:12,
+    id:13,
 
     title:"Proposed Coffee Washing Station",
 
@@ -406,7 +442,7 @@ export const projects = [
 },
 
 {
-    id:13,
+    id:14,
 
     title:"Construction of Rugunga Playground",
 
@@ -440,7 +476,7 @@ export const projects = [
 },
 
 {
-    id:14,
+    id:15,
 
     title:"Gitwe SDA College Extension",
 
@@ -475,7 +511,7 @@ export const projects = [
 },
 
 {
-    id:15,
+    id:16,
 
     title:"Proposed Residential Building",
 

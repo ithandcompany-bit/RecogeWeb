@@ -5,6 +5,8 @@ import Dufatane from "../assets/images/team/Dufatanye.jpeg";
 import Francois from "../assets/images/team/Francois.png";
 import Elie from "../assets/images/team/Elie.png";
 import Mugenga from "../assets/images/team/Mugenga.jpeg"
+import Esther from "../assets/images/team/Esther.PNG"
+import Mugeni from "../assets/images/team/Mugeni.png"
 
 const aboutData = {
   title: "About RECOGE Ltd",
@@ -88,14 +90,14 @@ const aboutData = {
         id: 6,
         name: "MUGENI Marie Claire",
         role: "Customer Service Receptionist",
-        image: ""
+        image: Mugeni
     },
 
      {
         id: 7,
         name: "DUSABE Esther",
         role: "IT Support Technician",
-        image: ""
+        image: Esther
     },
 
      {

@@ -1,4 +1,10 @@
-import MoD from "../assets/images/services/MoD.jpeg"
+import MoD from "../assets/images/services/MoD.jpeg";
+import Ruliba from "/images/serImages/Ruliba.png";
+import Kagarama from "/images/serImages/Kagarama.png";
+import Rwangingo from "/images/serImages/Rwangingo.jpeg";
+import Muringa from "/images/serImages/Muringa.png";
+import Rwimbogo from "/images/serImages/Rwimbogo.png";
+import Gitwe from "/images/serImages/Gitwe.png";
 
 
 export const projects = [
@@ -18,7 +24,7 @@ export const projects = [
 
     status:"Completed",
 
-    year:"----",
+    year:"2022-2023",
 
     image:"/images/p1.png",
 
@@ -78,18 +84,18 @@ export const projects = [
 
     sector:"Industrial",
 
-    location:"",
+    location:"Kigali",
 
     client:"REAL CONTRACTORS",
 
-    status:"----",
+    status:"Completed",
 
-    year:"----",
+    year:"2022",
 
-    image:"/images/projects/office-card.jpg",
+    image:Ruliba,
 
     gallery:[
-        "/images/projects/office-card.jpg"
+        Ruliba
     ],
 
     summary:"Construction material testing.",
@@ -117,7 +123,7 @@ export const projects = [
 
     status:"Completed",
 
-    year:"----",
+    year:"2024-2026",
 
     image:"/images/p3.png",
 
@@ -145,18 +151,18 @@ export const projects = [
 
     sector:"Residential",
 
-    location:"Kagarama",
+    location:"Kigali-Kagarama",
 
     client:"MAKUZA BUSINESS GROUP Ltd",
 
-    status:"Ongoing",
+    status:"Completed",
 
-    year:"----",
+    year:"2023",
 
-    image:"/images/projects/resort-card.jpg",
+    image:Kagarama,
 
     gallery:[
-        "/images/projects/resort-card.jpg"
+        Kagarama
     ],
 
     summary:"Geotechnical study.",
@@ -178,13 +184,13 @@ export const projects = [
 
     sector:"Healthcare",
 
-    location:"Nyamata",
+    location:"Bugesera-Nyamata",
 
     client:"ADEPR NYAMATA HOSPITAL",
 
-    status:"Ongoing",
+    status:"Completed",
 
-    year:"----",
+    year:"2021",
 
     image:"/images/projects/mall-card.jpg",
 
@@ -218,7 +224,7 @@ export const projects = [
 
     status:"Completed",
 
-    year:"----",
+    year:"2025",
 
     image:"/images/projects/health-card.jpg",
 
@@ -246,18 +252,18 @@ export const projects = [
 
     sector:"Water Infrastructure",
 
-    location:"----",
+    location:"Rwangingo-Karangazi",
 
     client:"CIMA INTERNATIONAL",
 
-    status:"----",
+    status:"Completed",
 
-    year:"----",
+    year:"2024",
 
-    image:"/images/projects/school-card.jpg",
+    image:Rwangingo,
 
     gallery:[
-        "/images/projects/school-card.jpg"
+        Rwangingo
     ],
 
     summary:"Feasibility study update.",
@@ -279,13 +285,13 @@ export const projects = [
 
     sector:"Water Infrastructure",
 
-    location:"----",
+    location:"Cyarubare",
 
     client:"CROSS LAND CONSTRUCTION GROUP LTD",
 
-    status:"Completed",
+    status:"Ongoing",
 
-    year:"----",
+    year:"2026",
 
     image:"/images/projects/warehouse-card.jpg",
 
@@ -313,13 +319,13 @@ export const projects = [
 
     sector:"Bridge Infrastructure",
 
-    location:"----",
+    location:"Kivugiza",
 
     client:"CROSS LAND CONSTRUCTION GROUP LTD",
 
     status:"Completed",
 
-    year:"----",
+    year:"2026",
 
     image:"/images/p9.png",
 
@@ -352,14 +358,14 @@ export const projects = [
 
     client:"JV CROSS LAND CONSTRUCTION GROUP LTD AND NEW EARTH CONSTRUCTION COMPANY LTD",
 
-    status:"Ongoing",
+    status:"Completed",
 
-    year:"----",
+    year:"2026",
 
-    image:"/images/projects/mixed-card.jpg",
+    image:Muringa,
 
     gallery:[
-        "/images/projects/mixed-card.jpg"
+        Muringa
     ],
 
     summary:"Geotechnical investigations.",
@@ -382,18 +388,18 @@ export const projects = [
 
     sector:"Road Infrastructure",
 
-    location:"----",
+    location:"Rwimbogo",
 
     client:"JV T AND M CONSTRUCTION LTD AND R.D.C.C. LTD",
 
-    status:"----",
+    status:"Completed",
 
-    year:"----",
+    year:"2024",
 
-    image:"/images/projects/mixed-card.jpg",
+    image:Rwimbogo,
 
     gallery:[
-        "/images/projects/mixed-card.jpg"
+        Rwimbogo
     ],
 
     summary:"Feasibility study.",
@@ -416,13 +422,13 @@ export const projects = [
 
     sector:"Agriculture",
 
-    location:"----",
+    location:"Rwimbogo-Munini",
 
     client:"MUBUGA BIO-COFFEE",
 
-    status:"----",
+    status:"Completed",
 
-    year:"----",
+    year:"2024",
 
     image:"/images/projects/mixed-card.jpg",
 
@@ -450,13 +456,13 @@ export const projects = [
 
     sector:"Sports Infrastructure",
 
-    location:"Rugunga",
+    location:"Kigali-Rugunga",
 
     client:"SPORT GENIX INTERNATIONAL Ltd",
 
-    status:"----",
+    status:"Completed",
 
-    year:"----",
+    year:"2024",
 
     image:"/images/projects/mixed-card.jpg",
 
@@ -490,12 +496,12 @@ export const projects = [
 
     status:"Completed",
 
-    year:"----",
+    year:"2024",
 
-    image:"/images/projects/mixed-card.jpg",
+    image:Gitwe,
 
     gallery:[
-        "/images/projects/mixed-card.jpg"
+        Gitwe
     ],
 
     summary:"Geotechnical investigations.",

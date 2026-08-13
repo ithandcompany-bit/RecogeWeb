@@ -58,44 +58,44 @@ function ServicesModal({
 
             <div className="services-popup">
 
-                {/*=========================================
-                            HERO
-                =========================================*/}
+               {/*=========================================
+                    HERO
+=========================================*/}
 
-                <section className="services-hero">
+<div className="services-hero">
 
-                    <img
+    <img
 
-                        src={aboutData.heroImage}
+        src={aboutData.heroImage}
 
-                        alt="Engineering Services"
+        alt="Engineering Services"
 
-                        className="services-hero-image"
+        className="services-hero-image"
 
-                    />
+    />
 
-                    <div className="services-hero-overlay">
+    <div className="services-hero-overlay">
 
-                        <h2>
+        <h2>
 
-                            Professional Engineering Services
+            Professional Engineering Services
 
-                        </h2>
+        </h2>
 
-                        <p>
+        <p>
 
-                            Delivering innovative engineering,
-                            geotechnical, laboratory,
-                            construction and consultancy
-                            solutions that build stronger,
-                            safer and more sustainable
-                            infrastructure.
+            Delivering innovative engineering,
+            geotechnical, laboratory,
+            construction and consultancy
+            solutions that build stronger,
+            safer and more sustainable
+            infrastructure.
 
-                        </p>
+        </p>
 
-                    </div>
+    </div>
 
-                </section>
+</div>
 
                 {/*=========================================
                         INTRODUCTION

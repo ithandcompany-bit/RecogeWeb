@@ -220,7 +220,7 @@
 
     height:100%;
 
-    object-fit:cover;
+    object-fit:contain;
 
     transition:filter .35s ease;
 

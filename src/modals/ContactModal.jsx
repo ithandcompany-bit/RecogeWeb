@@ -33,10 +33,10 @@ function ContactModal({
 <div className="contact-popup">
 
 {/*=========================================
-                HERO
+                    HERO
 =========================================*/}
 
-<section className="contact-hero">
+<div className="contact-hero">
 
     <img
 
@@ -68,7 +68,7 @@ function ContactModal({
 
     </div>
 
-</section>
+</div>
 
 {/*=========================================
             INTRODUCTION

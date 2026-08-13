@@ -512,6 +512,54 @@
 
 }
 
+.contact-hero-overlay{
+
+    padding:clamp(20px,5vw,40px);
+
+}
+
+.contact-hero-overlay h2{
+
+    color:white;
+
+    font-size:clamp(1.6rem,5vw,3.3rem);
+
+    line-height:1.2;
+
+    margin:0 0 15px;
+
+}
+
+.contact-hero-overlay p{
+
+    max-width:820px;
+
+    margin:0;
+
+    color:rgba(255,255,255,.92);
+
+    font-size:clamp(.85rem,2.5vw,1.1rem);
+
+    line-height:1.6;
+
+}
+
+.contact-hero-overlay::after{
+
+    content:"";
+
+    width:clamp(70px,15vw,120px);
+
+    height:4px;
+
+    margin-top:20px;
+
+    border-radius:30px;
+
+    background:var(--accent);
+
+}
+
 }
 
 @media(max-width:768px){
@@ -589,6 +637,44 @@
     height:220px;
 
 }
+
+ .contact-hero{
+
+        height:240px;
+
+    }
+
+    .contact-hero-overlay{
+
+        padding:18px;
+
+    }
+
+    .contact-hero-overlay h2{
+
+        font-size:1.6rem;
+
+        margin-bottom:10px;
+
+    }
+
+    .contact-hero-overlay p{
+
+        font-size:.85rem;
+
+        line-height:1.5;
+
+        max-width:95%;
+
+    }
+
+    .contact-hero-overlay::after{
+
+        margin-top:14px;
+
+        height:3px;
+
+    }
 
 }
 

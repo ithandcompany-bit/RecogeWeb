@@ -7,6 +7,7 @@ import Elie from "../assets/images/team/Elie.png";
 import Mugenga from "../assets/images/team/Mugenga.jpeg"
 import Esther from "../assets/images/team/Esther.PNG"
 import Mugeni from "../assets/images/team/Mugeni.png"
+import Claude from "../assets/images/team/Claude.png"
 
 const aboutData = {
   title: "About RECOGE Ltd",
@@ -62,7 +63,7 @@ const aboutData = {
         id: 2,
         name: "Eng.KUBWIMANA Jean Claude",
         role: "Laboratory and Quality Manager",
-        image: ""
+        image: Claude
     },
 
     {
@@ -119,13 +120,6 @@ const aboutData = {
         name: "Eng.MUGENGA Jean Aime",
         role: "Structure Engineer",
         image: Mugenga
-    },
-
-     {
-        id: 11,
-        name: "MASENGESHO Hilaire",
-        role: "Legal Advisor",
-        image: " "
     }
 ]
 };

@@ -35,10 +35,10 @@ function CTASection({
 
                 <p>
 
-                    Whether you require geotechnical investigations,
-                    engineering consultancy, construction supervision
-                    or laboratory testing, RECOGE is ready to deliver
-                    reliable solutions tailored to your project.
+                   Whether you require geotechnical investigations,
+    construction materials testing, engineering consultancy
+    or construction supervision, RECOGE is ready to deliver
+    reliable solutions tailored to your project.
 
                 </p>
 

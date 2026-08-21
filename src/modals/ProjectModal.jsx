@@ -40,7 +40,7 @@ function ProjectModal({
 
                         src={project.gallery[0]}
 
-                        alt={project.title}
+                        alt={`${project.title} - RECOGE LTD`}
 
                         className="project-popup-image"
 

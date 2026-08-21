@@ -59,11 +59,11 @@ function ProjectCard({
 
                 </div>
 
-                <h4>
+                <h3>
 
                     {project.title}
 
-                </h4>
+                </h3>
 
                 <button className="project-link">
 

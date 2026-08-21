@@ -11,9 +11,10 @@ import SectionTitle from "./SectionTitle"
 
 import "../styles/workSection.css";
 
-function ProjectsSection( openContact,
-
-    openServices) {
+function ProjectsSection( {
+    openContact,
+    openServices
+}) {
 
     const [selectedProject, setSelectedProject] = useState(null);
     const [selectedResearch, setSelectedResearch] = useState(null);

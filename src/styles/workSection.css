@@ -328,9 +328,9 @@
                     TITLE
 ==========================================================*/
 
-.project-content h4{
+.project-content h3{
 
-    color:var(--accent);
+    color:var(--text);
 
     font-size:1.1rem;
 
@@ -360,7 +360,7 @@
 
     padding:0;
 
-    color:var(--primary);
+    color:var(--accent);
 
     cursor:pointer;
 

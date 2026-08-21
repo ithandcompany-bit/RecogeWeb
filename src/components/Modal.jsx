@@ -37,7 +37,7 @@ function Modal({ title, children, close }) {
 
         <div
             className="backdrop"
-            onClick={close}
+            // onClick={close}
         >
 
             <div

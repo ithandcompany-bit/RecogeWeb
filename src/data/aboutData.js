@@ -15,8 +15,7 @@ const aboutData = {
   heroImage: "/images/heroAbout.png",
 
   overview:
-    "RECOGE Ltd is a Kigali-based General Building Construction Company with over 12 years of experience in the building and civil engineering industry. We specialize in professional construction services, design-build solutions, and efficient project management, delivering residential, commercial, industrial, refurbishment, and civil engineering projects across Rwanda. Our commitment to innovation, quality, and client satisfaction has made us a trusted construction partner for both public and private sector clients.",
-
+  "RECOGE Ltd is a Kigali-based engineering company with over 12 years of experience in the building and civil engineering industry. We specialize in geotechnical engineering, geotechnical investigations, construction materials testing, and multidisciplinary engineering services, while also delivering residential, commercial, industrial, refurbishment, and civil engineering projects across Rwanda. Our commitment to innovation, quality, safety, and client satisfaction has made us a trusted partner for public and private sector projects.",
   mission:
     "We are dedicated to providing quality construction and technical services to our clients. We strive to implement and maintain long-term relationships based on quality assurance, service delivery and safety.",
 
@@ -35,12 +34,12 @@ const aboutData = {
   ],
 
   expertise: [
-    "Geothechnical Investigation",
-    "Materials Testing & Quality Control",
-    "Archtectural & Structural Design",
-    "Construction Services",
-    "Technical Consultancy",
-    "Infrastructure Development"
+    "Geotechnical Engineering & Investigation",
+  "Construction Materials Testing & Quality Control",
+  "Architectural & Structural Design",
+  "Construction Services",
+  "Technical Consultancy",
+  "Infrastructure Development"
   ],
 
   achievements: [

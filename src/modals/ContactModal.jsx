@@ -58,11 +58,11 @@ function ContactModal({
 
         <p>
 
-            Whether you need engineering consultancy,
-            geotechnical investigations, laboratory
-            testing or construction support,
-            our experienced professionals are ready
-            to help turn your vision into reality.
+           Whether you need engineering consultancy,
+    geotechnical investigations, construction materials
+    testing or construction support, our experienced
+    professionals are ready to help turn your vision
+    into reality.
 
         </p>
 
@@ -120,6 +120,10 @@ function ContactModal({
             (+250) 790 288 833
 
         </a>
+
+        <a href="tel:+250783159615">
+    (+250) 783 159 615
+</a>
 
         <a href="tel:+250785445075">
 
@@ -179,28 +183,15 @@ function ContactModal({
 
             </h4>
 
-            <p>
-
-        
-                Kigali, Rwanda
-
-                <br />
-
-                Kicukiro Centre
-
-                <br />
-
-                Gatenga Sector
-
-                <br />
-
-                KK 649 St
-
-                <br/>
-
-                Gate No:24
-
-            </p>
+           <p>
+    Kigali, Rwanda
+    <br />
+    Kicukiro
+    <br />
+    KK 649 St
+    <br />
+    Gate No: 24
+</p>
 
         </div>
 

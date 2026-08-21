@@ -1,3 +1,4 @@
+
 import AboutSection from "./AboutSection";
 import ServicesSection from "./ServicesSection";
 
@@ -35,8 +36,11 @@ function AboutServicesSection({
 
                 <p>
 
-                    RECOGE Ltd is a trusted construction and geotechnical company committed to delivering 
-                    safe, reliable, and high quality engineering solutions.
+                    RECOGE Ltd is a trusted engineering company in Rwanda
+                    specializing in geotechnical engineering, geotechnical
+                    investigations, and construction materials testing, while
+                    providing multidisciplinary solutions for safe, reliable,
+                    and sustainable infrastructure.
 
                 </p>
 
@@ -69,3 +73,4 @@ function AboutServicesSection({
 }
 
 export default AboutServicesSection;
+

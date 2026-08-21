@@ -78,11 +78,10 @@ function Footer({
 
     <p>
 
-        RECOGE Ltd delivers engineering consultancy,
-        geotechnical investigations, laboratory testing,
-        construction supervision and surveying services
-        for residential, commercial and infrastructure
-        projects across Rwanda.
+        RECOGE Ltd provides trusted geotechnical engineering,
+    geotechnical investigations, construction materials testing,
+    engineering consultancy and surveying services for residential,
+    commercial and infrastructure projects across Rwanda.
 
     </p>
 
@@ -110,7 +109,7 @@ Company
 
 <FaChevronRight className="footer-arrow"/>
 
-About Us
+
 
 About Us
 
@@ -202,7 +201,7 @@ Geotechnical Studies & Material Testing
 
                <FaChevronRight className="footer-arrow"/>
 
-                Surveying & Environment Management
+               Geological & Hydrological Studies
 
             </button>
 
@@ -268,7 +267,7 @@ Geotechnical Studies & Material Testing
 
                 <p>
 
-                    <a href="https://maps.app.goo.gl/r4EAv3EVis2J5nCB9" target="_blank">Kigali, Rwanda, KK 649 St, Gate No 24</a>
+                    <a href="https://maps.app.goo.gl/r4EAv3EVis2J5nCB9" target="_blank">Kicukiro, Kigali, Rwanda, KK 649 St, Gate No 24</a>
 
 
                 </p>
@@ -293,11 +292,9 @@ Geotechnical Studies & Material Testing
 
         </h4>
 
-        <a href="tel:+250785445075">
-
-            (+250) 785 445 075
-
-        </a>
+        <a href="tel:+250783159615">
+    (+250) 783 159 615
+</a>
 
     </div>
 

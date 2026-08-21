@@ -34,7 +34,7 @@ import General from "/images/General.png"
 export const services = [
   {
     id: 1,
-    title: "Geotechnical & Site Investigation",
+    title: "Geotechnical Engineering & Site Investigation",
      group: "Geotechnical & Laboratory",
     icon: FaMountain,
     image: geotech,
@@ -44,7 +44,7 @@ export const services = [
 
   {
     id: 2,
-    title: "Material Testing & Laboratory Services",
+    title: "Construction Material Testing & Laboratory Services",
      group: "Geotechnical & Laboratory",
     icon: FaFlask,
     image: labo,
@@ -128,7 +128,7 @@ export const services = [
   {
     id: 10,
     title: "Drainage & Water Supply Infrastructure",
-      title: "Environmental Studies",
+    group: "Environmental Studies",
     icon: FaTint,
     image: drain,
     description:

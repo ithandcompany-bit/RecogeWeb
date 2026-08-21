@@ -452,17 +452,16 @@
 
     border-radius:14px;
 
-    background:var(--primary);
+    background:var(--accent);
 
-    color:var(--secondary);
+    color:white;
 
     font-size:1rem;
 
     font-weight:700;
 
     cursor:pointer;
-
-    border: 2px solid var(--secondary);
+border: 2px solid var(--accent);
 
     transition:.35s;
 
@@ -470,13 +469,18 @@
 
 .contact-submit:hover{
 
-    background:var(--accent);
+    
 
-    color:white;
+    background:var(--primary);
+
+    color:var(--secondary);
+
+    border-color:var(--secoandary);
+
 
     transform:translateY(-4px);
 
-    border: none;
+   
 
 }
 

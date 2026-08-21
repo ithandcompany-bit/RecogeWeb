@@ -131,9 +131,9 @@ function TestimonialsSection(){
 
         <p>
 
-            Hear from organizations, institutions and private
-            clients who trusted RECOGE for engineering,
-            geotechnical and construction consultancy services.
+           Hear from organizations, institutions and private clients who trusted
+    RECOGE for geotechnical engineering, construction materials testing
+    and multidisciplinary engineering services.
 
         </p>
 

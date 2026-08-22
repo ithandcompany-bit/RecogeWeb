@@ -5,6 +5,11 @@ import Rwangingo from "/images/serImages/Rwangingo.jpeg";
 import Muringa from "/images/serImages/Muringa.png";
 import Rwimbogo from "/images/serImages/Rwimbogo.png";
 import Gitwe from "/images/serImages/Gitwe.png";
+import Nyamata from "/images/serImages/NyamataHospital.png";
+import Harvest from "/images/serImages/PostHarvest.png";
+import Cyarubare from "/images/serImages/Cyarubare.png";
+import Rugunga from "/images/serImages/Rugunga.png";
+import Coffee from "/images/serImages/CoffeeWash.jpeg"
 
 
 export const projects = [
@@ -34,8 +39,7 @@ export const projects = [
 
     summary:"Construction material testing.",
 
-    overview:
-        "Construction material testing services carried out during the renovation of Rwanda's national stadium to ensure quality, durability and compliance with engineering standards.",
+    overview:"Amahoro National Stadium Renovation Project is a major sports infrastructure development project in Kigali, Rwanda, aimed at transforming the existing stadium into a modern, safe, and internationally competitive sports and entertainment facility.",
 
     scope:[
         "Construction Material Testing"
@@ -67,8 +71,7 @@ export const projects = [
 
     summary:"Construction material testing.",
 
-    overview:
-        "Construction material testing services carried our during extension of Rwanda military teaching hospital to ensure quality, durability and compliance with engineering standards.",
+    overview: "Expansion of Rwanda Military Teaching Hospital (RMTH) Muhabura Block 1 is a major healthcare infrastructure project in Rwanda aimed at increasing the hospital's capacity and improving the quality of healthcare services provided to military personnel, their families, and other beneficiaries.",
 
     scope:[
         "Construction Material Testing"
@@ -100,8 +103,7 @@ export const projects = [
 
     summary:"Construction material testing.",
 
-    overview:
-        "Construction material testing services supporting quality control during the construction of the Ruliba Clay Plant B.",
+    overview:"Construction of Ruliba Clay Plant B is an industrial infrastructure project aimed at expanding and modernizing clay processing and production capacity in Rwanda. The project provides facilities for the efficient extraction, processing, manufacturing, storage, and handling of clay-based construction products.",
 
     scope:[
         "Construction Material Testing"
@@ -111,7 +113,7 @@ export const projects = [
 {
     id:4,
 
-    title:"Rehabilitation of Kingdom Halls",
+    title:"Rehabilitation of Jehovah's Witnesses Kingdom Halls",
 
     service:"Building Rehabilitation",
 
@@ -133,8 +135,7 @@ export const projects = [
 
     summary:"Building rehabilitation.",
 
-    overview:
-        "Engineering support and rehabilitation works for Kingdom Halls to improve structural integrity and extend the service life of the buildings.",
+    overview:"Rehabilitation of Jehovah's Witnesses Kingdom Halls Project involves the renovation, repair, upgrading, and maintenance of existing Kingdom Hall facilities to ensure that they remain safe, functional, durable, comfortable, and suitable for worship and community activities.",
 
     scope:[
         
@@ -167,8 +168,7 @@ export const projects = [
 
     summary:"Geotechnical study.",
 
-    overview:
-        "Comprehensive geotechnical investigation carried out to determine soil conditions and provide engineering recommendations for foundation design.",
+    overview:"Proposed Kagarama Housing Project involves the planning, design, construction, and completion of a modern and functional residential building intended to provide a safe, comfortable, durable, and healthy living environment for its occupants.",
 
     scope:[
         "Geotechnical study"
@@ -192,16 +192,15 @@ export const projects = [
 
     year:"2021",
 
-    image:"/images/projects/mall-card.jpg",
+    image:Nyamata,
 
     gallery:[
-        "/images/projects/mall-card.jpg"
+        Nyamata
     ],
 
     summary:"Geotechnical investigations.",
 
-    overview:
-        "Geotechnical investigations conducted for the construction of extension buildings at ADEPR Nyamata Hospital.",
+    overview:"ADEPR Nyamata Hospital Extension Project is a healthcare infrastructure development initiative aimed at expanding and improving the existing hospital facilities in Nyamata, Rwanda. The project is intended to increase healthcare service capacity and provide modern, safe, and functional spaces for patients, medical staff, and hospital support services.",
 
     scope:[
         "Site Investigation",
@@ -226,16 +225,15 @@ export const projects = [
 
     year:"2025",
 
-    image:"/images/projects/health-card.jpg",
+    image:Harvest,
 
     gallery:[
-        "/images/projects/health-card.jpg"
+        Harvest
     ],
 
     summary:"Geotechnical investigations.",
 
-    overview:
-        "Geotechnical investigations supporting the construction of post-harvest handling and grain storage facilities.",
+    overview: "Post-Harvest Storage Facilities Project is an agricultural infrastructure development initiative aimed at providing safe, efficient, and modern facilities for the storage, handling, preservation, and management of agricultural produce after harvesting. The project is designed to reduce post-harvest losses, maintain product quality, and improve farmers' access to reliable storage facilities.",
 
     scope:[
         
@@ -268,8 +266,7 @@ export const projects = [
 
     summary:"Feasibility study update.",
 
-    overview:
-        "Review and update of the feasibility study and detailed engineering design for rehabilitation and upgrading of the 937-hectare irrigation scheme.",
+    overview:"Rehabilitation and Upgrading Works of the Rwangingo–Karangazi Irrigation Scheme is an agricultural infrastructure project aimed at restoring deteriorated irrigation facilities, improving water distribution efficiency, and increasing the reliability and productivity of irrigated agriculture. The project focuses on upgrading existing infrastructure while improving the overall performance and sustainability of the irrigation scheme.",
 
     scope:[
         "Geotechnical investigations"
@@ -293,16 +290,15 @@ export const projects = [
 
     year:"2026",
 
-    image:"/images/projects/warehouse-card.jpg",
+    image:Cyarubare,
 
     gallery:[
-        "/images/projects/warehouse-card.jpg"
+        Cyarubare
     ],
 
     summary:"Construction material testing.",
 
-    overview:
-        "Construction material testing services supporting the rehabilitation works of Cyarubare Dam.",
+    overview: "Rehabilitation of Cyarubare Dam in Gisagara District is a water infrastructure project aimed at restoring and improving the performance, safety, and reliability of the existing dam and its associated water-retaining and water-management facilities. The project is intended to strengthen water storage capacity and support reliable water availability for agricultural and other community needs.",
 
     scope:[
         "Construction Material Testing",
@@ -335,8 +331,7 @@ export const projects = [
 
     summary:"Geotechnical investigations.",
 
-    overview:
-        "Geotechnical investigations and construction material testing carried out to support the successful construction of Kivugiza Bridge.",
+    overview: "Construction of Kivugiza Bridge in Nyamasheke District is a transport infrastructure project aimed at improving connectivity and accessibility between communities, agricultural areas, and key economic and social facilities. The bridge will provide a reliable crossing over the existing watercourse and improve the movement of people, vehicles, agricultural products, and other goods.",
 
     scope:[
         "Site Investigation",
@@ -371,8 +366,7 @@ export const projects = [
     summary:"Geotechnical investigations.",
 
     overview:
-        "Geotechnical investigations supporting rehabilitation and extension of water supply systems in Muringa, Jomba and Bigogwe sectors.",
-
+"The Muringa Water Supply Rehabilitation project in Muringa, Jomba and Bigogwe sectors is a water infrastructure project aimed at improving the reliability, accessibility, and efficiency of water supply services within the surrounding communities. The project involves the rehabilitation and extension of existing water supply systems to enhance water distribution and provide more reliable access to safe water. Geotechnical investigations are being undertaken to assess the ground conditions along the proposed infrastructure and provide essential information for the safe and appropriate design and construction of the water supply facilities. The project will contribute to strengthening the existing water supply network and improving access to reliable water services for households, institutions, and other users within the served areas.",
     scope:[
         "Site Investigation",
         
@@ -404,8 +398,7 @@ export const projects = [
 
     summary:"Feasibility study.",
 
-    overview:
-        "Geotechnical investigations carried out for the feasibility study of the Rwimbogo–Munini–Gikobwa road project.",
+    overview:"Construction of the Rwimbogo–Munini–Gikobwa Road in Gatsibo District is a road infrastructure development project aimed at improving connectivity, accessibility, mobility, and transportation within the district. The project will provide a reliable road link between communities, agricultural production areas, markets, and essential social and economic services.",
 
     scope:[
         
@@ -430,16 +423,15 @@ export const projects = [
 
     year:"2024",
 
-    image:"/images/projects/mixed-card.jpg",
+    image:Coffee,
 
     gallery:[
-        "/images/projects/mixed-card.jpg"
+        Coffee
     ],
 
     summary:"Geotechnical study.",
 
-    overview:
-        "Geotechnical study supporting the construction of the proposed coffee washing station.",
+    overview:"Proposed Coffee Washing Station Project is an agricultural processing infrastructure project designed to provide modern facilities for the receiving, washing, processing, drying, grading, storage, and handling of harvested coffee cherries. The project aims to improve coffee quality, reduce post-harvest losses, and increase the value of locally produced coffee.",
 
     scope:[
         "Site Investigation",
@@ -464,16 +456,15 @@ export const projects = [
 
     year:"2024",
 
-    image:"/images/projects/mixed-card.jpg",
+    image:Rugunga,
 
     gallery:[
-        "/images/projects/mixed-card.jpg"
+        Rugunga
     ],
 
     summary:"Geotechnical study.",
 
-    overview:
-        "Site investigation and geotechnical study carried out for the construction of the proposed Rugunga Playground.",
+    overview:"The Construction of Rugunga Playground in Kigali, Rwanda is a sports infrastructure development project aimed at providing a modern, safe, and accessible recreational facility for football, physical activities, community events, and youth development.",
 
     scope:[
         "Site Investigation",
@@ -506,46 +497,11 @@ export const projects = [
 
     summary:"Geotechnical investigations.",
 
-    overview:
-        "Geotechnical investigations and construction material testing supporting the construction and extension of Gitwe SDA College.",
+    overview:"Gitwe SDA College Extension Project is an educational infrastructure development project aimed at expanding and improving the existing college facilities to accommodate increasing numbers of students, teaching staff, and administrative activities. The project is intended to provide modern, safe, functional, and conducive learning environments.",
 
     scope:[
         "Site Investigation",
         "Material Testing",
-        
-    ]
-},
-
-{
-    id:16,
-
-    title:"Proposed Residential Building",
-
-    service:"Geotechnical Investigation",
-
-    sector:"Residential",
-
-    location:"----",
-
-    client:"MWIREBUA FRANKLIN MWITI",
-
-    status:"----",
-
-    year:"----",
-
-    image:"/images/projects/mixed-card.jpg",
-
-    gallery:[
-        "/images/projects/mixed-card.jpg"
-    ],
-
-    summary:"Geotechnical investigations.",
-
-    overview:
-        "Comprehensive geotechnical investigations providing engineering recommendations for safe residential building construction.",
-
-    scope:[
-        "Geotechnical Investigation",
         
     ]
 }

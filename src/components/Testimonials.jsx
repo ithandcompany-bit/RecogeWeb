@@ -22,15 +22,13 @@ function TestimonialsSection(){
 
             image:avatar,
 
-            name:"Michael Johnson",
+            name:"Arch.MUTABAZI Emmanuel",
 
-            position:"Project Manager",
+            position:"",
 
-            company:"ABC Construction Ltd",
+            company:"",
 
-            text:
-            "RECOGE delivered outstanding engineering services. Their professionalism, technical expertise and commitment to quality exceeded our expectations."
-
+            text:"We are very pleased with the services provided by RECOGE Ltd. Their professionalism, accuracy, and customer-focused approach make them a company we would confidently recommend to other construction and engineering clients."
         },
 
         {
@@ -39,15 +37,14 @@ function TestimonialsSection(){
 
             image:avatar,
 
-            name:"Sarah Williams",
+            name:"Cross land Construction Group Ltd",
 
-            position:"Business Owner",
+            position:"",
 
-            company:"Prime Holdings",
+            company:"",
 
             text:
-            "The entire project was completed on schedule with exceptional communication from the engineering team."
-
+"The field and laboratory teams worked according to schedule and maintained excellent communication with our project team. We appreciated their commitment to meeting deadlines without compromising quality."
         },
 
         {
@@ -56,16 +53,30 @@ function TestimonialsSection(){
 
             image:avatar,
 
-            name:"David Brown",
+            name:"Eng.KWIZERA Moise",
 
-            position:"Property Developer",
+            position:"",
 
-            company:"Brown Developers",
+            company:"",
 
             text:
-            "Their geotechnical recommendations helped us make confident engineering decisions from day one."
+"RECOGE Ltd provided excellent geotechnical investigation services for our project. Their team was professional, responsive, and delivered accurate results on time. We highly recommend their services."
+        },
 
-        }
+        {
+
+            id:4,
+
+            image:avatar,
+
+            name:"Eng.PFUKAMUSENGE Euladie",
+
+            position:"",
+
+            company:"",
+
+            text:
+"RECOGE Ltd provided a well-organized geotechnical report with clear conclusions and practical recommendations. The report was extremely helpful during our project planning and design stages."        }
 
     ];
 

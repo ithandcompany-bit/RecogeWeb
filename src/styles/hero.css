@@ -318,13 +318,20 @@
 
 
 
-.active-service svg{
+/* .active-service svg{
 
-    color:var(--secondary);
+    background:var(--accent);
 
-    transform:scale(1.15);
+    height: 48px;
+    width: 40px;
 
-}
+    color:white;
+
+    transform:rotate(-8deg);
+
+    border-radius: 16px;
+
+} */
 
 .active-service span{
 

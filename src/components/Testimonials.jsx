@@ -153,28 +153,20 @@ function TestimonialsSection(){
     <div className="testimonial-card">
 
         <button
+    className="testimonial-arrow testimonial-prev"
+    onClick={previousSlide}
+    aria-label="Previous testimonial"
+>
+    <FaChevronLeft />
+</button>
 
-            className="testimonial-arrow testimonial-prev"
-
-            onClick={previousSlide}
-
-        >
-
-            <FaChevronLeft/>
-
-        </button>
-
-        <button
-
-            className="testimonial-arrow testimonial-next"
-
-            onClick={nextSlide}
-
-        >
-
-            <FaChevronRight/>
-
-        </button>
+       <button
+    className="testimonial-arrow testimonial-next"
+    onClick={nextSlide}
+    aria-label="Next testimonial"
+>
+    <FaChevronRight />
+</button>
 
                 <div className="testimonial-image">
 
